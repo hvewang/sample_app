@@ -31,6 +31,7 @@ gem 'mysql2'
 # end
 group :development do
 	gem 'rspec-rails'
+	gem 'ZenTest'
 end
 group :test do
 	gem 'rspec' 
