@@ -1,5 +1,5 @@
 .container {
-	width: 890px;
+	width: 980px;
 }
 
 body {
@@ -11,8 +11,10 @@ header {
 }
 
 header img {
-	padding: 1em;
+	padding: 0em;
 	background: #fff;
+	width: 980px;
+	height: 160px;
 }
 
 section {
@@ -40,14 +42,14 @@ a:visited {
 
 /* Navigation */
 nav {
-	float: right;
+	float: center;
 }
 
 nav {
 	background-color: #cff;
-	padding: 0 0.7em;
+	padding: 0 0.1em;
 	white-space: nowrap;
-	padding-top: 60px;
+	padding-top: 1px;
 }
 
 
@@ -59,7 +61,14 @@ nav ul {
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.2em 0;
+	padding: 0.1em 7px;
+}
+
+nav ul li img {
+	padding: 0em;
+	background: #fff;
+	width: 54px;
+	height: 16px;
 }
 
 nav ul li a {
@@ -98,7 +107,7 @@ a.signup_button {
 
 footer {
 	text-align: center;
-	margin-top: 1px;
+	margin-top: 10px;
 	width: 710px;
 	margin-left: auto;
 	margin-right: auto;
