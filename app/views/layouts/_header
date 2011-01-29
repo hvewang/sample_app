@@ -2,19 +2,22 @@
 	<%= link_to logo, root_path %>
 	<nav class="round">
 		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "About", about_path %></li>
+			<li><%= link_to t('header.label.home'), root_path %></li>
+			<li><%= link_to t('header.label.about'), about_path %></li>
 			<li><%= link_to "News", '#' %></li>
 			<li><%= link_to "Services", '#' %></li>
 			<li><%= link_to "Schools", '#' %></li>
 			<li><%= link_to "Success Cases", '#' %></li>
 			<li><%= link_to "Student Message", '#' %></li>
 			<li><%= link_to "Our Team", '#' %></li>
-			<li><%= link_to "Contact", contact_path %></li>
-			<li><%= link_to "Sign up", signup_path %></li>
-			<li><%= link_to "Sign in", '#' %></li>
-			<li><%= link_to "Help", help_path %></li>
-			<li><%= link_to lanImg, '#' %></li>
+			<li><%= link_to t('header.label.contact'), contact_path %></li>
+			<li><%= link_to t('header.label.signup'), signup_path %></li>
+			<li><%= link_to t('header.label.signin'), '#' %></li>
+			<li><%= link_to t('header.label.help'), help_path %></li>
+			<!--
+			<li><%= link_to langImg, '#' %></li>
+			-->
+			<li><%= language_selector %></li>
 		</ul>
 	</nav>
 </header>

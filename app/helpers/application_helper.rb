@@ -13,7 +13,17 @@ module ApplicationHelper
 		image_tag("greatwall.png", :alt => "New Hope International Education", :class => "round")
 	end
 	
-	def lanImg
-		image_tag("zh.png", :alt => "New Hope International Education", :class => "round") 
+	def langImg
+		image_tag("#{t('langimg')}", :alt => "New Hope International Education", :class => "round") 
+	end
+	
+	def language_selector
+		puts "locale is: <" + I18n.locale.to_s + ">"
+		
+		if I18n.locale == :en
+			link_to langImg, url_for(:locale => 'zh-cn')
+		else
+			link_to langImg, url_for(:locale => 'en')
+		end
 	end
 end
