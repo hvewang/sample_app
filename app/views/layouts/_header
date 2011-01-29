@@ -1,9 +1,5 @@
 <header>
-
-	<% logo = image_tag("greatwall.png", :alt => "New Hope International Education", :class => "round") %>
-	<% zh = image_tag("zh.png", :alt => "New Hope International Education", :class => "round") %>
 	<%= link_to logo, root_path %>
-
 	<nav class="round">
 		<ul>
 			<li><%= link_to "Home", root_path %></li>
@@ -18,7 +14,7 @@
 			<li><%= link_to "Sign up", signup_path %></li>
 			<li><%= link_to "Sign in", '#' %></li>
 			<li><%= link_to "Help", help_path %></li>
-			<li><%= link_to zh, '#' %></li>
+			<li><%= link_to lanImg, '#' %></li>
 		</ul>
 	</nav>
 </header>
