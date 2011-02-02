@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'rails/all'
 
 describe "LayoutLinks" do
 	it "should have a Home page at '/'" do
@@ -34,7 +35,7 @@ describe "LayoutLinks" do
 		response.should have_selector('title', :content => "Help")
 		click_link "Contact"
 		response.should have_selector('title', :content => "Contact")
-		click_link "Home"
+		click_link "/"
 		response.should have_selector('title', :content => "Home")
 		click_link "Sign up"
 		response.should have_selector('title', :content => "Sign up")

@@ -26,6 +26,13 @@ zh-cn:
     your_name: Seu nome
     your_friend_email: O email do seu amigo
     or: ou
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: User name cannot be blank
   application:
     access_denied: "Por favor, efetue o login para continuar"
   articles:
@@ -63,16 +70,6 @@ zh-cn:
     add: Adicionar
     errors: 
       not_published_yet: 文章还没有发表
-    
-  activerecord:
-    errors:
-      models:
-        article:
-          attributes:
-            title:
-              blank: "题目不能是空的"
-            body:
-              blank: "não pode ficar em branco"
 
   date:
     formats:
