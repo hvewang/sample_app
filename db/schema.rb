@@ -10,9 +10,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110202014448) do
+ActiveRecord::Schema.define(:version => 20110202041319) do
 
-# Could not dump table "users" because of following Mysql2::Error
-#   Invalid date: BTREE
+# Could not dump table "users" because of following ArgumentError
+#   invalid date
 
 end
