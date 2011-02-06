@@ -46,6 +46,8 @@ nav {
 }
 
 nav {
+	font-size: 110%;
+	text-align: center;
 	background-color: #cff;
 	padding: 0 0.1em;
 	white-space: nowrap;
@@ -61,7 +63,7 @@ nav ul {
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.1em 1.2px;
+	padding: 0.1em 1px;
 }
 
 nav ul li img {
