@@ -32,7 +32,13 @@ zh-cn:
         user:
           attributes:
             name:
-              blank: User name cannot be blank
+              blank: 不能空
+            email: 
+              blank: 不能空
+              invalid: 无效
+            password:
+              blank: 不能空
+              too_short: 太短
   application:
     access_denied: "Por favor, efetue o login para continuar"
   articles:

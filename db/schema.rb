@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(:version => 20110202041319) do
 
-# Could not dump table "users" because of following ArgumentError
-#   invalid date
+# Could not dump table "users" because of following Mysql2::Error
+#   Invalid date: BTREE
 
 end
