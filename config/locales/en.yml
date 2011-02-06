@@ -7,6 +7,8 @@ en:
       contact: Contact
       signup: Sign Up
       signin: Sign In
+      signout: Sign Out
+      profile: Profile
       help: Help 
   general:
     are_you_sure: Are you sure?

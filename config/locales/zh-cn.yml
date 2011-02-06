@@ -7,6 +7,8 @@ zh-cn:
       contact: 联系我们
       signup: 注册
       signin: 登录
+      signout: 退出
+      profile: 我的帐户
       help: 帮助 
   general: 
     are_you_sure: Tem certeza?
