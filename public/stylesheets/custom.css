@@ -61,10 +61,11 @@ nav ul {
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.1em 7px;
+	padding: 0.1em 1.2px;
 }
 
 nav ul li img {
+	float: right;
 	padding: 0em;
 	background: #fff;
 	width: 54px;

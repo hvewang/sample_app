@@ -4,11 +4,17 @@ en:
     label:
       home: Home
       about: About
+      latestnews: Latest News
+      services: Services
+      schools: Schools
+      successcase: Success Cases
+      studentmsg: Student Messages
       contact: Contact
+      ourteam: Our Team
       signup: Sign Up
       signin: Sign In
       signout: Sign Out
-      profile: Profile
+      profile: My Account
       help: Help 
   general:
     are_you_sure: Are you sure?

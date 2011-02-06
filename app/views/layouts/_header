@@ -4,12 +4,12 @@
 		<ul>
 			<li><%= link_to t('header.label.home'), root_path %></li>
 			<li><%= link_to t('header.label.about'), about_path %></li>
-			<li><%= link_to "News", '#' %></li>
-			<li><%= link_to "Services", '#' %></li>
-			<li><%= link_to "Schools", '#' %></li>
-			<li><%= link_to "Success Cases", '#' %></li>
-			<li><%= link_to "Student Message", '#' %></li>
-			<li><%= link_to "Our Team", '#' %></li>
+			<li><%= link_to t('header.label.latestnews'), '#' %></li>
+			<li><%= link_to t('header.label.services'), '#' %></li>
+			<li><%= link_to t('header.label.schools'), '#' %></li>
+			<li><%= link_to t('header.label.successcase'), '#' %></li>
+			<li><%= link_to t('header.label.studentmsg'), '#' %></li>
+			<li><%= link_to t('header.label.ourteam'), '#' %></li>
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
 			<li><%= link_to t('header.label.signup'), signup_path %></li>
 			

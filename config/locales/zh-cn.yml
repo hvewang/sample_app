@@ -3,8 +3,14 @@ zh-cn:
   header:
     label:
       home: 首页
-      about: 关于我们
+      about: 公司介绍
+      latestnews: 留美最新资讯
+      services: 服务项目
+      schools: 合作学校
+      successcase: 成功案例
+      studentmsg: 学生感言
       contact: 联系我们
+      ourteam: 精英团队
       signup: 注册
       signin: 登录
       signout: 退出
