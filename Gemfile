@@ -8,6 +8,7 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 
 gem 'gravatar_image_tag'
+gem 'will_paginate', '3.0.pre2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -35,9 +36,12 @@ group :development do
 	gem 'rspec-rails'
 	gem 'ZenTest'
 	gem 'annotate-models'
+	gem 'faker'
+	#gem 'will_paginate', '3.0.pre2'
 end
 group :test do
 	gem 'rspec' 
 	gem 'webrat' 
 	gem 'factory_girl_rails'
+	#gem 'will_paginate', '3.0.pre2'
 end

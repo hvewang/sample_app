@@ -46,7 +46,7 @@ nav {
 }
 
 nav {
-	font-size: 110%;
+	font-size: 100%;
 	text-align: center;
 	background-color: #cff;
 	padding: 0 0.1em;
@@ -63,7 +63,7 @@ nav ul {
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.1em 1px;
+	padding: 0.1em 2px;
 }
 
 nav ul li img {
@@ -187,4 +187,12 @@ color: #fff;
 #error_explanation ul li {
 	font-size: 12px;
 	list-style: square;
+}
+
+ul.users {
+	margin-top: 1em;
+}
+
+.users li {
+	list-style: none;
 }
