@@ -4,8 +4,8 @@ namespace :db do
 	desc "Fill database with sample data"
 		task :populate => :environment do
 		#Rake::Task['db:reset'].invoke
-		Rake::Task['db:drop'].invoke
-		Rake::Task['db:create'].invoke
+		#Rake::Task['db:drop'].invoke
+		#Rake::Task['db:create'].invoke
 		Rake::Task['db:migrate'].invoke
 		user = User.create!(:name => "admin",
 			:email => "baiqing_wang@hotmail.com",
