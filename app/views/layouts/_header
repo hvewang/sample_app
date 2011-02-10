@@ -11,12 +11,13 @@
 			<li><%= link_to t('header.label.studentmsg'), '#' %></li>
 			<li><%= link_to t('header.label.ourteam'), '#' %></li>
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
-			<li><%= link_to t('header.label.signup'), signup_path %></li>
+			
 			
 			<% if signed_in? %>
 				<li><%= link_to t('header.label.profile'), current_user %></li>
 				<li><%= link_to t('header.label.signout'), signout_path, :method => :delete %></li>
 			<% else %>
+				<li><%= link_to t('header.label.signup'), signup_path %></li>
 				<li><%= link_to t('header.label.signin'), signin_path %></li>
 			<% end %>
 			

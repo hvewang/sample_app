@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   end
   
   def new
+	redirect_to root_path if signed_in?
+	
 	@title = "Sign up"
 	@user = User.new
   end
@@ -20,6 +22,8 @@ class UsersController < ApplicationController
 	end
 	
 	def create
+		redirect_to root_path if signed_in?
+		
 		@user = User.new(params[:user])
 		if @user.save
 			# Handle a successful save.
