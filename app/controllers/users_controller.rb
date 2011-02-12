@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
+  before_filter :authenticate, :only => [:index, :show, :micropost, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user, :only => :destroy
   
   def index
 	@title = "All users"
 	#@users = User.all
-	@users = User.paginate(:page => params[:page])
+	@users = User.paginate(:page => params[:page], :per_page => 20)
   end
   
   def new
@@ -53,21 +53,26 @@ class UsersController < ApplicationController
 	end
 	
 	def destroy
-		if current_user.id == params[:id]
+		#puts "current user id:#{current_user.id}, params id:#{params[:id]}"
+		if current_user.id.to_s != params[:id].to_s
+			#puts "deleting user <#{params[:id]}> by current user: <#{current_user.id}>"
 			User.find(params[:id]).destroy
 			flash[:success] = "User destroyed."
 		else
 			flash[:success] = "You cannot delete yourself."
 		end
 		
-		
 		redirect_to users_path
 	end	
 	
-	private
-	def authenticate
-		deny_access unless signed_in?
+	def micropost
+		#@user = current_user
+		@microposts = current_user.feed.paginate(:page => params[:page], :per_page => 5)
+		@title = current_user.name
+		@micropost = Micropost.new
 	end
+	
+	private
 	
 	def correct_user
 		@user = User.find(params[:id])

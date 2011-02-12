@@ -4,8 +4,8 @@ namespace :db do
 	desc "Fill database with sample data"
 		task :populate => :environment do
 		#Rake::Task['db:reset'].invoke
-		#Rake::Task['db:drop'].invoke
-		#Rake::Task['db:create'].invoke
+		Rake::Task['db:drop'].invoke
+		Rake::Task['db:create'].invoke
 		Rake::Task['db:migrate'].invoke
 		user = User.create!(:name => "admin",
 			:email => "baiqing_wang@hotmail.com",
@@ -26,18 +26,18 @@ namespace :db do
 		)
 		user.password = "foobar"
 		user.password_confirmation = "foobar"
-		user.user_type_id = 1
+		user.user_type_id = 0
 		user.save!
 		
 		user = User.create!(:name => "linali",
 			:email => "linali99@hotmail.com",
 			:password => "foobar",
 			:password_confirmation => "foobar",
-			:user_type_id => 1
+			:user_type_id => 0
 		)
 		user.password = "foobar"
 		user.password_confirmation = "foobar"
-		user.user_type_id = 1
+		user.user_type_id = 0
 		user.save!
 		
 		user = User.create!(:name => "yanli",
@@ -93,6 +93,12 @@ namespace :db do
 				:password => password,
 				:password_confirmation => password,
 				:user_type_id => 2)
+		end
+		
+		User.all(:limit => 6).each do |user|
+			50.times do
+				user.microposts.create!(:title => "My title", :content => Faker::Lorem.sentence(5))
+			end
 		end
 	end
 end
