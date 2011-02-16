@@ -1,6 +1,7 @@
 <table class="profile" summary="Profile information">
 	<tr>
 		<td class="sidebar round">
+			<%= link_to "My account", @user %><br />
 			<%= link_to "Profile", edit_user_path(current_user) %><br />
 			<%= link_to "All users", users_path %> <br />
 			<%= link_to "My posts", mypost_path %>
@@ -11,13 +12,11 @@
 				<%= gravatar_for current_user %>
 				<%= current_user.name %>
 			</h1>
-			<br />
 			<strong>Microposts</strong> <%= current_user.microposts.count %>
 			<br />
-			
+			<%= render 'shared/stats' %>
 			<%= render 'shared/micropost_form' %>
 			
-			<br />
 			<% unless current_user.microposts.empty? %>
 				<table class="microposts" summary="User microposts">
 					<%= render @microposts %>

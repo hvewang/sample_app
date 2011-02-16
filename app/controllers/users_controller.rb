@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:index, :show, :micropost, :edit, :update, :destroy]
+  #before_filter :authenticate, :only => [:index, :show, :micropost, :edit, :update, :destroy, :following, :follower]
+  before_filter :authenticate, :except => [:new, :create]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user, :only => :destroy
   
@@ -19,6 +20,11 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@title = @user.name
+		if @user.id == current_user.id
+			@microposts = []
+		else
+			@microposts = @user.feed.paginate(:page => params[:page], :per_page => 5)
+		end
 	end
 	
 	def create
@@ -70,6 +76,20 @@ class UsersController < ApplicationController
 		@microposts = current_user.feed.paginate(:page => params[:page], :per_page => 5)
 		@title = current_user.name
 		@micropost = Micropost.new
+	end
+	
+	def following
+		@title = "Following"
+		@user = User.find(params[:id])
+		@users = @user.following.paginate(:page => params[:page])
+		render 'show_follow'
+	end
+	
+	def followers
+		@title = "Followers"
+		@user = User.find(params[:id])
+		@users = @user.followers.paginate(:page => params[:page])
+		render 'show_follow'
 	end
 	
 	private

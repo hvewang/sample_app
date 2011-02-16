@@ -1,6 +1,7 @@
 <table class="profile" summary="Profile information">
 	<tr>
 		<td class="sidebar round">
+			<%= link_to "My account", @user %><br />
 			<%= link_to "Profile", edit_user_path(current_user) %><br />
 			<%= link_to "All users", users_path %><br />
 			<%= link_to "My posts", mypost_path %>
@@ -14,6 +15,15 @@
 				<%= gravatar_for @user %>
 				<%= @user.name %>
 			</h1>
+			
+			<%= render 'shared/stats' %>
+			<%= render 'follow_form' if signed_in? %>
+			<% unless @microposts.empty? %>
+				<table class="microposts" summary="User microposts">
+					<%= render @microposts %>
+				</table>
+				<%= will_paginate @microposts %>
+			<% end %>
 		</td>
 	</tr>
 </table>

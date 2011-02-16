@@ -3,9 +3,14 @@ SampleApp::Application.routes.draw do
 
   get "users/micropost"
   #match '/users/micropost', :to => 'users#micropost'
-  resources :users
+  resources :users do
+	member do
+		get :following, :followers
+	end
+  end
 
   resources :microposts, :only => [:index, :create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
   
   #get "pages/home"
 

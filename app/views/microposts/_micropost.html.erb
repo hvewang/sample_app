@@ -1,4 +1,7 @@
 <tr>
+	<td>
+		<%= gravatar_for micropost.user %>
+	</td>
 	<td class="micropost">
 		<span class="title"><%= micropost.title %></span>
 		<span class="content"><%= wrap(micropost.content) %></span>
