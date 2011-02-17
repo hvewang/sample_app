@@ -17,7 +17,7 @@
 			<%= render 'shared/stats' %>
 			<%= render 'shared/micropost_form' %>
 			
-			<% unless current_user.microposts.empty? %>
+			<% unless @microposts.empty? %>
 				<table class="microposts" summary="User microposts">
 					<%= render @microposts %>
 				</table>
