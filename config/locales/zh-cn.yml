@@ -16,7 +16,18 @@ zh-cn:
       signout: 退出
       profile: 我的帐户
       help: 帮助 
-  general: 
+  footer:
+    msg: 2011 新希望国际教育咨询有限公司.  版权所有.
+  label:
+    name: 姓名
+    email: 电子邮件
+    password: 密码
+    confirmation: 密码确认
+    signup: 注册
+    signin: 登录
+    signupnow: 赶快注册
+    newuser: 新用户
+  general:
     are_you_sure: Tem certeza?
     back: 返回
     cancel: Cancelar

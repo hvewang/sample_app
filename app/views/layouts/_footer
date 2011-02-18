@@ -1,6 +1,6 @@
 <footer>
 	<nav class="round">
-		Copyright 2011 New Hope International Education Consulting, LLC. All Rights Reserved.
+		&copy; <%= t('footer.msg') %>
 		<ul>
 			<li><%= link_to t('header.label.about'),  about_path %></li>
 			<li><%= link_to t('header.label.latestnews'), '#' %></li>

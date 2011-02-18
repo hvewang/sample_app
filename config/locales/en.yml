@@ -15,7 +15,18 @@ en:
       signin: Sign In
       signout: Sign Out
       profile: My Account
-      help: Help 
+      help: Help
+  footer:
+    msg: 2011 New Hope International Education Consulting, LLC. All Rights Reserved.
+  label:
+    name: Name
+    email: Email
+    password: Password
+    confirmation: Confirmation
+    signup: Sign up
+    signin: Sign in
+    signupnow: Sign up now!
+    newuser: New user 
   general:
     are_you_sure: Are you sure?
     back: Back
