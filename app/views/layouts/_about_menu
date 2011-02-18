@@ -1,0 +1,2 @@
+<%= link_to t('header.label.about'), about_path %>
+

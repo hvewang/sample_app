@@ -96,6 +96,7 @@ class UsersController < ApplicationController
 	private
 	
 	def set_layout
+		@curr_menu = "layouts/user_menu"
 		@curr_layout = "layouts/user_layout"
 	end
 	

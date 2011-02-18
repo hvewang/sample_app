@@ -1,11 +1,5 @@
 <table class="profile" summary="Profile information">
 	<tr>
-	    <% if !@curr_menu.nil? %>
-			<td class="sidebar round">
-				<%= render @curr_menu %>
-			</td>
-		<% end %>
-		
 		<td class="main">
 			<%= yield %>
 		</td>
