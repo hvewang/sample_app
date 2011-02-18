@@ -71,3 +71,6 @@ en:
     add: Add
     errors: 
       not_published_yet: is not published yet
+
+  pages:
+    about: This is a test msg
