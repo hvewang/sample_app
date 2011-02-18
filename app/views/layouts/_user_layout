@@ -1,0 +1,11 @@
+<table class="profile" summary="Profile information">
+	<tr>
+		<td class="sidebar round">
+			<%= render "layouts/user_menu" %>
+		</td>
+		
+		<td class="main">
+			<%= yield %>
+		</td>
+	</tr>
+</table>

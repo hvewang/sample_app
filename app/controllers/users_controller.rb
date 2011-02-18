@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_filter :authenticate, :except => [:new, :create]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user, :only => :destroy
-  
+  before_filter :set_layout, :except => [:new, :create]
+	
   def index
 	@title = "All users"
 	#@users = User.all
@@ -93,6 +94,10 @@ class UsersController < ApplicationController
 	end
 	
 	private
+	
+	def set_layout
+		@curr_layout = "layouts/user_layout"
+	end
 	
 	def correct_user
 		@user = User.find(params[:id])

@@ -1,13 +1,4 @@
-<table class="profile" summary="Profile information">
-	<tr>
-		<td class="sidebar round">
-			<%= link_to "My account", @user %><br />
-			<%= link_to "Profile", edit_user_path(current_user) %><br />
-			<%= link_to "All users", users_path %><br />
-			<%= link_to "My posts", mypost_path %>
-		</td>
-		
-		<td class="main">
+
 			<strong>Name</strong> <%= @user.name %><br />
 			<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
 			
@@ -24,6 +15,3 @@
 				</table>
 				<%= will_paginate @microposts %>
 			<% end %>
-		</td>
-	</tr>
-</table>

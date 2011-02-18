@@ -31,4 +31,8 @@ module ApplicationHelper
 		form.submit + " or " +
 			link_to(name, 'javascript:history.go(-1);', :class => 'cancel')
 	end
+	
+	def tt(labelname)
+
+	end
 end
