@@ -35,6 +35,11 @@ class PagesController < ApplicationController
 	@title = "Our Team"
   end
   
+  def whynewhope
+	@curr_menu = "layouts/about_menu"
+	@title = "About"
+  end
+  
   private
 	
 	def set_layout

@@ -30,6 +30,7 @@ SampleApp::Application.routes.draw do
 	match '/service', :to => 'pages#service'
 	match '/school', :to => 'pages#school'
 	match '/ourteam', :to => 'pages#ourteam'
+	match '/whynewhope', :to => 'pages#whynewhope'
 	
   # The priority is based upon order of creation:
   # first created -> highest priority.
