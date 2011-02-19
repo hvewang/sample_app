@@ -26,7 +26,18 @@ en:
     signup: Sign up
     signin: Sign in
     signupnow: Sign up now!
-    newuser: New user 
+    newuser: New user
+    service:
+      newhope: New Hope's services
+      applyforhs: Apply for High School
+      privatehs: Private day school
+      boardinghs: Boarding school
+      publichs: Public school
+      undergraduate: Undergraduate
+      msphd: Master & PhD
+      boardingfamily: Host family
+      wenshu: Documentation preparation
+      afterservice: After services
   general:
     are_you_sure: Are you sure?
     back: Back

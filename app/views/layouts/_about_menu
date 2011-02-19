@@ -1,2 +1,3 @@
-<%= link_to t('header.label.about'), about_path %>
-
+<div class="menu">
+	<%= link_to t('header.label.about'), about_path %>
+</div>

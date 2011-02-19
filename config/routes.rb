@@ -27,6 +27,10 @@ SampleApp::Application.routes.draw do
 	match '/signout', :to => 'sessions#destroy'
 	match '/mypost', :to => 'users#micropost'
 	
+	match '/service', :to => 'pages#service'
+	match '/school', :to => 'pages#school'
+	match '/ourteam', :to => 'pages#ourteam'
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

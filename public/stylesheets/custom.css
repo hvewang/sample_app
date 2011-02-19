@@ -54,6 +54,14 @@ nav {
 	padding-top: 1px;
 }
 
+div.menu {
+	font-size: 90%;
+	text-align: left;
+	/*background-color: #cff;*/
+	padding: 0 0.1em;
+	white-space: nowrap;
+	padding-top: 1px;
+}
 
 nav ul {
 	margin: 0;

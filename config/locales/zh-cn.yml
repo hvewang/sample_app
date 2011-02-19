@@ -27,6 +27,17 @@ zh-cn:
     signin: 登录
     signupnow: 赶快注册
     newuser: 新用户
+    service:
+      newhope: 新希望服务项目
+      applyforhs: 高中申请
+      privatehs: 走读私立高中
+      boardinghs: 寄宿高中
+      publichs: 公立高中
+      undergraduate: 本科申请
+      msphd: 研究生和博士生申请
+      boardingfamily: 安排寄宿家庭
+      wenshu: 文书写作
+      afterservice: 后续服务
   general:
     are_you_sure: Tem certeza?
     back: 返回

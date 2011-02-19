@@ -20,6 +20,21 @@ class PagesController < ApplicationController
 	@title = "Help"
   end
   
+  def service
+	@curr_menu = "layouts/service_menu"
+	@title = "Services"
+  end
+  
+  def school
+	@curr_menu = "layouts/school_menu"
+	@title = "School"
+  end
+  
+  def ourteam
+	@curr_menu = "layouts/ourteam_menu"
+	@title = "Our Team"
+  end
+  
   private
 	
 	def set_layout
