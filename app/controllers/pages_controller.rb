@@ -7,12 +7,12 @@ class PagesController < ApplicationController
 
   def contact
 	@curr_menu = "layouts/contact_menu"
-	@title = "Contact"
+	@title = "Contact New Hope"
   end
   
   def about
 	@curr_menu = "layouts/about_menu"
-	@title = "About"
+	@title = "About New Hope"
   end
 
   def help
@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   
   def school
 	@curr_menu = "layouts/school_menu"
-	@title = "School"
+	@title = "Schools"
   end
   
   def ourteam
@@ -37,7 +37,19 @@ class PagesController < ApplicationController
   
   def whynewhope
 	@curr_menu = "layouts/about_menu"
-	@title = "About"
+	@title = "Why New Hope"
+  end
+  
+  def news
+	@title = "News"
+  end
+  
+  def successcase
+	@title = "Success cases"
+  end
+  
+  def studentmsg
+	@title = "Student messages"
   end
   
   private
