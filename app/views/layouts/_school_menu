@@ -1,21 +1,12 @@
 <div class="menu">
 
-<%= link_to t('label.service.newhope'), service_path %> <br />
+<%= t('label.school.highschool') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.privatehs'), school_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.boardinghs'), school_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), school_path %> <br />
 
+<%= link_to t('label.school.college'), school_path %> <br />
 
-<%= t('label.service.applyforhs') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.privatehs'), service_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.boardinghs'), service_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), service_path %> <br />
-
-<%= link_to t('label.service.undergraduate'), service_path %> <br />
-
-<%= link_to t('label.service.msphd'), service_path %> <br />
-
-<%= link_to t('label.service.boardingfamily'), service_path %> <br />
-
-<%= link_to t('label.service.wenshu'), service_path %> <br />
-
-<%= link_to t('label.service.afterservice'), service_path %> <br />
+<%= link_to t('label.school.graduate'), school_path %> <br />
 
 </div>

@@ -40,6 +40,20 @@ zh-cn:
       afterservice: 后续服务
     company:
       whynewhope: 选择新希望的理由
+    school:
+      highschool: 高中
+      college: 本科大学
+      graduate: 研究生 & 博士生大学
+    ourteam:
+      newhope: 新希望精英团队
+      china:
+        china: 中国
+        xian: 西安
+      usa:
+        usa: 美国
+        chicago: 芝加哥
+      advisor: 海外高级留学顾问
+      legal: 高级法律顾问
   general:
     are_you_sure: Tem certeza?
     back: 返回
