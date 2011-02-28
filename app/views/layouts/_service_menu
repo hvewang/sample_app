@@ -8,11 +8,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.boardinghs'), service_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), service_path %> <br />
 
-<%= link_to t('label.service.undergraduate'), service_path %> <br />
 
-<%= link_to t('label.service.msphd'), service_path %> <br />
+<%= t('label.service.applyforcollege') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.undergraduate'), service_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.msphd'), service_path %> <br />
 
-<%= link_to t('label.service.boardingfamily'), service_path %> <br />
+<%= t('label.service.boardingfamily') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.requesthostfamily'), service_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.applyforhostfamily'), service_path %> <br />
 
 <%= link_to t('label.service.wenshu'), service_path %> <br />
 

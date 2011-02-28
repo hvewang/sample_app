@@ -4,18 +4,21 @@ zh-cn:
     label:
       home: 首页
       about: 公司介绍
-      latestnews: 留美最新资讯
+      latestnews: 最新资讯
       services: 服务项目
       schools: 合作学校
       successcase: 成功案例
-      studentmsg: 学生感言
+      testimonial: 感言
       contact: 联系我们
       ourteam: 精英团队
       signup: 注册
       signin: 登录
       signout: 退出
       profile: 我的帐户
-      help: 帮助 
+      help: 帮助
+      hostfamily: 寄宿家庭
+      highschool: 美国中学
+      university: 美国大学 
   footer:
     msg: 2011 新希望国际教育咨询有限公司.  版权所有.
   label:
@@ -29,21 +32,37 @@ zh-cn:
     newuser: 新用户
     service:
       newhope: 新希望服务项目
-      applyforhs: 高中申请
+      applyforhs: 美国高中申请
+      applyforcollege: 美国大学申请
       privatehs: 走读私立高中
-      boardinghs: 寄宿高中
+      boardinghs: 寄宿私立高中
       publichs: 公立高中
-      undergraduate: 本科申请
-      msphd: 研究生和博士生申请
-      boardingfamily: 安排寄宿家庭
+      undergraduate: 本科
+      msphd: 研究生和博士生
+      boardingfamily: 寄宿家庭
+      requesthostfamily: 提供寄宿家庭
+      applyforhostfamily: 寄宿家庭申请
       wenshu: 文书写作
       afterservice: 后续服务
     company:
       whynewhope: 选择新希望的理由
     school:
-      highschool: 高中
+      highschool: 美国高中
       college: 本科大学
       graduate: 研究生 & 博士生大学
+    highschool:
+      rank: 美国著名高中排名
+      schoolapplication:
+        schoolapplication: 高中申请
+        procedure: 申请程序
+        otherservice: 额外服务
+    college:
+      college: 美国大学
+      bachelor: 本科
+      msphd: 硕士/博士
+      rank: 大学排名
+      undergraduaterank: 本科
+      graduateschoolrank: 研究生
     ourteam:
       newhope: 新希望精英团队
       china:
@@ -54,6 +73,25 @@ zh-cn:
         chicago: 芝加哥
       advisor: 海外高级留学顾问
       legal: 高级法律顾问
+    testimonial:
+      parent: 家长感言
+      student: 学生感言
+      host: 寄宿家庭感言
+    hostfamily:
+      homestay:
+        homestay: 寄宿家庭
+        whatisahomestay: 什么是寄宿家庭
+        whynewhope: 为什么选择新希望
+        faq: 常见问题问答
+        photo: 学生和寄宿家庭照片
+      servicerequest:
+        servicerequest: 学生寄宿要求
+        form: 寄宿要求表格
+        availabehomestay: 现有寄宿家庭名单
+      host:
+        host: 申请寄宿家庭
+        qualification: 寄宿家庭的标准
+        applicationform: 寄宿家庭申请表格
   general:
     are_you_sure: Tem certeza?
     back: 返回

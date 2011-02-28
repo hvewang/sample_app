@@ -8,14 +8,17 @@ en:
       services: Services
       schools: Schools
       successcase: Success Cases
-      studentmsg: Student Testimonial
-      contact: Contact us
+      testimonial: Testimonials
+      contact: Contact Us
       ourteam: Our Team
       signup: Register
       signin: Sign In
       signout: Sign Out
       profile: My Account
       help: Help
+      hostfamily: Host Family
+      highschool: High School
+      university: Univeristy
   footer:
     msg: 2011 New Hope International Education Consulting, LLC. All Rights Reserved.
   label:
@@ -28,22 +31,38 @@ en:
     signupnow: Sign up now!
     newuser: New user
     service:
-      newhope: New Hope's services
-      applyforhs: Apply for High School
-      privatehs: Private day school
-      boardinghs: Boarding school
-      publichs: Public school
+      newhope: New Hope's Services
+      applyforhs: US High School
+      applyforcollege: US College
+      privatehs: Private Day School
+      boardinghs: Private Boarding School
+      publichs: Public School
       undergraduate: Undergraduate
       msphd: Master & PhD
-      boardingfamily: Host family
-      wenshu: Documentation preparation
-      afterservice: After services
+      boardingfamily: Host Family
+      requesthostfamily: Request Host Family
+      applyforhostfamily: Apply for Host Family
+      wenshu: Documentation Preparation
+      afterservice: Follow-up Services
     company:
       whynewhope: Why New Hope
     school:
-      highschool: High school
+      highschool: US High School
       college: College
       graduate: Graduate school
+    highschool:
+      rank: Top US High School Ranking
+      schoolapplication:
+        schoolapplication: High School Application
+        procedure: Application Procedures
+        otherservice: Additional Services
+    college:
+      college: US College & University
+      bachelor: Bachelor
+      msphd: Master & PhD
+      rank: University Ranking
+      undergraduaterank: Undergraduate
+      graduateschoolrank: Graduate School
     ourteam:
       newhope: New Hope Team
       china:
@@ -54,6 +73,25 @@ en:
         chicago: Chicago
       advisor: Senior overseas advisor
       legal: Senior legal advisor
+    testimonial:
+      parent: Parent Testimonials
+      student: Student Testimonials
+      host: Host Family Testimonials
+    hostfamily:
+      homestay:
+        homestay: Homestay
+        whatisahomestay: What is a Homestay
+        whynewhope: Why New Hope
+        faq: Frquently Asked Questions
+        photo: Homestay Photos
+      servicerequest:
+        servicerequest: Service Request
+        form: Service Request Form
+        availabehomestay: Available Host Families
+      host:
+        host: Host Family Application
+        qualification: Family Qualification
+        applicationform: Application Form
   general:
     are_you_sure: Are you sure?
     back: Back

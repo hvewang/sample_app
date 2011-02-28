@@ -1,4 +1,29 @@
 SampleApp::Application.routes.draw do
+  get "host_families/qualification"
+  get "host_families/applicationform"
+  get "host_families/whynewhope"
+  get "host_families/whatishomestay"
+  get "host_families/faq"
+  get "host_families/homestayphoto"
+  get "host_families/servicerequestform"
+  get "host_families/availablehomestay"
+
+  get "colleges/bachelor"
+  get "colleges/msphd"
+  get "colleges/undergraduaterank"
+  get "colleges/graduateschoolrank"
+
+  get "high_schools/privateday"
+  get "high_schools/privateboarding"
+  get "high_schools/public"
+  get "high_schools/rank"
+  get "high_schools/applicationprocedure"
+  get "high_schools/otherservice"
+
+  get "testimonials/parent"
+  get "testimonials/student"
+  get "testimonials/hostfamily"
+
   resources :sessions, :only => [:new, :create, :destroy]
 
   get "users/micropost"
@@ -24,7 +49,7 @@ SampleApp::Application.routes.draw do
 	match '/help', :to => 'pages#help'
 	match '/news', :to => 'pages#news'
 	match '/successcase', :to => 'pages#successcase'
-	match 'studentmsg', :to=> 'pages#studentmsg'
+	match 'testimonial', :to=> 'testimonials#student'
 	
 	match '/signup', :to => 'users#new'
 	match '/signin', :to => 'sessions#new'
@@ -32,7 +57,6 @@ SampleApp::Application.routes.draw do
 	match '/mypost', :to => 'users#micropost'
 	
 	match '/service', :to => 'pages#service'
-	match '/school', :to => 'pages#school'
 	match '/ourteam', :to => 'pages#ourteam'
 	match '/whynewhope', :to => 'pages#whynewhope'
 	

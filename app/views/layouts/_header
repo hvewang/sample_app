@@ -6,9 +6,13 @@
 			<li><%= link_to t('header.label.about'), about_path %></li>
 			<li><%= link_to t('header.label.latestnews'), news_path %></li>
 			<li><%= link_to t('header.label.services'), service_path %></li>
-			<li><%= link_to t('header.label.schools'), school_path %></li>
+			
+			<li><%= link_to t('header.label.highschool'), high_schools_privateday_path %></li>
+			<li><%= link_to t('header.label.university'), colleges_bachelor_path %></li>
+			<li><%= link_to t('header.label.hostfamily'), host_families_whatishomestay_path %></li>
+			
 			<li><%= link_to t('header.label.successcase'), successcase_path %></li>
-			<li><%= link_to t('header.label.studentmsg'), studentmsg_path %></li>
+			<li><%= link_to t('header.label.testimonial'), testimonial_path %></li>
 			<li><%= link_to t('header.label.ourteam'), ourteam_path %></li>
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
 			
@@ -21,8 +25,9 @@
 				<li><%= link_to t('header.label.signin'), signin_path %></li>
 			<% end %>
 			
-			<li><%= link_to t('header.label.help'), help_path %></li>
 			<!--
+			<li><%= link_to t('header.label.help'), help_path %></li>
+			
 			<li><%= link_to langImg, '#' %></li>
 			-->
 			<li><%= language_selector %></li>

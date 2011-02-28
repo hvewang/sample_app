@@ -1,0 +1,5 @@
+<div class="menu">
+	<%= link_to t('label.testimonial.student'), testimonials_student_path %><br/>
+	<%= link_to t('label.testimonial.parent'), testimonials_parent_path %><br \>
+	<%= link_to t('label.testimonial.host'), testimonials_hostfamily_path %><br \>
+</div>

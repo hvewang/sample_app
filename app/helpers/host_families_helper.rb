@@ -1,0 +1,2 @@
+module HostFamiliesHelper
+end

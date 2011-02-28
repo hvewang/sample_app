@@ -25,11 +25,6 @@ class PagesController < ApplicationController
 	@title = "Services"
   end
   
-  def school
-	@curr_menu = "layouts/school_menu"
-	@title = "Schools"
-  end
-  
   def ourteam
 	@curr_menu = "layouts/ourteam_menu"
 	@title = "Our Team"
@@ -46,10 +41,6 @@ class PagesController < ApplicationController
   
   def successcase
 	@title = "Success cases"
-  end
-  
-  def studentmsg
-	@title = "Student messages"
   end
   
   private

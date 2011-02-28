@@ -1,0 +1,11 @@
+<div class="menu">
+
+<%= t('label.college.college') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.bachelor'), colleges_bachelor_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.msphd'), colleges_msphd_path %> <br />
+
+<%= t('label.college.rank') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.undergraduaterank'), colleges_undergraduaterank_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.graduateschoolrank'), colleges_graduateschoolrank_path %> <br />
+
+</div>

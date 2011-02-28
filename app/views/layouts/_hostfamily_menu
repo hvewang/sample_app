@@ -1,0 +1,17 @@
+<div class="menu">
+
+<%= t('label.hostfamily.homestay.homestay') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.whatisahomestay'), host_families_whatishomestay_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.whynewhope'), host_families_whynewhope_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.faq'), host_families_faq_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.photo'), host_families_homestayphoto_path %> <br />
+
+<%= t('label.hostfamily.servicerequest.servicerequest') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.servicerequest.form'), host_families_servicerequestform_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.servicerequest.availabehomestay'), host_families_availablehomestay_path %> <br />
+
+<%= t('label.hostfamily.host.host') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.qualification'), host_families_qualification_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.applicationform'), host_families_applicationform_path %> <br />
+
+</div>
