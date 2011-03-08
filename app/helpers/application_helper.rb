@@ -32,7 +32,11 @@ module ApplicationHelper
 			link_to(name, 'javascript:history.go(-1);', :class => 'cancel')
 	end
 	
-	def tt(labelname)
-
+	def tt(transobj)
+		if I18n.locale == :en
+			raw(transobj.en_txt)
+		else
+			raw(transobj.zw_txt)
+		end
 	end
 end

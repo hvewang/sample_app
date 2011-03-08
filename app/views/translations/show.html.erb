@@ -1,0 +1,42 @@
+<%   @translation.force_utf %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nm:</b>
+  <%= @translation.nm %>
+</p>
+
+<p>
+  <b>Controller nm:</b>
+  <%= @translation.controller_nm %>
+</p>
+
+<p>
+  <b>Model nm:</b>
+  <%= @translation.model_nm %>
+</p>
+
+<p>
+  <b>Action nm:</b>
+  <%= @translation.action_nm %>
+</p>
+
+<p>
+  <b>Func:</b>
+  <%= @translation.func %>
+</p>
+
+<p>
+  <b>En txt:</b>
+  <%= @translation.en_txt %>
+</p>
+
+<p>
+  <b>Cn txt:</b>
+  <%= @translation.zw_txt %>
+</p>
+
+
+<%= link_to 'Edit', edit_translation_path(@translation) %> |
+<%= link_to 'Back', translations_path %>

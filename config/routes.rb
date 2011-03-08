@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :translations
+
   get "host_families/qualification"
   get "host_families/applicationform"
   get "host_families/whynewhope"

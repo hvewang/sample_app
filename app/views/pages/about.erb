@@ -1,5 +1,7 @@
 <h1><%= t('header.label.about') %></h1>
 
+<%   @translation.force_utf %>
+
 <p>
-	<%= raw(t('pages.about.newhope')) %>
+	<%= tt(@translation) %>
 </p>

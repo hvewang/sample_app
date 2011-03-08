@@ -13,6 +13,7 @@ class PagesController < ApplicationController
   def about
 	@curr_menu = "layouts/about_menu"
 	@title = "About New Hope"
+	@translation = Translation.find_by_nm('pages.about.newhope')
   end
 
   def help

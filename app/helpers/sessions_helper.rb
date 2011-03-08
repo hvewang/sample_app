@@ -43,6 +43,10 @@ module SessionsHelper
 		current_user.user_type_id == 0 unless current_user.nil?
 	end
 	
+	def admin_user
+		redirect_to(root_path) unless admin_user?
+	end
+	
   private
 	def user_from_remember_token
 		User.authenticate_with_salt(*remember_token)

@@ -1,6 +1,9 @@
 <div class="menu">
-	<%= link_to "My account", @user %><br />
+	<%= link_to "My account", current_user %><br />
 	<%= link_to "Profile", edit_user_path(current_user) %><br />
 	<%= link_to "All users", users_path %><br />
-	<%= link_to "My posts", mypost_path %>
+	<%= link_to "My posts", mypost_path %><br />
+	<% if admin_user? %>
+		<%= link_to "Translations", translations_path %><br />
+	<% end %>
 </div>
