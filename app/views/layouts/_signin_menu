@@ -1,0 +1,4 @@
+<div class="menu">
+	<%= link_to t('header.label.signin'), signin_path %><br>
+	<%= link_to t('header.label.signup'), signup_path %>
+</div>

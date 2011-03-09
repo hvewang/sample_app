@@ -30,6 +30,9 @@ en:
     signin: Sign in
     signupnow: Sign up now!
     newuser: New user
+    cellphone: Cell Phone
+    homephone: Home Phone
+    phoneformat: Country Code-Area Code-Phone Number
     service:
       newhope: New Hope's Services
       applyforhs: US High School
@@ -67,7 +70,7 @@ en:
       newhope: New Hope Team
       china:
         china: China
-        xian: Xian
+        xian: Xi'an
       usa:
         usa: USA
         chicago: Chicago

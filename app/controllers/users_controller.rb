@@ -16,6 +16,9 @@ class UsersController < ApplicationController
 	
 	@title = "Sign up"
 	@user = User.new
+	
+	@curr_menu = "layouts/signup_menu"
+	@curr_layout = "layouts/user_layout"
   end
 
 	def show

@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
 	if signed_in?
 		redirect_to current_user
 	end
+	
+	@curr_menu = "layouts/signin_menu"
+	@curr_layout = "layouts/user_layout"
   end
   
   def create

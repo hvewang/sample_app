@@ -30,6 +30,9 @@ zh-cn:
     signin: 登录
     signupnow: 赶快注册
     newuser: 新用户
+    cellphone: 手机号码
+    homephone: 座机号码
+    phoneformat: 国家代码-区号-电话号码
     service:
       newhope: 新希望服务项目
       applyforhs: 美国高中申请
