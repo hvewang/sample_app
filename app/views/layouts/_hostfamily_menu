@@ -7,7 +7,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.photo'), host_families_homestayphoto_path %> <br />
 
 <%= t('label.hostfamily.servicerequest.servicerequest') %> <br />
+<!--
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.servicerequest.form'), host_families_servicerequestform_path %> <br />
+-->
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.servicerequest.form'), new_service_request_path %> <br />
+
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.servicerequest.availabehomestay'), host_families_availablehomestay_path %> <br />
 
 <%= t('label.hostfamily.host.host') %> <br />

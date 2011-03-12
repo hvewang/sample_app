@@ -1,14 +1,19 @@
 
-			<strong>Name</strong> <%= @user.name %><br />
+			<strong>Welcome </strong> <%= @user.name %><br />
+			<!--
 			<strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+			-->
 			
 			<h1>
 				<%= gravatar_for @user %>
 				<%= @user.name %>
 			</h1>
 			
-			<%= render 'shared/stats' %>
-			<%= render 'follow_form' if signed_in? %>
+			<% if admin_user? %>
+				<%= render 'shared/stats' %>
+				<%= render 'follow_form' if signed_in? %>
+			<% end %>
+			
 			<% unless @microposts.empty? %>
 				<table class="microposts" summary="User microposts">
 					<%= render @microposts %>

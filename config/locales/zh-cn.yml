@@ -89,8 +89,44 @@ zh-cn:
         photo: 学生和寄宿家庭照片
       servicerequest:
         servicerequest: 学生寄宿要求
-        form: 寄宿要求表格
+        form: 服务要求表格
         availabehomestay: 现有寄宿家庭名单
+        label:
+          studentname: 学生姓名
+          yearofbirth: 出生年
+          gender: 性别
+          male: 男
+          female: 女
+          parentname: 家长/监服人姓名
+          relationship: 与学生的关系
+          street: 街道
+          city: 城市
+          country: 国家
+          nationality: 国籍
+          cellphone: 手机
+          homephone: 家庭电话
+          email: 电子邮件
+          servicegrade: 申请年纪
+          servicetype: 所需服务类别
+          schoolapplication: 申请学校
+          homestay: .安排寄宿家庭
+          schoolapplicationandhomestay: 申请学校并安排寄宿家庭
+          localsettlement: 当地安置
+          otherservicetype: 其它
+          servicecity: 城市
+          servicestate: 州
+          servicedetail: 所需服务的细节
+          howtoknownh: 你怎么知道新希望的
+          wordofmouth: 朋友熟人推荐
+          google: 谷歌
+          baidu: 百度
+          yahoo: 雅虎
+          sina: 新浪
+          msn: MSN
+          onlinesite: 其他网站
+          newspaper: 报纸
+          otherhowtoknownh: 其他途径
+          submit: 递交服务申请
       host:
         host: 申请寄宿家庭
         qualification: 寄宿家庭的标准

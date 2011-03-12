@@ -1,4 +1,8 @@
 SampleApp::Application.routes.draw do
+  resources :service_requests
+
+  resources :service_grades
+
   resources :translations
 
   get "host_families/qualification"

@@ -8,10 +8,13 @@ class HostFamiliesController < ApplicationController
   end
 
   def whynewhope
+	@title = "Why New Hope"
+	@translation = Translation.find_by_nm('hostfamily.whynewhope')
   end
 
   def whatishomestay
 	@title = "What ia a Homestay"
+	@translation = Translation.find_by_nm('hostfamily.whatishostfamily')
   end
 
   def faq

@@ -1,10 +1,14 @@
 <h1>
 	<%= gravatar_for current_user %>
-	<%= current_user.name %>
+	<%= current_user.name %>'s post
 </h1>
-<strong>Microposts</strong> <%= current_user.microposts.count %>
-<br />
-<%= render 'shared/stats' %>
+<strong>Total Microposts</strong> <%= current_user.microposts.count %>
+<br /><br />
+
+<% if admin_user? %>
+	<%= render 'shared/stats' %>
+<% end %>
+
 <%= render 'shared/micropost_form' %>
 
 <% unless @microposts.empty? %>

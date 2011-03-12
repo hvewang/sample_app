@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<% @service_grade.force_utf %>
+
+<p>
+  <b>Grade:</b>
+  <%= @service_grade.grade %>
+</p>
+
+<p>
+  <b>En label:</b>
+  <%= @service_grade.en_label %>
+</p>
+
+<p>
+  <b>Cn label:</b>
+  <%= @service_grade.cn_label %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_grade_path(@service_grade) %> |
+<%= link_to 'Back', service_grades_path %>

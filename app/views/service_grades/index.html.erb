@@ -1,0 +1,28 @@
+<h1>Listing service_grades</h1>
+
+<table>
+  <tr>
+    <th>Grade</th>
+    <th>En label</th>
+    <th>Cn label</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @service_grades.each do |service_grade| %>
+  <%   service_grade.force_utf %>
+  <tr>
+    <td><%= service_grade.grade %></td>
+    <td><%= service_grade.en_label %></td>
+    <td><%= service_grade.cn_label %></td>
+    <td><%= link_to 'Show', service_grade %></td>
+    <td><%= link_to 'Edit', edit_service_grade_path(service_grade) %></td>
+    <td><%= link_to 'Destroy', service_grade, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Service grade', new_service_grade_path %>

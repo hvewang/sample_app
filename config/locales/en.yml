@@ -91,6 +91,42 @@ en:
         servicerequest: Service Request
         form: Service Request Form
         availabehomestay: Available Host Families
+        label:
+          studentname: Student name
+          yearofbirth: Year of birth
+          gender: Gender
+          male: Male
+          female: Female
+          parentname: Parent name
+          relationship: Relationship
+          street: Street
+          city: City
+          country: Country
+          nationality: Nationality
+          cellphone: Cell phone
+          homephone: Home phone
+          email: Email
+          servicegrade: Service grade
+          servicetype: Service Type
+          schoolapplication: School application
+          homestay: Homestay
+          schoolapplicationandhomestay: School application & Homestay
+          localsettlement: Local settlement
+          otherservicetype: Other
+          servicecity: Service city
+          servicestate: Service state
+          servicedetail: Service detail
+          howtoknownh: How did you know New Hope
+          wordofmouth: Word of mouth
+          google: Google
+          baidu: Baidu
+          yahoo: Yahoo
+          sina: Sina
+          msn: MSN
+          onlinesite: Online sites
+          newspaper: Newspaper
+          otherhowtoknownh: Others
+          submit: Submit service request
       host:
         host: Host Family Application
         qualification: Family Qualification

@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110210222221
+# Schema version: 20110309201705
 #
 # Table name: users
 #
@@ -11,13 +11,15 @@
 #  encrypted_password :string(255)
 #  salt               :string(255)
 #  user_type_id       :integer(4)      default(3)
+#  cellphone          :string(255)
+#  homephone          :string(255)
 #
 
 require 'digest'
 
 class User < ActiveRecord::Base
 	attr_accessor :password
-	attr_accessible :name, :email, :password, :password_confirmation
+	attr_accessible :name, :email, :password, :password_confirmation, :cellphone, :homephone
 	
 	has_many :microposts, :dependent => :destroy
 	has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
@@ -33,9 +35,11 @@ class User < ActiveRecord::Base
 	validates :email, :presence => true, :format => { :with => email_regex }, :uniqueness => { :case_sensitive => false }
 	validates :password, :presence => true, 
 					:confirmation => true,
-					:length => { :minimum =>6, :maximum => 40 }
+					:length => { :minimum =>6, :maximum => 40 } 
 		
-
+	validates :cellphone, :presence => true, :length => { :maximum => 20 }
+	validates :homephone, :presence => true, :length => { :maximum => 20 }
+	
 	before_save :encrypt_password
 	
 	# Return true if the user's password matches the submitted password.

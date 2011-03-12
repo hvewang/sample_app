@@ -1,0 +1,101 @@
+<%= form_for(@service_request) do |f| %>
+  <% if @service_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_request.errors.count, "error") %> prohibited this service_request from being saved:</h2>
+
+      <ul>
+      <% @service_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :student_name %><br />
+    <%= f.text_field :student_name %>
+  </div>
+  <div class="field">
+    <%= f.label :year_of_birth %><br />
+    <%= f.text_field :year_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_name %><br />
+    <%= f.text_field :parent_name %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship %><br />
+    <%= f.text_field :relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :nationality %><br />
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field">
+    <%= f.label :cell_phone %><br />
+    <%= f.text_field :cell_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :home_phone %><br />
+    <%= f.text_field :home_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :service_grade %><br />
+    <%= f.text_field :service_grade %>
+  </div>
+  <div class="field">
+    <%= f.label :service_type %><br />
+    <%= f.text_field :service_type %>
+  </div>
+  <div class="field">
+    <%= f.label :service_city %><br />
+    <%= f.text_field :service_city %>
+  </div>
+  <div class="field">
+    <%= f.label :service_state %><br />
+    <%= f.text_field :service_state %>
+  </div>
+  <div class="field">
+    <%= f.label :service_detail %><br />
+    <%= f.text_area :service_detail %>
+  </div>
+  <div class="field">
+    <%= f.label :way_to_know_nh %><br />
+    <%= f.text_field :way_to_know_nh %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_by %><br />
+    <%= f.text_field :updated_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

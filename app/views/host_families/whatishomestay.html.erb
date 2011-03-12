@@ -1,2 +1,7 @@
-<h1>HostFamilies#whatishomestay</h1>
-<p>Find me in app/views/host_families/whatishomestay.html.erb</p>
+<h1><%= t('label.hostfamily.homestay.whatisahomestay') %>?</h1>
+
+<% @translation.force_utf %>
+
+<p>
+	<%= tt(@translation) %>
+</p>

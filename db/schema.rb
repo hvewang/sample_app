@@ -10,12 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110228201701) do
+ActiveRecord::Schema.define(:version => 20110312230756) do
 
 # Could not dump table "microposts" because of following Mysql2::Error
 #   Invalid date: BTREE
 
 # Could not dump table "relationships" because of following Mysql2::Error
+#   Invalid date: BTREE
+
+# Could not dump table "service_grades" because of following Mysql2::Error
+#   Invalid date: BTREE
+
+# Could not dump table "service_requests" because of following Mysql2::Error
 #   Invalid date: BTREE
 
 # Could not dump table "translations" because of following Mysql2::Error

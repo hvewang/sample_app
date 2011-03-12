@@ -22,8 +22,8 @@
     <td><%= translation.model_nm %></td>
     <td><%= translation.action_nm %></td>
     <td><%= translation.func %></td>
-    <td><%= translation.zw_txt %></td>
-    <td><%= translation.en_txt %></td>
+    <td><%= truncate(translation.zw_txt) %></td>
+    <td><%= truncate(translation.en_txt) %></td>
     <td><%= link_to 'Show', translation %></td>
     <td><%= link_to 'Edit', edit_translation_path(translation) %></td>
     <td><%= link_to 'Destroy', translation, :confirm => 'Are you sure?', :method => :delete %></td>

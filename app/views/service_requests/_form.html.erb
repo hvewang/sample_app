@@ -1,0 +1,310 @@
+<%= form_for(@service_request) do |f| %>
+  <% if @service_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_request.errors.count, "error") %> prohibited this service_request from being saved:</h2>
+
+      <ul>
+      <% @service_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <table class="nhtabclass">
+  <tr>
+  <td colspn=4>
+  </td>
+  </tr>
+  
+  <tr>
+    <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.studentname') %>:
+	</td>
+	<td colspan=3>
+    <%= f.text_field :student_name, :size=>30 %>
+  </td>
+  </tr>
+
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.yearofbirth') %>:
+  </td>
+  <td>
+    <%= f.text_field :year_of_birth, :size=>20 %>
+	</td>
+	<td class="nhtabtdclassright">
+	<%= t('label.hostfamily.servicerequest.label.gender') %>:
+	</td>
+	<td>
+    <%= f.radio_button("gender", "male") %><%= t('label.hostfamily.servicerequest.label.male') %>
+	<%= f.radio_button("gender", "female") %><%= t('label.hostfamily.servicerequest.label.female') %>
+	</td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.parentname') %>:
+</td>
+<td>
+    <%= f.text_field :parent_name %>
+  </td>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.relationship') %>:
+	</td>
+	<td>
+    <%= f.text_field :relationship, :size=>10  %>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.street') %>:
+	</td>
+	<td colspan=3>
+    <%= f.text_field :street, :size=>70  %>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.city') %>:
+	</td>
+	<td>
+    <%= f.text_field :city, :size=>30  %>
+  </td>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.country') %>:
+	</td>
+	<td>
+    <%= f.text_field :country, :size=>10  %>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.nationality') %>:
+	</td>
+	<td colspan=3>
+    <%= f.text_field :nationality, :size=>10  %>
+	</td>
+	</tr>
+	
+  <tr>
+  <td class="nhtabtdclassright">
+  
+    <%= t('label.hostfamily.servicerequest.label.cellphone') %>:
+	</td>
+	<td>
+    <%= f.text_field :cell_phone, :size=>20  %>
+  </td>
+
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.homephone') %>:
+	</td>
+	<td>
+    <%= f.text_field :home_phone, :size=>20  %>
+  </td>
+
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+  
+    <%= t('label.hostfamily.servicerequest.label.email') %>:
+	</td>
+	<td colspan=3>
+    <%= f.text_field :email, :size=>50  %>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+  
+    <%= t('label.hostfamily.servicerequest.label.servicegrade') %>:
+	</td>
+	<td>
+	<% @servicegrades.each do |servicegrade| %>
+		<% servicegrade.force_utf %>
+	<% end %>
+    <% if session[:locale] == "en" %>
+		<% cur_label = "en_label" %>
+	<% else %>
+		<% cur_label = "cn_label" %>
+	<% end %>	
+    <%= select_tag "service_request[service_grade]", options_from_collection_for_select(@servicegrades, "grade", "#{cur_label}") %>
+  </td>
+  </tr>
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.servicetype') %>:
+	</td>
+	<td colspan=3>
+	<%= f.radio_button("service_type", "School Application") %><%= t('label.hostfamily.servicerequest.label.schoolapplication') %>
+	<%= f.radio_button("service_type", "Homestay") %><%= t('label.hostfamily.servicerequest.label.homestay') %>
+	<%= f.radio_button("service_type", "School Application and Homestay") %><%= t('label.hostfamily.servicerequest.label.schoolapplicationandhomestay') %>
+	<%= f.radio_button("service_type", "Other") %><%= t('label.hostfamily.servicerequest.label.localsettlement') %>
+	<%= f.radio_button("service_type", "Other") %><%= t('label.hostfamily.servicerequest.label.otherservicetype') %>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+  
+    <%= t('label.hostfamily.servicerequest.label.servicecity') %>:
+	</td>
+	<td>
+    <%= f.text_field :service_city, :size=>30  %>
+  </td>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.servicestate') %>:
+	</td>
+	<td>
+    <select id="service_request[service_state]" name="service_request[service_state]">
+		<option value="">Select a state</option>				  
+                <option value="AB">AB</option>
+	
+				<option value="AK">AK</option>
+                <option value="AL">AL</option>
+                <option value="AR">AR</option>
+                <option value="AZ">AZ</option>
+                
+                <option value="BC">BC</option>
+				
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+				<option value="DC">DC</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="IA">IA</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="MA">MA</option>
+				
+                <option value="MB">MB</option>	
+			
+                <option value="MD">MD</option>
+                <option value="ME">ME</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MO">MO</option>
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+				
+                <option value="NB">NB</option>	
+			
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="NE">NE</option>	
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+				
+				<option value="NL">NL</option>
+				
+                <option value="NM">NM</option>
+				
+                <option value="NS">NS</option>				
+                <option value="NT">NT</option>
+				<option value="NU">NU</option>	
+			
+                <option value="NV">NV</option>
+                <option value="NY">NY</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+				
+                <option value="ON">ON</option>
+				
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+				
+                <option value="PE">PE</option>				
+                <option value="QC">QC</option>
+				
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+				
+                <option value="SK">SK</option>
+				
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VA">VA</option>
+                <option value="VT">VT</option>
+                <option value="WA">WA</option>
+                <option value="WI">WI</option>
+                <option value="WV">WV</option>
+                <option value="WY">WY</option>
+				
+                <option value="YT">YT</option>	
+	</select>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.servicedetail') %>:
+	</td>
+	<td colspan=3>
+    <%= f.text_area :service_detail, :cols=>80, :rows=>10 %>
+  </td>
+  </tr>
+  
+  <tr>
+  <td class="nhtabtdclassright">
+    <%= t('label.hostfamily.servicerequest.label.howtoknownh') %>:
+	</td>
+	<td colspan=3>
+	<%= f.radio_button("way_to_know_nh", "Word of mouth") %><%= t('label.hostfamily.servicerequest.label.wordofmouth') %>
+	<%= f.radio_button("way_to_know_nh", "Google") %><%= t('label.hostfamily.servicerequest.label.google') %>
+	<%= f.radio_button("way_to_know_nh", "Baidu") %><%= t('label.hostfamily.servicerequest.label.baidu') %>
+	<%= f.radio_button("way_to_know_nh", "Yahoo") %><%= t('label.hostfamily.servicerequest.label.yahoo') %>
+	<%= f.radio_button("way_to_know_nh", "Sina") %><%= t('label.hostfamily.servicerequest.label.sina') %>
+	<%= f.radio_button("way_to_know_nh", "MSN") %><%= t('label.hostfamily.servicerequest.label.msn') %>
+	<br>
+	<%= f.radio_button("way_to_know_nh", "Online") %><%= t('label.hostfamily.servicerequest.label.onlinesite') %>
+	<%= f.radio_button("way_to_know_nh", "Newspaper") %><%= t('label.hostfamily.servicerequest.label.newspaper') %>
+	<%= f.radio_button("way_to_know_nh", "Others") %><%= t('label.hostfamily.servicerequest.label.otherhowtoknownh') %>
+  </td>
+  </tr>
+  
+  <!--
+  <tr>
+  <td colspn=4>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_by %><br />
+    <%= f.text_field :updated_by %>
+  </div>
+  </td>
+  </tr>
+  -->
+  
+  <tr>
+  <td colspan=4>
+  </td>
+  </tr>
+  
+  <tr>
+  <td></td>
+  <td colspan=3>
+    <%= f.submit t('label.hostfamily.servicerequest.label.submit') %>
+  </td>
+  </tr>
+  </table>
+<% end %>

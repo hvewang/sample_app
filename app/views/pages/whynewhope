@@ -1,6 +1,6 @@
 <h1><%= t('label.company.whynewhope') %></h1>
 
-<%   @translation.force_utf %>
+<% @translation.force_utf %>
 
 <p>
 	<%= tt(@translation) %>

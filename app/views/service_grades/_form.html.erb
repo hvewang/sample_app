@@ -1,0 +1,30 @@
+<%= form_for(@service_grade) do |f| %>
+  <%  @service_grade.force_utf %>
+  <% if @service_grade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@service_grade.errors.count, "error") %> prohibited this service_grade from being saved:</h2>
+
+      <ul>
+      <% @service_grade.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :grade %><br />
+    <%= f.text_field :grade %>
+  </div>
+  <div class="field">
+    <%= f.label :en_label %><br />
+    <%= f.text_field :en_label %>
+  </div>
+  <div class="field">
+    <%= f.label :cn_label %><br />
+    <%= f.text_field :cn_label %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
