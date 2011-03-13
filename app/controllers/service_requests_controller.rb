@@ -5,6 +5,9 @@ class ServiceRequestsController < ApplicationController
   # GET /service_requests.xml
   def index
     @service_requests = ServiceRequest.all
+	@curr_menu = "layouts/user_menu"
+	@curr_layout = "layouts/user_layout"
+	
     #@service_requests = ServiceRequest.find_by_sql("select id, student_name, year_of_birth, gender, 
 	#parent_name, relationship, street, city, country, nationality, cell_phone, email, service_grade, service_type, service_city, 
 	#service_state, service_detail, way_to_know_nh, comments, status, updated_by, home_phone from service_requests")
