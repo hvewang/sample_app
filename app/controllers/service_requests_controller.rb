@@ -53,6 +53,7 @@ class ServiceRequestsController < ApplicationController
     @curr_menu = "layouts/user_menu"
 	@curr_layout = "layouts/user_layout"
     @service_request = ServiceRequest.find(params[:id])
+	@servicegrades = ServiceGrade.all
   end
 
   # POST /service_requests

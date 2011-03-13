@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :host_family_infos
+
   resources :service_requests
 
   resources :service_grades

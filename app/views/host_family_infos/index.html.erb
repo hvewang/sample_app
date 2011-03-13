@@ -1,0 +1,122 @@
+<h1>Listing host_family_infos</h1>
+
+<table>
+  <tr>
+    <th>F nm</th>
+    <th>L nm</th>
+    <th>Sex</th>
+    <th>Dob</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Homephone</th>
+    <th>Cellphone</th>
+    <th>Email</th>
+    <th>Ethnicity</th>
+    <th>Legal status</th>
+    <th>Education</th>
+    <th>Religion</th>
+    <th>Occupation</th>
+    <th>English level</th>
+    <th>Primary language</th>
+    <th>Second language</th>
+    <th>Homestay experience</th>
+    <th>Student sex</th>
+    <th>Student group</th>
+    <th>Marrital status</th>
+    <th>S f nm</th>
+    <th>S l nm</th>
+    <th>S sex</th>
+    <th>S dob</th>
+    <th>S ethnicity</th>
+    <th>S legal status</th>
+    <th>S education</th>
+    <th>S final school</th>
+    <th>Final school</th>
+    <th>S religion</th>
+    <th>S occupation</th>
+    <th>S english level</th>
+    <th>S primary language</th>
+    <th>S second language</th>
+    <th>Number of kids</th>
+    <th>Kids detail</th>
+    <th>House ownership</th>
+    <th>House type</th>
+    <th>Num of bedroom</th>
+    <th>Num of bathroom</th>
+    <th>Num of car</th>
+    <th>Num of pet</th>
+    <th>Pet detail</th>
+    <th>Avail room</th>
+    <th>Ride avail</th>
+    <th>Comment</th>
+    <th>Way to know nh</th>
+    <th>Ind confirm</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @host_family_infos.each do |host_family_info| %>
+  <tr>
+    <td><%= host_family_info.f_nm %></td>
+    <td><%= host_family_info.l_nm %></td>
+    <td><%= host_family_info.sex %></td>
+    <td><%= host_family_info.dob %></td>
+    <td><%= host_family_info.street %></td>
+    <td><%= host_family_info.city %></td>
+    <td><%= host_family_info.state %></td>
+    <td><%= host_family_info.zip %></td>
+    <td><%= host_family_info.homephone %></td>
+    <td><%= host_family_info.cellphone %></td>
+    <td><%= host_family_info.email %></td>
+    <td><%= host_family_info.ethnicity %></td>
+    <td><%= host_family_info.legal_status %></td>
+    <td><%= host_family_info.education %></td>
+    <td><%= host_family_info.religion %></td>
+    <td><%= host_family_info.occupation %></td>
+    <td><%= host_family_info.english_level %></td>
+    <td><%= host_family_info.primary_language %></td>
+    <td><%= host_family_info.second_language %></td>
+    <td><%= host_family_info.homestay_experience %></td>
+    <td><%= host_family_info.student_sex %></td>
+    <td><%= host_family_info.student_group %></td>
+    <td><%= host_family_info.marrital_status %></td>
+    <td><%= host_family_info.s_f_nm %></td>
+    <td><%= host_family_info.s_l_nm %></td>
+    <td><%= host_family_info.s_sex %></td>
+    <td><%= host_family_info.s_dob %></td>
+    <td><%= host_family_info.s_ethnicity %></td>
+    <td><%= host_family_info.s_legal_status %></td>
+    <td><%= host_family_info.s_education %></td>
+    <td><%= host_family_info.s_final_school %></td>
+    <td><%= host_family_info.final_school %></td>
+    <td><%= host_family_info.s_religion %></td>
+    <td><%= host_family_info.s_occupation %></td>
+    <td><%= host_family_info.s_english_level %></td>
+    <td><%= host_family_info.s_primary_language %></td>
+    <td><%= host_family_info.s_second_language %></td>
+    <td><%= host_family_info.number_of_kids %></td>
+    <td><%= host_family_info.kids_detail %></td>
+    <td><%= host_family_info.house_ownership %></td>
+    <td><%= host_family_info.house_type %></td>
+    <td><%= host_family_info.num_of_bedroom %></td>
+    <td><%= host_family_info.num_of_bathroom %></td>
+    <td><%= host_family_info.num_of_car %></td>
+    <td><%= host_family_info.num_of_pet %></td>
+    <td><%= host_family_info.pet_detail %></td>
+    <td><%= host_family_info.avail_room %></td>
+    <td><%= host_family_info.ride_avail %></td>
+    <td><%= host_family_info.comment %></td>
+    <td><%= host_family_info.way_to_know_nh %></td>
+    <td><%= host_family_info.ind_confirm %></td>
+    <td><%= link_to 'Show', host_family_info %></td>
+    <td><%= link_to 'Edit', edit_host_family_info_path(host_family_info) %></td>
+    <td><%= link_to 'Destroy', host_family_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

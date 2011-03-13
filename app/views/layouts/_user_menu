@@ -9,5 +9,6 @@
 		<%= link_to "Translations", translations_path %><br />
 		<%= link_to "Service Grade", service_grades_path %><br />
 		<%= link_to "Service Request", service_requests_path %><br />
+		<%= link_to "Host Family Request", host_family_infos_path %><br />
 	<% end %>
 </div>

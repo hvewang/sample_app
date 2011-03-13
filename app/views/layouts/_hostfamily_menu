@@ -16,6 +16,6 @@
 
 <%= t('label.hostfamily.host.host') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.qualification'), host_families_qualification_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.applicationform'), host_families_applicationform_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.applicationform'), new_host_family_info_path %> <br />
 
 </div>
