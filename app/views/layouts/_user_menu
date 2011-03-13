@@ -8,5 +8,6 @@
 	<% if admin_user? %>
 		<%= link_to "Translations", translations_path %><br />
 		<%= link_to "Service Grade", service_grades_path %><br />
+		<%= link_to "Service Request", service_requests_path %><br />
 	<% end %>
 </div>

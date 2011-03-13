@@ -1,4 +1,6 @@
 class ServiceRequestsController < ApplicationController
+  before_filter :admin_user, :except=>[:new]
+  
   # GET /service_requests
   # GET /service_requests.xml
   def index
@@ -20,7 +22,9 @@ class ServiceRequestsController < ApplicationController
 	#@service_request = ServiceRequest.find_by_sql("select id, student_name, year_of_birth, gender, 
 	#parent_name, relationship, street, city, country, nationality, cell_phone, email, service_grade, service_type, service_city, 
 	#service_state, service_detail, way_to_know_nh, comments, status, updated_by, home_phone from service_requests where id=1")
-
+	@curr_menu = "layouts/user_menu"
+	@curr_layout = "layouts/user_layout"
+	
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @service_request }
@@ -43,6 +47,8 @@ class ServiceRequestsController < ApplicationController
 
   # GET /service_requests/1/edit
   def edit
+    @curr_menu = "layouts/user_menu"
+	@curr_layout = "layouts/user_layout"
     @service_request = ServiceRequest.find(params[:id])
   end
 
