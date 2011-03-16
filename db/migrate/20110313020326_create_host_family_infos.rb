@@ -1,5 +1,7 @@
 class CreateHostFamilyInfos < ActiveRecord::Migration
   def self.up
+    drop_table :host_family_infos
+	
     create_table :host_family_infos do |t|
       t.string :f_nm
       t.string :l_nm
@@ -38,7 +40,6 @@ class CreateHostFamilyInfos < ActiveRecord::Migration
       t.string :s_english_level
       t.string :s_primary_language
       t.string :s_second_language
-	  t.string :s_live_in
       t.string :number_of_kids
       t.text :kids_detail
       t.string :house_ownership
