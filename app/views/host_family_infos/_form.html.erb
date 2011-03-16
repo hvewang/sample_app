@@ -1,4 +1,7 @@
+<%   @host_family_info.force_utf %>
+
 <%= form_for(@host_family_info) do |f| %>
+	
   <% if @host_family_info.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@host_family_info.errors.count, "error") %> prohibited this host_family_info from being saved:</h2>
@@ -11,211 +14,655 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :f_nm %><br />
-    <%= f.text_field :f_nm %>
-  </div>
-  <div class="field">
-    <%= f.label :l_nm %><br />
-    <%= f.text_field :l_nm %>
-  </div>
-  <div class="field">
-    <%= f.label :sex %><br />
-    <%= f.text_field :sex %>
-  </div>
-  <div class="field">
-    <%= f.label :dob %><br />
-    <%= f.date_select :dob %>
-  </div>
-  <div class="field">
-    <%= f.label :street %><br />
-    <%= f.text_field :street %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br />
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :homephone %><br />
-    <%= f.text_field :homephone %>
-  </div>
-  <div class="field">
-    <%= f.label :cellphone %><br />
-    <%= f.text_field :cellphone %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :ethnicity %><br />
-    <%= f.text_field :ethnicity %>
-  </div>
-  <div class="field">
-    <%= f.label :legal_status %><br />
-    <%= f.text_field :legal_status %>
-  </div>
-  <div class="field">
-    <%= f.label :education %><br />
-    <%= f.text_field :education %>
-  </div>
-  <div class="field">
-    <%= f.label :religion %><br />
-    <%= f.text_field :religion %>
-  </div>
-  <div class="field">
-    <%= f.label :occupation %><br />
-    <%= f.text_field :occupation %>
-  </div>
-  <div class="field">
-    <%= f.label :english_level %><br />
-    <%= f.text_field :english_level %>
-  </div>
-  <div class="field">
-    <%= f.label :primary_language %><br />
-    <%= f.text_field :primary_language %>
-  </div>
-  <div class="field">
-    <%= f.label :second_language %><br />
-    <%= f.text_field :second_language %>
-  </div>
-  <div class="field">
-    <%= f.label :homestay_experience %><br />
-    <%= f.text_field :homestay_experience %>
-  </div>
-  <div class="field">
-    <%= f.label :student_sex %><br />
-    <%= f.text_field :student_sex %>
-  </div>
-  <div class="field">
-    <%= f.label :student_group %><br />
-    <%= f.text_field :student_group %>
-  </div>
-  <div class="field">
-    <%= f.label :marrital_status %><br />
-    <%= f.text_field :marrital_status %>
-  </div>
-  <div class="field">
-    <%= f.label :s_f_nm %><br />
-    <%= f.text_field :s_f_nm %>
-  </div>
-  <div class="field">
-    <%= f.label :s_l_nm %><br />
-    <%= f.text_field :s_l_nm %>
-  </div>
-  <div class="field">
-    <%= f.label :s_sex %><br />
-    <%= f.text_field :s_sex %>
-  </div>
-  <div class="field">
-    <%= f.label :s_dob %><br />
-    <%= f.date_select :s_dob %>
-  </div>
-  <div class="field">
-    <%= f.label :s_ethnicity %><br />
-    <%= f.text_field :s_ethnicity %>
-  </div>
-  <div class="field">
-    <%= f.label :s_legal_status %><br />
-    <%= f.text_field :s_legal_status %>
-  </div>
-  <div class="field">
-    <%= f.label :s_education %><br />
-    <%= f.text_field :s_education %>
-  </div>
-  <div class="field">
-    <%= f.label :s_final_school %><br />
-    <%= f.text_field :s_final_school %>
-  </div>
-  <div class="field">
-    <%= f.label :final_school %><br />
-    <%= f.text_field :final_school %>
-  </div>
-  <div class="field">
-    <%= f.label :s_religion %><br />
-    <%= f.text_field :s_religion %>
-  </div>
-  <div class="field">
-    <%= f.label :s_occupation %><br />
-    <%= f.text_field :s_occupation %>
-  </div>
-  <div class="field">
-    <%= f.label :s_english_level %><br />
-    <%= f.text_field :s_english_level %>
-  </div>
-  <div class="field">
-    <%= f.label :s_primary_language %><br />
-    <%= f.text_field :s_primary_language %>
-  </div>
-  <div class="field">
-    <%= f.label :s_second_language %><br />
-    <%= f.text_field :s_second_language %>
-  </div>
-  <div class="field">
-    <%= f.label :number_of_kids %><br />
-    <%= f.text_field :number_of_kids %>
-  </div>
-  <div class="field">
-    <%= f.label :kids_detail %><br />
-    <%= f.text_area :kids_detail %>
-  </div>
-  <div class="field">
-    <%= f.label :house_ownership %><br />
-    <%= f.text_field :house_ownership %>
-  </div>
-  <div class="field">
-    <%= f.label :house_type %><br />
-    <%= f.text_field :house_type %>
-  </div>
-  <div class="field">
-    <%= f.label :num_of_bedroom %><br />
-    <%= f.text_field :num_of_bedroom %>
-  </div>
-  <div class="field">
-    <%= f.label :num_of_bathroom %><br />
-    <%= f.text_field :num_of_bathroom %>
-  </div>
-  <div class="field">
-    <%= f.label :num_of_car %><br />
-    <%= f.text_field :num_of_car %>
-  </div>
-  <div class="field">
-    <%= f.label :num_of_pet %><br />
-    <%= f.text_field :num_of_pet %>
-  </div>
-  <div class="field">
-    <%= f.label :pet_detail %><br />
-    <%= f.text_area :pet_detail %>
-  </div>
-  <div class="field">
-    <%= f.label :avail_room %><br />
-    <%= f.text_field :avail_room %>
-  </div>
-  <div class="field">
-    <%= f.label :ride_avail %><br />
-    <%= f.text_field :ride_avail %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :way_to_know_nh %><br />
-    <%= f.text_field :way_to_know_nh %>
-  </div>
-  <div class="field">
-    <%= f.label :ind_confirm %><br />
-    <%= f.text_field :ind_confirm %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<table class="nhtabclass">
+		<tr>
+			<td colspan=4>
+				<font size=4><strong>Your Information<strong></font>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				First name:
+			</td>
+			<td>
+				<%= f.text_field :f_nm %>
+			</td>
+			<td class="nhtabtdclassright">
+				Last name:
+			</td>
+			<td>
+				<%= f.text_field :l_nm %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Date of birth:
+			</td>
+			<td colspan=3>
+				<%= f.date_select :dob, :use_short_month=>true, :start_year => 1930, :end_year => Date.current.year - 18, :order => [:month, :day, :year], :default => { :month=> 1, :day=> 1, :year => Date.current.year - 40 } %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Gender:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("sex", "male") %>Male
+				<%= f.radio_button("sex", "female") %>Female
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Marrital status:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("marrital_status", "married") %>Married
+				<%= f.radio_button("marrital_status", "single") %>Single
+				<%= f.radio_button("marrital_status", "divorced") %>Divorced
+				<%= f.radio_button("marrital_status", "widowed") %>Widowed (single)
+				<%= f.radio_button("marrital_status", "separated") %>Separated
+				<%= f.radio_button("marrital_status", "other") %>Other
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Street:
+			</td>
+			<td colspan=3>
+				<%= f.text_field :street, :size=>80 %>
+			</td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright">
+				City:
+			</td>
+			<td>
+				<%= f.text_field :city %>
+			</td>
+			
+			<td class="nhtabtdclassright">
+				State:
+			</td>
+			<td>
+				<%= f.select(:state, 
+					[
+					    "",
+						"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", 
+						"MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", 
+						"SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+					]
+				) %>
+			</td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright">
+				Zip code:
+			</td>
+			<td colspan=3>
+				<%= f.text_field :zip, :size=>10 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Cell phone:
+			</td>
+			<td>
+				<%= f.text_field :cellphone, :size=>20 %>
+			</td>
+			<td class="nhtabtdclassright">
+				Home phone:
+			</td>
+			<td>
+				<%= f.text_field :homephone, :size=>20 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Email:
+			</td>
+			<td colspan=3>
+				<%= f.text_field :email, :size=>40 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Ethinicity:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("ethnicity", "white") %>White
+				<%= f.radio_button("ethnicity", "black") %>Black
+				<%= f.radio_button("ethnicity", "asian") %>Asian/Pacific islander
+				<%= f.radio_button("ethnicity", "hispanic") %>Hispanic
+				<%= f.radio_button("ethnicity", "other") %>Others
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Religion:
+			</td>
+			<td colspan=3>
+				<%= f.select(:religion, ["Christianity", "Buddiest", "Catholics",  "Hinduism", "Judaism", "Muslim", "Others", "None"]) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Legal status:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("legal_status", "citizen") %>US citizen
+				<%= f.radio_button("legal_status", "greencard") %>US permanent resident
+				<%= f.radio_button("legal_status", "nonimmigrant") %>Non-Immigrant with legitimate visa
+				<%= f.radio_button("legal_status", "other") %>Others
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Level of education:
+			</td>
+			<td>
+				<%= f.select(:education, ["", "Graduate", "College", "High school",  "Middle school", "Elementary school"]) %>
+			</td>
+			
+			<td class="nhtabtdclassright">
+				Final school:
+			</td>
+			<td colspan=1>
+				<%= f.text_field :final_school, :size=>40 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Current occupation:
+			</td>
+			<td colspan=3>
+				<%= f.text_field :occupation, :size=>50 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				English level:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("english_level", "native") %>Native
+				<%= f.radio_button("english_level", "advanced") %>Advanced
+				<%= f.radio_button("english_level", "intermediate") %>Intermediate
+				<%= f.radio_button("english_level", "beginner") %>Beginner
+				<%= f.radio_button("english_level", "no communication") %>No communication
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Primary language:
+			</td>
+			<td>
+				<%= f.select(:primary_language, 
+					[
+						"English", "Arabic", "Chinese",  "Czech", "Danish",
+						"Finnish", "French", "German", "Greek", "Hebrew", "Indonesian",
+						"Irish", "Italian", "Japanese", "Korean", "Latin", 
+						"Malay", "Mongolian", "Polish", "Portuguese", "Romanian",
+						"Russian", "Serbian", "Slovak", "Spanish", "Swedish",
+						"Thai", "Turkish", "Ukrainian", "Uzbek", "Vietnamese",
+						"Others"
+					]
+				) %>
+			</td>
+			<td class="nhtabtdclassright">
+				Secondary language:
+			</td>
+			<td>
+				<%= f.select(:second_language, 
+					[
+						"None",
+						"English", "Arabic", "Chinese",  "Czech", "Danish",
+						"Finnish", "French", "German", "Greek", "Hebrew", "Indonesian",
+						"Irish", "Italian", "Japanese", "Korean", "Latin", 
+						"Malay", "Mongolian", "Polish", "Portuguese", "Romanian",
+						"Russian", "Serbian", "Slovak", "Spanish", "Swedish",
+						"Thai", "Turkish", "Ukrainian", "Uzbek", "Vietnamese",
+						"Others"
+					]
+				) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Homestay experience:
+			</td>
+			<td>
+				<%= f.select(:homestay_experience, 
+					[
+						"None",
+						"Guardian Only", "1 year", "2~3 years",  "4~5 years", "6 or more years"
+					]
+				) %>
+			</td>
+			<td class="nhtabtdclassright">
+				Desired student gender:
+			</td>
+			<td>
+				<%= f.select(:student_sex, 
+					[
+						"No Preference", "Male Only", "Female Only"
+					]
+				) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Desired student grade group:
+			</td>
+			<td colspan=3>
+				<%= f.check_box("student_group1", {}, "6th8th", "not6th8th") %>6th ~ 8th
+				<%= f.check_box("student_group2", {}, "9th12th", "not9th12th") %>9th ~ 12th
+				<%= f.check_box("student_group3", {}, "undergraduate", "notundergraduate") %>Undergraduate
+				<%= f.check_box("student_group4", {}, "graduate", "notgraduate") %>Graduate
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan=4>
+			    <br>
+				<font size=4><strong>Spouse Information<strong></font>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				First name:
+			</td>
+			<td>
+				<%= f.text_field :s_f_nm %>
+			</td>
+			<td class="nhtabtdclassright">
+				Last name:
+			</td>
+			<td>
+				<%= f.text_field :s_l_nm %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Date of birth:
+			</td>
+			<td colspan=3>
+				<%= f.date_select :s_dob, :use_short_month=>true, :start_year => 1930, :end_year => Date.current.year - 18, :order => [:month, :day, :year], :default => { :month=> 1, :day=> 1, :year => Date.current.year - 40 } %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Gender:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("s_sex", "male") %>Male
+				<%= f.radio_button("s_sex", "female") %>Female
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Ethinicity:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("s_ethnicity", "white") %>White
+				<%= f.radio_button("s_ethnicity", "black") %>Black
+				<%= f.radio_button("s_ethnicity", "asian") %>Asian/Pacific islander
+				<%= f.radio_button("s_ethnicity", "hispanic") %>Hispanic
+				<%= f.radio_button("s_ethnicity", "other") %>Others
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Religion:
+			</td>
+			<td colspan=3>
+				<%= f.select(:s_religion, ["Christianity", "Buddiest", "Catholics",  "Hinduism", "Judaism", "Muslim", "Others", "None"]) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Legal status:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("s_legal_status", "citizen") %>US citizen
+				<%= f.radio_button("s_legal_status", "greencard") %>US permanent resident
+				<%= f.radio_button("s_legal_status", "nonimmigrant") %>Non-Immigrant with legitimate visa
+				<%= f.radio_button("s_legal_status", "other") %>Others
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Level of education:
+			</td>
+			<td>
+				<%= f.select(:s_education, ["", "Graduate", "College", "High school",  "Middle school", "Elementary school"]) %>
+			</td>
+			
+			<td class="nhtabtdclassright">
+				Final school:
+			</td>
+			<td colspan=1>
+				<%= f.text_field :s_final_school, :size=>40 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Current occupation:
+			</td>
+			<td colspan=3>
+				<%= f.text_field :s_occupation, :size=>50 %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				English level:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("s_english_level", "native") %>Native
+				<%= f.radio_button("s_english_level", "advanced") %>Advanced
+				<%= f.radio_button("s_english_level", "intermediate") %>Intermediate
+				<%= f.radio_button("s_english_level", "beginner") %>Beginner
+				<%= f.radio_button("s_english_level", "no communication") %>No communication
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Primary language:
+			</td>
+			<td>
+				<%= f.select(:s_primary_language, 
+					[
+						"English", "Arabic", "Chinese",  "Czech", "Danish",
+						"Finnish", "French", "German", "Greek", "Hebrew", "Indonesian",
+						"Irish", "Italian", "Japanese", "Korean", "Latin", 
+						"Malay", "Mongolian", "Polish", "Portuguese", "Romanian",
+						"Russian", "Serbian", "Slovak", "Spanish", "Swedish",
+						"Thai", "Turkish", "Ukrainian", "Uzbek", "Vietnamese",
+						"Others"
+					]
+				) %>
+			</td>
+			<td class="nhtabtdclassright">
+				Secondary language:
+			</td>
+			<td>
+				<%= f.select(:s_second_language, 
+					[	"None",
+						"English", "Arabic", "Chinese",  "Czech", "Danish",
+						"Finnish", "French", "German", "Greek", "Hebrew", "Indonesian",
+						"Irish", "Italian", "Japanese", "Korean", "Latin", 
+						"Malay", "Mongolian", "Polish", "Portuguese", "Romanian",
+						"Russian", "Serbian", "Slovak", "Spanish", "Swedish",
+						"Thai", "Turkish", "Ukrainian", "Uzbek", "Vietnamese",
+						"Others"
+					]
+				) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Living in:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("s_live_in", "Current address") %>Current address
+				<%= f.radio_button("s_live_in", "Different address") %>Different address
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan=4>
+				<br>
+				<font size=4><strong>Family Information<strong></font>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				# of kids:
+			</td>
+			<td>
+				<%= f.select(:number_of_kids, 
+					[	 
+						"None", "1", "2", "3",
+						"4", "5 or more"
+					]
+				) %>
+			</td>
+			<td>
+			</td>
+			<td>
+			</td>
+		</tr>
+		
+		<tr>
+		    <td></td>
+			<td colspan=3>
+				Kids details such as last name, first name, gender, date of birth, relationship, current living location
+				<br>
+				Please also have all other family member living in the address above
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Kid details:
+			</td>
+			<td colspan=3>
+				<%= f.text_area :kids_detail, :cols=>80, :rows=>6 %>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan=4>
+				<br>
+				<font size=4><strong>House Information<strong></font>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Hous ownership:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("house_ownership", "own") %>Own
+				<%= f.radio_button("house_ownership", "rent") %>Rent
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				House type:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("house_type", "singlehouse") %>Single house
+				<%= f.radio_button("house_type", "townhouse") %>Town house
+				<%= f.radio_button("house_type", "condominium") %>Condominium
+				<%= f.radio_button("house_type", "apartment") %>Apartment
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				# of bedroom:
+			</td>
+			<td>
+				<%= f.select(:num_of_bedroom, 
+					[	 
+						"2", "3", "4", "5", "6 or more"
+					]
+				) %>
+			</td>
+			<td class="nhtabtdclassright">
+				# of bathroom:
+			</td>
+			<td>
+				<%= f.select(:num_of_bathroom, 
+					[	 
+						"1", "2", "3", "4", "5 or more"
+					]
+				) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Avail bedroom:
+			</td>
+			<td>
+				<%= f.select(:avail_room, 
+					[	 
+						"1", "2", "3", "4 or more"
+					]
+				) %>
+			</td>
+			<td class="nhtabtdclassright">
+				# of car:
+			</td>
+			<td>
+				<%= f.select(:num_of_car, 
+					[	 
+						"1", "2", "3", "4 or more"
+					]
+				) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Rides Availablity:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("ride_avail", "schoolcommutingonly") %>School commuting rides only
+				<%= f.radio_button("ride_avail", "schoolcommutingandextrrides") %>School commuting rides + extra rides
+				<%= f.radio_button("ride_avail", "noride") %>No ride available
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				# of pet:
+			</td>
+			<td colspan=3>
+				<%= f.select(:num_of_pet, 
+					[	 
+						"None", "1", "2", "3", "4 or more"
+					]
+				) %>
+			</td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright">
+				Pet details:
+			</td>
+			<td colspan=3>
+				<%= f.text_area :pet_detail, :cols=>75, :rows=>4 %>			
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan=4>
+				<br>
+				<font size=4><strong>Miscellanious<strong></font>
+			</td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright">
+				How did you find New Hope:
+			</td>
+			<td colspan=3>
+				<%= f.radio_button("way_to_know_nh", "wordofmouth") %>Word of mouth
+				<%= f.radio_button("way_to_know_nh", "craigslist") %>Craigslist
+				<%= f.radio_button("way_to_know_nh", "google") %>Google
+				<%= f.radio_button("way_to_know_nh", "yahoo") %>Yahoo
+				<%= f.radio_button("way_to_know_nh", "baidu") %>Baidu
+				<%= f.radio_button("way_to_know_nh", "msn") %>MSN
+				<%= f.radio_button("way_to_know_nh", "facebook") %>Facebook
+				<%= f.radio_button("way_to_know_nh", "twitter") %>Twitter
+				<br>
+				<%= f.radio_button("way_to_know_nh", "othersite") %>Other web site
+				<%= f.radio_button("way_to_know_nh", "newspaper") %>Newspaper
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+				Comments:
+			</td>
+			<td colspan=3>
+				Please provide additiona info regarding your family, your neighborthod, etc.
+				<br>
+				<%= f.text_area :comment, :cols=>80, :rows=>6 %>
+			</td>
+		</tr>
+
+	    <tr>
+			<td colspan=4>
+				<br>
+				<font size=4><strong>Your confirmation<strong></font>
+			</td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright">
+				Review and confirm:
+			</td>
+			<td colspan=3>
+				Please review and confirm information filled out and click box below before clicking Submit button
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+			</td>
+			<td colspan=3>
+				<%= f.check_box("ind_confirm", {}, "true") %><font color=red size=4>I have reviewed and confirmed that above information is true and correct</font>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">
+			Request status:
+			</td>
+			<td colspan=3>
+				<%= f.select(:status, 
+					[	 
+						"", "Active", "Inactive"
+					]
+				) %>
+			</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td colspan=3>
+				<br>
+				<%= f.submit "Submit Host Family Request" %>
+			</td>
+		</tr>
+	</table>
+
 <% end %>

@@ -27,6 +27,7 @@ class HostFamiliesController < ApplicationController
   end
 
   def availablehomestay
+	@host_family_infos = HostFamilyInfo.find_by_sql("select * from host_family_infos where status='Active'")	
   end
 
   private

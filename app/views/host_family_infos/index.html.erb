@@ -1,18 +1,22 @@
-<h1>Listing host_family_infos</h1>
+<h1>List of all Host Family Request</h1>
 
 <table>
   <tr>
     <th>F nm</th>
     <th>L nm</th>
+	<!--
     <th>Sex</th>
     <th>Dob</th>
     <th>Street</th>
     <th>City</th>
     <th>State</th>
     <th>Zip</th>
+	-->
     <th>Homephone</th>
     <th>Cellphone</th>
     <th>Email</th>
+	<th>Status</th>
+	<!--
     <th>Ethnicity</th>
     <th>Legal status</th>
     <th>Education</th>
@@ -53,24 +57,30 @@
     <th>Comment</th>
     <th>Way to know nh</th>
     <th>Ind confirm</th>
+	-->
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @host_family_infos.each do |host_family_info| %>
+	<%   host_family_info.force_utf %>
   <tr>
     <td><%= host_family_info.f_nm %></td>
     <td><%= host_family_info.l_nm %></td>
+	<!--
     <td><%= host_family_info.sex %></td>
     <td><%= host_family_info.dob %></td>
     <td><%= host_family_info.street %></td>
     <td><%= host_family_info.city %></td>
     <td><%= host_family_info.state %></td>
     <td><%= host_family_info.zip %></td>
+	-->
     <td><%= host_family_info.homephone %></td>
     <td><%= host_family_info.cellphone %></td>
     <td><%= host_family_info.email %></td>
+	<td><%= host_family_info.status %></td>
+	<!--
     <td><%= host_family_info.ethnicity %></td>
     <td><%= host_family_info.legal_status %></td>
     <td><%= host_family_info.education %></td>
@@ -111,6 +121,7 @@
     <td><%= host_family_info.comment %></td>
     <td><%= host_family_info.way_to_know_nh %></td>
     <td><%= host_family_info.ind_confirm %></td>
+	-->
     <td><%= link_to 'Show', host_family_info %></td>
     <td><%= link_to 'Edit', edit_host_family_info_path(host_family_info) %></td>
     <td><%= link_to 'Destroy', host_family_info, :confirm => 'Are you sure?', :method => :delete %></td>

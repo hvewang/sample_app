@@ -1,0 +1,23 @@
+<h1>Abailable Host Families in US</h1>
+
+
+<table>
+  <tr>
+    <th> # </th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+  </tr>
+
+<% i = 0 %>
+<% @host_family_infos.each do |host_family_info| %>
+	<%   host_family_info.force_utf %>
+	<% i = i + 1 %>
+  <tr>
+    <td><%= i %></td> 
+    <td><%= host_family_info.city %></td>
+    <td><%= host_family_info.state %></td>
+    <td><%= host_family_info.zip %></td>
+  </tr>
+<% end %>
+</table>

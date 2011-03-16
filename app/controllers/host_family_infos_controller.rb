@@ -41,6 +41,13 @@ class HostFamilyInfosController < ApplicationController
   # GET /host_family_infos/1/edit
   def edit
     @host_family_info = HostFamilyInfo.find(params[:id])
+	sg = @host_family_info.student_group
+	sga = sg.split
+	
+	@host_family_info.student_group1 = sga[0]
+	@host_family_info.student_group2 = sga[1]
+	@host_family_info.student_group3 = sga[2]
+	@host_family_info.student_group4 = sga[3]
   end
 
   # POST /host_family_infos
@@ -65,6 +72,9 @@ class HostFamilyInfosController < ApplicationController
   def update
     @host_family_info = HostFamilyInfo.find(params[:id])
 
+    hfi = params[:host_family_info][:student_group]
+	puts hfi;
+	
     respond_to do |format|
       if @host_family_info.update_attributes(params[:host_family_info])
         format.html { redirect_to(@host_family_info, :notice => 'Host family info was successfully updated.') }

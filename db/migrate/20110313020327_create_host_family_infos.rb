@@ -38,6 +38,7 @@ class CreateHostFamilyInfos < ActiveRecord::Migration
       t.string :s_english_level
       t.string :s_primary_language
       t.string :s_second_language
+	  t.string :s_live_in
       t.string :number_of_kids
       t.text :kids_detail
       t.string :house_ownership
@@ -52,7 +53,8 @@ class CreateHostFamilyInfos < ActiveRecord::Migration
       t.text :comment
       t.string :way_to_know_nh
       t.string :ind_confirm
-
+	  t.string :status
+	  
       t.timestamps
     end
   end
