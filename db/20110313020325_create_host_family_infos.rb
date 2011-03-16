@@ -53,7 +53,6 @@ class CreateHostFamilyInfos < ActiveRecord::Migration
       t.text :comment
       t.string :way_to_know_nh
       t.string :ind_confirm
-	  #t.string :status
 	  
       t.timestamps
     end
