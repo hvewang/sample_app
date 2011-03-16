@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110313020327) do
+ActiveRecord::Schema.define(:version => 20110316150506) do
 
   create_table "host_family_infos", :force => true do |t|
     t.string   "f_nm"
@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20110313020327) do
     t.string   "s_english_level"
     t.string   "s_primary_language"
     t.string   "s_second_language"
-    t.string   "s_live_in"
     t.string   "number_of_kids"
     t.text     "kids_detail"
     t.string   "house_ownership"
@@ -65,9 +64,10 @@ ActiveRecord::Schema.define(:version => 20110313020327) do
     t.text     "comment"
     t.string   "way_to_know_nh"
     t.string   "ind_confirm"
-    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
+    t.string   "s_live_in"
   end
 
   create_table "microposts", :force => true do |t|
