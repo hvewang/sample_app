@@ -54,11 +54,27 @@ zh-cn:
       college: 本科大学
       graduate: 研究生 & 博士生大学
     highschool:
+      allhighschool: 全部高中名单
       rank: 美国著名高中排名
       schoolapplication:
         schoolapplication: 高中申请
         procedure: 申请程序
         otherservice: 额外服务
+      label:
+        schoolname: 学校名
+        schooltype: 走读/寄宿
+        schooladdress: 学校地址
+        citynearby: 附近大城市
+        schoolfacts: 学校概况
+        yearfounded: 建校年份
+        hstype: 学生类型
+        religion: 宗教信仰
+        totalstudent: 学生总数
+        totalchinesestudent: 中国学生数
+        percentageofasiastudent: 亚洲学生比例
+        totalteacher: 老师总数
+        teacherstudentratio: 老师学生比
+        schoolbus: 校车服务
     college:
       college: 美国大学
       bachelor: 本科

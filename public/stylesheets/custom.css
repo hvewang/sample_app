@@ -206,7 +206,17 @@ ul.users {
 }
 
 table.nhtabclass {
-	margin-top: 1em;
+	margin-top: 0em;
+}
+
+table.nhtabclass tr td.nhtabtdclassleft {
+	text-align: left;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+table.nhtabclass tr td.nhtabtdclasstop {
+	vertical-align: top;
 }
 
 table.nhtabclass tr td.nhtabtdclassright {

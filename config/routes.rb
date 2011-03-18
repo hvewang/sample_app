@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :high_school_lists
+
   resources :host_family_infos
 
   resources :service_requests
@@ -21,6 +23,8 @@ SampleApp::Application.routes.draw do
   get "colleges/undergraduaterank"
   get "colleges/graduateschoolrank"
 
+  get "high_schools/highschooldetail"
+  get "high_schools/allhighschool"
   get "high_schools/privateday"
   get "high_schools/privateboarding"
   get "high_schools/public"

@@ -1,0 +1,227 @@
+ <%   @high_school_list.force_utf %>
+ 
+<%= form_for(@high_school_list) do |f| %>
+  <% if @high_school_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@high_school_list.errors.count, "error") %> prohibited this high_school_list from being saved:</h2>
+
+      <ul>
+      <% @high_school_list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :name_cn %><br />
+    <%= f.text_field :name_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :hs_type %><br />
+    <%= f.text_field :hs_type %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :about_en %><br />
+    <%= f.text_area :about_en, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :about_cn %><br />
+    <%= f.text_area :about_cn, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :school_pics %><br />
+    <%= f.text_field :school_pics %>
+  </div>
+  <div class="field">
+    <%= f.label :founded %><br />
+    <%= f.text_field :founded %>
+  </div>
+  <div class="field">
+    <%= f.label :grade_en %><br />
+    <%= f.text_field :grade_en %>
+  </div>
+  <div class="field">
+    <%= f.label :grade_cn %><br />
+    <%= f.text_field :grade_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :student_type_en %><br />
+    <%= f.text_field :student_type_en %>
+  </div>
+  <div class="field">
+    <%= f.label :student_type_cn %><br />
+    <%= f.text_field :student_type_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :religion_en %><br />
+    <%= f.text_field :religion_en %>
+  </div>
+  <div class="field">
+    <%= f.label :religion_cn %><br />
+    <%= f.text_field :religion_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :total_student %><br />
+    <%= f.text_field :total_student %>
+  </div>
+  <div class="field">
+    <%= f.label :total_teacher %><br />
+    <%= f.text_field :total_teacher %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher_student_ratio %><br />
+    <%= f.text_field :teacher_student_ratio %>
+  </div>
+  <div class="field">
+    <%= f.label :percentage_of_asia_student %><br />
+    <%= f.text_field :percentage_of_asia_student %>
+  </div>
+  <div class="field">
+    <%= f.label :num_of_chinese_student %><br />
+    <%= f.text_field :num_of_chinese_student %>
+  </div>
+  <div class="field">
+    <%= f.label :num_of_ap_class %><br />
+    <%= f.text_field :num_of_ap_class %>
+  </div>
+  <div class="field">
+    <%= f.label :num_of_honor_class %><br />
+    <%= f.text_field :num_of_honor_class %>
+  </div>
+  <div class="field">
+    <%= f.label :esl_class %><br />
+    <%= f.text_field :esl_class %>
+  </div>
+  <div class="field">
+    <%= f.label :school_bus %><br />
+    <%= f.text_field :school_bus %>
+  </div>
+  <div class="field">
+    <%= f.label :winter_entry_en %><br />
+    <%= f.text_field :winter_entry_en %>
+  </div>
+  <div class="field">
+    <%= f.label :winter_entry_cn %><br />
+    <%= f.text_field :winter_entry_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :fall_entry_en %><br />
+    <%= f.text_field :fall_entry_en %>
+  </div>
+  <div class="field">
+    <%= f.label :fall_entry_cn %><br />
+    <%= f.text_field :fall_entry_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :airport_en %><br />
+    <%= f.text_field :airport_en %>
+  </div>
+  <div class="field">
+    <%= f.label :airport_cn %><br />
+    <%= f.text_field :airport_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :uniform %><br />
+    <%= f.text_field :uniform %>
+  </div>
+  <div class="field">
+    <%= f.label :interview %><br />
+    <%= f.text_field :interview %>
+  </div>
+  <div class="field">
+    <%= f.label :required_test %><br />
+    <%= f.text_field :required_test %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_sac_atc %><br />
+    <%= f.text_field :avg_sac_atc %>
+  </div>
+  <div class="field">
+    <%= f.label :tuition %><br />
+    <%= f.text_field :tuition %>
+  </div>
+  <div class="field">
+    <%= f.label :other_fee_en %><br />
+    <%= f.text_field :other_fee_en %>
+  </div>
+  <div class="field">
+    <%= f.label :other_fee_cn %><br />
+    <%= f.text_field :other_fee_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :facility_en %><br />
+    <%= f.text_area :facility_en, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :facility_cn %><br />
+    <%= f.text_area :facility_cn, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :top_university %><br />
+    <%= f.text_area :top_university, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :club_activity_en %><br />
+    <%= f.text_area :club_activity_en, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :club_activity_cn %><br />
+    <%= f.text_area :club_activity_cn, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :city_nearby_en %><br />
+    <%= f.text_field :city_nearby_en %>
+  </div>
+  <div class="field">
+    <%= f.label :city_nearby_cn %><br />
+    <%= f.text_field :city_nearby_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :about_neary_city_en %><br />
+    <%= f.text_area :about_neary_city_en, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :about_nearby_city_cn %><br />
+    <%= f.text_area :about_nearby_city_cn, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="field">
+    <%= f.label :nearby_city_pics %><br />
+    <%= f.text_field :nearby_city_pics %>
+  </div>
+  <div class="field">
+    <%= f.label :school_level %><br />
+    <%= f.text_field :school_level %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br />
+    <%= f.text_area :remarks, :cols=>80, :rows=>6  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

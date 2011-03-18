@@ -54,11 +54,27 @@ en:
       college: College
       graduate: Graduate school
     highschool:
+      allhighschool: All High School
       rank: Top US High School Ranking
       schoolapplication:
         schoolapplication: High School Application
         procedure: Application Procedures
         otherservice: Additional Services
+      label:
+        schoolname: Name
+        schooltype: School Type
+        schooladdress: Address
+        citynearby: City nearby
+        schoolfacts: School Facts
+        yearfounded: Year Founded
+        hstype: School Type
+        religion: Religion
+        totalstudent: Total Student
+        totalchinesestudent: Total Chinese Student
+        percentageofasiastudent: Percentage of Asia Student
+        totalteacher: Total Teacher
+        teacherstudentratio: Teacher/Student Ratio
+        schoolbus: School Bus
     college:
       college: US College & University
       bachelor: Bachelor

@@ -1,14 +1,16 @@
-<h1>Listing high_school_lists</h1>
+<h1><%= t('label.highschool.allhighschool') %></h1>
 
 <table>
   <tr>
-    <th>Name en</th>
-    <th>Name cn</th>
-    <th>Hs type</th>
-    <th>Address</th>
+    <th>#</th>
+    <th><%= t('label.highschool.label.schoolname') %></th>
+	<th></th>
+    <th><%= t('label.highschool.label.schooltype') %></th>
+    <th><%= t('label.highschool.label.schooladdress') %></th>
+	<th><%= t('label.highschool.label.citynearby') %></th>
+	<!--
     <th>State</th>
     <th>Zip</th>
-	<!--
     <th>Website</th>
     <th>About en</th>
     <th>About cn</th>
@@ -54,18 +56,30 @@
     <th>Nearby city pics</th>
     <th>School level</th>
     <th>Remarks</th>
+	<th></th>
 	-->
   </tr>
 
+<% i = 0 %>
 <% @high_school_lists.each do |high_school_list| %>
   <%   high_school_list.force_utf %>
+  <% i = i + 1 %>
   <tr>
-    <td><%= high_school_list.name_en %></td>
-    <td><%= high_school_list.name_cn %></td>
-    <td><%= high_school_list.hs_type %></td>
-    <td><%= high_school_list.address %></td>
-    <td><%= high_school_list.state %></td>
-    <td><%= high_school_list.zip %></td>
+  <% if I18n.locale == :en %>
+        <td><%= link_to i, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<td><%= high_school_list.name_en %></td>
+		<td><%= high_school_list.name_cn  %></td>
+		<td><%= high_school_list.hs_type %></td>
+		<td><%= high_school_list.state %> <%= high_school_list.zip %></td>
+		<td><%= high_school_list.city_nearby_en %></td>
+	<% else %>
+	    <td><%= link_to i, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<td><%= high_school_list.name_en  %></td>
+		<td><%= high_school_list.name_cn  %></td>
+		<td><%= high_school_list.hs_type %></td>
+		<td><%= high_school_list.state %> <%= high_school_list.zip %></td>
+		<td><%= high_school_list.city_nearby_cn %></td>
+	<% end %>
 	<!--
     <td><%= high_school_list.website %></td>
     <td><%= high_school_list.about_en %></td>
@@ -112,6 +126,7 @@
     <td><%= high_school_list.nearby_city_pics %></td>
     <td><%= high_school_list.school_level %></td>
     <td><%= high_school_list.remarks %></td>
+	<td><%= link_to 'Show', high_school_list %></td>
 	-->
   </tr>
 <% end %>

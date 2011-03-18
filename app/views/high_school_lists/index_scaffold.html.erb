@@ -8,7 +8,6 @@
     <th>Address</th>
     <th>State</th>
     <th>Zip</th>
-	<!--
     <th>Website</th>
     <th>About en</th>
     <th>About cn</th>
@@ -54,7 +53,9 @@
     <th>Nearby city pics</th>
     <th>School level</th>
     <th>Remarks</th>
-	-->
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @high_school_lists.each do |high_school_list| %>
@@ -66,7 +67,6 @@
     <td><%= high_school_list.address %></td>
     <td><%= high_school_list.state %></td>
     <td><%= high_school_list.zip %></td>
-	<!--
     <td><%= high_school_list.website %></td>
     <td><%= high_school_list.about_en %></td>
     <td><%= high_school_list.about_cn %></td>
@@ -112,7 +112,13 @@
     <td><%= high_school_list.nearby_city_pics %></td>
     <td><%= high_school_list.school_level %></td>
     <td><%= high_school_list.remarks %></td>
-	-->
+    <td><%= link_to 'Show', high_school_list %></td>
+    <td><%= link_to 'Edit', edit_high_school_list_path(high_school_list) %></td>
+    <td><%= link_to 'Destroy', high_school_list, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+<br />
+
+<%= link_to 'New High school list', new_high_school_list_path %>

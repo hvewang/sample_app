@@ -1,0 +1,190 @@
+<%   @high_school_list.force_utf %>
+<p id="notice"><%= notice %></p>
+
+<fieldset>
+	<legend><%= @high_school_list.name_en %>&nbsp;&nbsp;<%= @high_school_list.name_cn %></legend>
+	<table class="nhtabclass">
+		<tr>
+			<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/highschool/#{@high_school_list.school_pics}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			<% if I18n.locale == :en %>
+				<td colspan=3 class="nhtabtdclasstop"><%= raw(truncate(@high_school_list.about_en, :length=> 600)) %></td>
+			<% else %>
+				<td colspan=3 class="nhtabtdclasstop"><%= raw(truncate(@high_school_list.about_cn, :length=> 600)) %></td>
+			<% end %>
+		</tr>
+		
+		<% if admin_user? %>
+		<tr>
+			<td colspan=6>
+				<%= @high_school_list.address %>, <%= @high_school_list.state %> <%= @high_school_list.zip %>
+				&nbsp;&nbsp;
+				<%= @high_school_list.contact %>
+				&nbsp;&nbsp;
+				<%= link_to @high_school_list.website,  "http://#{@high_school_list.website}", :target=> :blank %>
+			</td>
+		</tr>
+		<% end %>
+		
+		<tr>
+			<td colspan=8><br><h1><%= t('label.highschool.label.schoolfacts') %></h1></td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.yearfounded') %></td>
+			<td><%= @high_school_list.founded %></td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.hstype') %></td>
+			<% if I18n.locale == :en %>
+				<td><%= @high_school_list.student_type_en %></td>
+			<% else %>
+				<td><%= @high_school_list.student_type_cn %></td>
+			<% end %>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.religion') %></td>
+			<% if I18n.locale == :en %>
+				<td><%= @high_school_list.religion_en %></td>
+			<% else %>
+				<td><%= @high_school_list.religion_cn %></td>
+			<% end %>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.totalstudent') %></td>
+			<td><%= @high_school_list.total_student %></td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.totalchinesestudent') %></td>
+			<td><%= @high_school_list.num_of_chinese_student %></td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.percentageofasiastudent') %></td>
+            <td><%= @high_school_list.percentage_of_asia_student %></td> 
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.totalteacher') %></td>
+			<td><%= @high_school_list.total_teacher %></td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.teacherstudentratio') %></td>
+			<td><%= @high_school_list.teacher_student_ratio %></td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.schoolbus') %></td>
+			<td><%= @high_school_list.school_bus %></td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright">Winter Entry</td>
+			<% if I18n.locale == :en %>
+				<td><%= @high_school_list.winter_entry_en %></td>
+			<% else %>
+				<td><%= @high_school_list.winter_entry_cn %></td>
+			<% end %>
+			<td class="nhtabtdclassright">Fall Entry</td>
+			<% if I18n.locale == :en %>
+				<td><%= @high_school_list.fall_entry_en %></td>
+			<% else %>
+				<td><%= @high_school_list.fall_entry_cn %></td>
+			<% end %>
+			<td class="nhtabtdclassright">Nearby Airport</td>
+			<% if I18n.locale == :en %>
+				<td><%= @high_school_list.airport_en %></td>
+			<% else %>
+				<td><%= @high_school_list.airport_cn %></td>
+			<% end %>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">ESL Course</td>
+			<td><%= @high_school_list.esl_class %></td>
+			<td class="nhtabtdclassright">AP Class</td>
+			<td><%= @high_school_list.num_of_ap_class %></td>
+			<td class="nhtabtdclassright">Honor Class</td>
+			<td><%= @high_school_list.num_of_honor_class %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Grade</td>
+			<% if I18n.locale == :en %>
+				<td><%= @high_school_list.grade_en %></td>
+			<% else %>
+				<td><%= @high_school_list.grade_cn %></td>
+			<% end %>
+		    <td class="nhtabtdclassright">Interview</td>
+			<td><%= @high_school_list.interview %></td>
+			<td class="nhtabtdclassright">Uniform</td>
+			<td><%= @high_school_list.uniform %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Required Test</td>
+			<td colspan=5><%= @high_school_list.required_test %></td>
+
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Avgerage SAT/ACT</td>
+			<td><%= @high_school_list.avg_sac_atc %></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Tuition</td>
+			<td><%= @high_school_list.tuition %></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Other Fee</td>
+			<% if I18n.locale == :en %>
+				<td colspan=5 class="nhtabtdclasstop"><%= @high_school_list.other_fee_en %></td>
+			<% else %>
+				<td colspan=5 class="nhtabtdclasstop"><%= raw(@high_school_list.other_fee_cn) %></td>
+			<% end %>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Top Ten University</td>
+			<td colspan=5><%= @high_school_list.top_university %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Facility</td>
+			<% if I18n.locale == :en %>
+				<td colspan=5 class="nhtabtdclasstop"><%= @high_school_list.facility_en %></td>
+			<% else %>
+				<td colspan=5 class="nhtabtdclasstop"><%= raw(@high_school_list.facility_cn) %></td>
+			<% end %>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright">Clubs and Activities</td>
+			<% if I18n.locale == :en %>
+				<td colspan=5 class="nhtabtdclasstop"><%= raw(@high_school_list.club_activity_en) %></td>
+			<% else %>
+				<td colspan=5 class="nhtabtdclasstop"><%= raw(@high_school_list.club_activity_cn) %></td>
+			<% end %>
+		</tr>
+		
+		<tr>
+			<% if I18n.locale == :en %>
+				<td colspan=6 class="nhtabtdclassleft">Nearby City: <%= raw(@high_school_list.city_nearby_en) %></td>
+			<% else %>
+				<td colspan=6 class="nhtabtdclassleft">Nearby City: <%= raw(@high_school_list.city_nearby_cn) %></td>
+			<% end %>
+		</tr>
+		<tr>
+			<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/highschool/#{@high_school_list.nearby_city_pics}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			<% if I18n.locale == :en %>
+				<td colspan=3 class="nhtabtdclasstop"><%= raw(truncate(@high_school_list.about_neary_city_en, :length=> 600)) %></td>
+			<% else %>
+				<td colspan=3 class="nhtabtdclasstop"><%= raw(truncate(@high_school_list.about_nearby_city_cn, :length=> 600)) %></td>
+			<% end %>
+		</tr>
+	</table>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
