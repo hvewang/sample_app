@@ -4,10 +4,12 @@ class HighSchoolsController < ApplicationController
   def allhighschool
 	@title = "All High School"
 	@high_school_lists = HighSchoolList.all
+	@titlelabel = 'label.highschool.allhighschool'
   end
   
   def privateday
 	@title = "Private Day School"
+	@titlelabel = 'label.service.privatehs'
 	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Day School")
 	
 	render :action => "allhighschool"
@@ -15,6 +17,11 @@ class HighSchoolsController < ApplicationController
 
   def privateboarding
 	@title = "Private Boarding School"
+	
+	@titlelabel = 'label.service.boardinghs'
+	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Boarding School")
+	
+	render :action => "allhighschool"
   end
 
   def public
