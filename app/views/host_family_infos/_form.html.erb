@@ -643,18 +643,20 @@
 			</td>
 		</tr>
 		
-		<tr>
-			<td class="nhtabtdclassright">
-			Request status:
-			</td>
-			<td colspan=3>
-				<%= f.select(:status, 
-					[	 
-						"", "Active", "Inactive"
-					]
-				) %>
-			</td>
-		</tr>
+		<% if admin_user? %>
+			<tr>
+				<td class="nhtabtdclassright">
+				Request status:
+				</td>
+				<td colspan=3>
+					<%= f.select(:status, 
+						[	 
+							"", "Active", "Inactive"
+						]
+					) %>
+				</td>
+			</tr>
+		<% end %>
 		
 		<tr>
 			<td></td>

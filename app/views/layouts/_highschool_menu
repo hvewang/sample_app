@@ -4,8 +4,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.highschool.allhighschool'), high_schools_allhighschool_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.privatehs'), high_schools_privateday_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.boardinghs'), high_schools_privateboarding_path %> <br />
+<!--
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), high_schools_public_path %> <br />
-
+-->
 <%= t('label.highschool.schoolapplication.schoolapplication') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.highschool.schoolapplication.procedure'), high_schools_applicationprocedure_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.highschool.schoolapplication.otherservice'), high_schools_otherservice_path %> <br />

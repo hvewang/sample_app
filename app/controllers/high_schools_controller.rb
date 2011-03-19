@@ -8,7 +8,9 @@ class HighSchoolsController < ApplicationController
   
   def privateday
 	@title = "Private Day School"
-	@high_school_lists = HighSchoolList.all
+	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Day School")
+	
+	render :action => "allhighschool"
   end
 
   def privateboarding

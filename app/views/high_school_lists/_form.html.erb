@@ -23,7 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :hs_type %><br />
-    <%= f.text_field :hs_type %>
+	<%= f.select(:hs_type, ["Private Day School", "Private Boarding School"]) %>
   </div>
   <div class="field">
     <%= f.label :address %><br />
@@ -31,7 +31,14 @@
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+	<%= f.select(:state, 
+					[
+					    "",
+						"AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", 
+						"MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", 
+						"SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"
+					]
+				) %>
   </div>
   <div class="field">
     <%= f.label :zip %><br />
@@ -43,7 +50,7 @@
   </div>
   <div class="field">
     <%= f.label :website %><br />
-    <%= f.text_field :website %>
+    <%= f.text_field :website, :size=>80 %>
   </div>
   <div class="field">
     <%= f.label :about_en %><br />
@@ -155,7 +162,7 @@
   </div>
   <div class="field">
     <%= f.label :required_test %><br />
-    <%= f.text_field :required_test %>
+    <%= f.text_field :required_test, :size=>80 %>
   </div>
   <div class="field">
     <%= f.label :avg_sac_atc %><br />
@@ -167,11 +174,11 @@
   </div>
   <div class="field">
     <%= f.label :other_fee_en %><br />
-    <%= f.text_field :other_fee_en %>
+    <%= f.text_field :other_fee_en, :size=>80 %>
   </div>
   <div class="field">
     <%= f.label :other_fee_cn %><br />
-    <%= f.text_field :other_fee_cn %>
+    <%= f.text_field :other_fee_cn, :size=>80 %>
   </div>
   <div class="field">
     <%= f.label :facility_en %><br />
@@ -211,11 +218,11 @@
   </div>
   <div class="field">
     <%= f.label :nearby_city_pics %><br />
-    <%= f.text_field :nearby_city_pics %>
+    <%= f.text_field :nearby_city_pics, :size=>60 %>
   </div>
   <div class="field">
     <%= f.label :school_level %><br />
-    <%= f.text_field :school_level %>
+	<%= f.select(:school_level, ["High Level", "Middle Level", "Low Level"]) %>
   </div>
   <div class="field">
     <%= f.label :remarks %><br />
