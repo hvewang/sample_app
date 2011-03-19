@@ -61,19 +61,19 @@
 			<td><%= @high_school_list.school_bus %></td>
 		</tr>
 		<tr>
-			<td class="nhtabtdclassright">Winter Entry</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.winterentry') %></td>
 			<% if I18n.locale == :en %>
 				<td><%= @high_school_list.winter_entry_en %></td>
 			<% else %>
 				<td><%= @high_school_list.winter_entry_cn %></td>
 			<% end %>
-			<td class="nhtabtdclassright">Fall Entry</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.fallentry') %></td>
 			<% if I18n.locale == :en %>
 				<td><%= @high_school_list.fall_entry_en %></td>
 			<% else %>
 				<td><%= @high_school_list.fall_entry_cn %></td>
 			<% end %>
-			<td class="nhtabtdclassright">Nearby Airport</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.nearbyairport') %></td>
 			<% if I18n.locale == :en %>
 				<td><%= @high_school_list.airport_en %></td>
 			<% else %>
@@ -82,35 +82,35 @@
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">ESL Course</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.eslcourse') %></td>
 			<td><%= @high_school_list.esl_class %></td>
-			<td class="nhtabtdclassright">AP Class</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.apclass') %></td>
 			<td><%= @high_school_list.num_of_ap_class %></td>
-			<td class="nhtabtdclassright">Honor Class</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.honorclass') %></td>
 			<td><%= @high_school_list.num_of_honor_class %></td>
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Grade</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.grade') %></td>
 			<% if I18n.locale == :en %>
 				<td><%= @high_school_list.grade_en %></td>
 			<% else %>
 				<td><%= @high_school_list.grade_cn %></td>
 			<% end %>
-		    <td class="nhtabtdclassright">Interview</td>
+		    <td class="nhtabtdclassright"><%= t('label.highschool.label.interview') %></td>
 			<td><%= @high_school_list.interview %></td>
-			<td class="nhtabtdclassright">Uniform</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.uniform') %></td>
 			<td><%= @high_school_list.uniform %></td>
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Required Test</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.requiredtest') %></td>
 			<td colspan=5><%= @high_school_list.required_test %></td>
 
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Avgerage SAT/ACT</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.avgsatact') %></td>
 			<td><%= @high_school_list.avg_sac_atc %></td>
 			<td></td>
 			<td></td>
@@ -119,7 +119,7 @@
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Tuition</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.tuition') %></td>
 			<td><%= @high_school_list.tuition %></td>
 			<td></td>
 			<td></td>
@@ -128,7 +128,7 @@
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Other Fee</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.otherfee') %></td>
 			<% if I18n.locale == :en %>
 				<td colspan=5 class="nhtabtdclasstop"><%= @high_school_list.other_fee_en %></td>
 			<% else %>
@@ -137,12 +137,12 @@
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Top Ten University</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.toptenuniversity') %></td>
 			<td colspan=5><%= @high_school_list.top_university %></td>
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Facility</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.facility') %></td>
 			<% if I18n.locale == :en %>
 				<td colspan=5 class="nhtabtdclasstop"><%= @high_school_list.facility_en %></td>
 			<% else %>
@@ -151,7 +151,7 @@
 		</tr>
 		
 		<tr>
-			<td class="nhtabtdclassright">Clubs and Activities</td>
+			<td class="nhtabtdclassright"><%= t('label.highschool.label.clubandactivity') %></td>
 			<% if I18n.locale == :en %>
 				<td colspan=5 class="nhtabtdclasstop"><%= raw(@high_school_list.club_activity_en) %></td>
 			<% else %>
@@ -161,9 +161,9 @@
 		
 		<tr>
 			<% if I18n.locale == :en %>
-				<td colspan=6 class="nhtabtdclassleft">Nearby City: <%= raw(@high_school_list.city_nearby_en) %></td>
+				<td colspan=6 class="nhtabtdclassleft"><%= t('label.highschool.label.nearbycity') %>: <%= raw(@high_school_list.city_nearby_en) %></td>
 			<% else %>
-				<td colspan=6 class="nhtabtdclassleft">Nearby City: <%= raw(@high_school_list.city_nearby_cn) %></td>
+				<td colspan=6 class="nhtabtdclassleft"><%= t('label.highschool.label.nearbycity') %>: <%= raw(@high_school_list.city_nearby_cn) %></td>
 			<% end %>
 		</tr>
 		<tr>

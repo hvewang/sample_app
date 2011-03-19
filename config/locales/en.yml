@@ -75,6 +75,23 @@ en:
         totalteacher: Total Teacher
         teacherstudentratio: Teacher/Student Ratio
         schoolbus: School Bus
+        winterentry: Winter Entry
+        fallentry: Fall Entry
+        nearbyairport: Nearby Airport
+        eslcourse: ESL Course
+        apclass: AP Class
+        honorclass: Honor Class
+        grade: Grade
+        interview: Interview
+        uniform: Uniform
+        requiredtest: Required Test
+        avgsatact: Avg SAT/ACT
+        tuition: Tuition
+        otherfee: Other Fee
+        toptenuniversity: Top Ten University
+        facility: Facility
+        clubandactivity: Clubs and Activities
+        nearbycity: Nearby City
     college:
       college: US College & University
       bachelor: Bachelor

@@ -75,6 +75,23 @@ zh-cn:
         totalteacher: 老师总数
         teacherstudentratio: 老师学生比
         schoolbus: 校车服务
+        winterentry: 冬季入学
+        fallentry: 秋季入学
+        nearbyairport: 附近机场
+        eslcourse: ESL 课
+        apclass: AP 课
+        honorclass: 荣誉课程
+        grade: 年级
+        interview: 面试
+        uniform: 校服
+        requiredtest: 必须测试成绩
+        avgsatact: 平均SAT/ACT成绩
+        tuition: 学费
+        otherfee: 其他费用
+        toptenuniversity: 前十名录取大学
+        facility: 学校设施
+        clubandactivity: 俱乐部和课外活动
+        nearbycity: 附近大城市
     college:
       college: 美国大学
       bachelor: 本科
