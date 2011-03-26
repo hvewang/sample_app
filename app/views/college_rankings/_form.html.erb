@@ -1,0 +1,74 @@
+<%= form_for(@college_ranking) do |f| %>
+  <% @college_ranking.force_utf %>
+  <% if @college_ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@college_ranking.errors.count, "error") %> prohibited this college_ranking from being saved:</h2>
+
+      <ul>
+      <% @college_ranking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :school_type %><br />
+	<%= f.select(:school_type, [["National University", "university"], ["Liberal Arts College", "college"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank %>
+  </div>
+  <div class="field">
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :name_cn %><br />
+    <%= f.text_field :name_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :tuition %><br />
+    <%= f.text_field :tuition %>
+  </div>
+  <div class="field">
+    <%= f.label :enrollment %><br />
+    <%= f.text_field :enrollment %>
+  </div>
+  <div class="field">
+    <%= f.label :acceptance_rate %><br />
+    <%= f.text_field :acceptance_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :retention_rate %><br />
+    <%= f.text_field :retention_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :graduation_rate %><br />
+    <%= f.text_field :graduation_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :class_size %><br />
+    <%= f.text_field :class_size %>
+  </div>
+  <div class="field">
+    <%= f.label :sat_act %><br />
+    <%= f.text_field :sat_act %>
+  </div>
+  <div class="field">
+    <%= f.label :college_list_id %><br />
+	<%= f.select(:college_list_id, "<option value="">--Select a School--</option>" + options_from_collection_for_select(@college_lists, "id", "name_en", "#{@college_ranking.college_list_id}")) %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, [["--Select a Status--", ""], ["Active", "active"], ["Inactive", "inactive"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

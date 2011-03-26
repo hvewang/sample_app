@@ -1,0 +1,2 @@
+module GraduateSchoolRankingsHelper
+end

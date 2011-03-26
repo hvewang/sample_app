@@ -94,11 +94,89 @@ zh-cn:
         nearbycity: 附近大城市
     college:
       college: 美国大学
+      collegelist: 大学名单
+      allcollegelist: 美国大学名单
+      allcollegelistbs: 美国本科大学名单
+      allcollegelistmsphd: 美国硕士博士大学名单
+      allcollegelistcc: 美国社区大学名单
       bachelor: 本科
       msphd: 硕士/博士
-      rank: 大学排名
-      undergraduaterank: 本科
-      graduateschoolrank: 研究生
+      cc: 社区大学
+      rank: 美国大学排名
+      universityrank: 大学
+      collegerank: 文理学院
+      graduateschoolrank: 研究生院
+      label:
+        contactinfo: 联系信息
+        name: 校名
+        address: 校址
+        schooltype: 学校性质
+        founded: 建校年份
+        url: 网址
+        schoolfact: 学校概况
+        totalstudent: 学生总数
+        enrollment: 录取人数
+        acceptancerate: 录取比例
+        teacherstudentratio: 老师学生比
+        studentinfo: 学生情况
+        facultyinfo: 老师情况
+        academiccalendar: 学制
+        setting: 校区位置
+        satscore: SAT 分数
+        degree: 可授学位
+        ranking: 大学排名
+        tuitionfee: 学费/其他费用
+        financialaid: 奖学金
+        popularmajor: 热门专业
+        specialfeature: 特点
+        applicationdeadline: 申请日期
+        applicationfee: 申请费
+        applicationmethod: 申请方式
+        applicationform: 申请表格
+        applicationmaterial: 申请材料
+        applicationmustknow: 申请须知
+        doubleadmission: 双录项目
+        recommendationform: 推荐信表格
+        financialform: 资金表格
+        langrequirement: 语言要求
+        dlangrequirement: 双录语言要求
+        admissionrequirement: 录取要求
+        mailtestscore: 送分
+        airporthelp: 接机
+        boarding: 住宿
+        notice: 注意事项
+        remark: 反馈
+        status: 学校状态
+        gsbusiness: 商学院
+        gseducation: 教育学院
+        gsengineering: 工学院
+        gslaw: 法学院
+        gsmedical: 医学院
+        gsscience: 自然科学
+        gslibrary: 图书馆与信息研究
+        gssocial: 社会科学及人文科学
+        gshealth: 健康学
+        gspublic: 公共事务学
+        gsfine: 美术学
+        universityrank: 美国大学本科排名
+        collegerank: 美国文理学院本科排名
+        gsbusinessrank: 美国研究生院/商学院排名
+        gseducationrank: 美国研究生院/教育学院排名
+        gsengineeringrank: 美国研究生院/工学院排名
+        gslawrank: 美国研究生院/法学院排名
+        gsmedicalrank: 美国研究生院/医学院排名
+        gssciencerank: 美国研究生院/自然科学排名
+        gslibraryrank: 美国研究生院/图书馆与信息研究排名
+        gssocialrank: 美国研究生院/社会科学及人文科学排名
+        gshealthrank: 美国研究生院/健康学排名
+        gspublicrank: 美国研究生院/公共事务学排名
+        gsfinerank: 美国研究生院/美术学排名
+        rank: 排名
+        tuition: 学费
+        retentionrate: 保留率
+        graduationrate: 毕业率
+        classsize: 班级规模
+        satact: Sat/Act
     ourteam:
       newhope: 新希望精英团队
       china:

@@ -93,12 +93,90 @@ en:
         clubandactivity: Clubs and Activities
         nearbycity: Nearby City
     college:
-      college: US College & University
+      college: US College
+      collegelist: College List
+      allcollegelist: College List
+      allcollegelistbs: Becholar Only College List
+      allcollegelistmsphd: Master/PhD College List
+      allcollegelistcc: Community College List
       bachelor: Bachelor
       msphd: Master & PhD
-      rank: University Ranking
-      undergraduaterank: Undergraduate
+      cc: Community College
+      rank: US University Rankings
+      universityrank: National University
+      collegerank: Liberal Arts College
       graduateschoolrank: Graduate School
+      label:
+        contactinfo: Contact Info
+        name: Name
+        address: Address
+        schooltype: School Type
+        founded: Founded
+        url: website
+        schoolfact: School Facts
+        totalstudent: Total Student
+        enrollment: Enrollment
+        acceptancerate: Acceptance Rate
+        teacherstudentratio: Teacher/Student Ratio
+        studentinfo: Student Details
+        facultyinfo: Faculty Details
+        academiccalendar: Academic Calendar
+        setting: Setting
+        satscore: SAT Score
+        degree: Degrees Conferred
+        ranking: US Ranking
+        tuitionfee: Tuition and Fees
+        financialaid: Financial Aid
+        popularmajor: Popular Majors
+        specialfeature: Specials
+        applicationdeadline: Application Deadline
+        applicationfee: Application Fee
+        applicationmethod: Application Method
+        applicationform: Application Form
+        applicationmaterial: Application Materials
+        applicationmustknow: Application Must Known
+        doubleadmission: Double Admission
+        recommendationform: Recommendation Form
+        financialform: Financial Form
+        langrequirement: Lang Requirements
+        dlangrequirement: Double Admission Lang Requirement
+        admissionrequirement: Admission Requirements
+        mailtestscore: Mail Test Score
+        airporthelp: Airport Help
+        boarding: Boarding
+        notice: Notice
+        remark: Remarks
+        status: Status
+        gsbusiness: Business
+        gseducation: Education
+        gsengineering: Engineering
+        gslaw: Law
+        gsmedical: Medical
+        gsscience: Science
+        gslibrary: Library & Information Studies
+        gssocial: Social Sciences & Humanities
+        gshealth: Health
+        gspublic: Public Affairs
+        gsfine: Fine Arts
+        universityrank: US National University Rankings
+        collegerank: US Liberal Arts College Rankings
+        gsbusinessrank: US Graudate School/Business Rankings
+        gseducationrank: US Graudate School/Education Rankings
+        gsengineeringrank: US Graudate School/Engineering Rankings
+        gslawrank: US Graudate School/Law Rankings
+        gsmedicalrank: US Graudate School/Medical Rankings
+        gssciencerank: US Graudate School/Science Rankings
+        gslibraryrank: US Graudate School/Library & Information Studies Rankings
+        gssocialrank: US Graudate School/Social Sciences & Humanities Rankings
+        gshealthrank: US Graudate School/Health Rankings
+        gspublicrank: US Graudate School/Public Affairs Rankings
+        gsfinerank: US Graudate School/Fine Arts Rankings
+        rank: Rank
+        tuition: Tuition
+        retentionrate: Retention Rate
+        graduationrate: Graduation Rate
+        classsize: Class Size
+        satact: Sat/Act
     ourteam:
       newhope: New Hope Team
       china:

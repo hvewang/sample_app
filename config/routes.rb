@@ -1,4 +1,10 @@
 SampleApp::Application.routes.draw do
+  resources :graduate_school_rankings
+
+  resources :college_rankings
+
+  resources :college_lists
+
   resources :high_school_lists
 
   resources :host_family_infos
@@ -18,9 +24,13 @@ SampleApp::Application.routes.draw do
   get "host_families/servicerequestform"
   get "host_families/availablehomestay"
 
+  get "colleges/collegedetail"
+  get "colleges/collegelist"
   get "colleges/bachelor"
   get "colleges/msphd"
-  get "colleges/undergraduaterank"
+  get "colleges/communitycollege"
+  get "colleges/universityrank"
+  get "colleges/collegerank"
   get "colleges/graduateschoolrank"
 
   get "high_schools/highschooldetail"

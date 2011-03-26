@@ -1,0 +1,50 @@
+<h1>Listing graduate_school_rankings</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Rank</th>
+    <th>Name en</th>
+    <th>Name cn</th>
+    <th>Tuition</th>
+    <th>Enrollment</th>
+    <th>Gpa</th>
+    <th>Gmat</th>
+    <th>Acceptance rate</th>
+    <th>Salary</th>
+    <th>Graduation rate</th>
+    <th>College list</th>
+    <th>Status</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @graduate_school_rankings.each do |graduate_school_ranking| %>
+  <% graduate_school_ranking.force_utf %>
+  <tr>
+    <td><%= graduate_school_ranking.category %></td>
+    <td><%= graduate_school_ranking.rank %></td>
+    <td><%= graduate_school_ranking.name_en %></td>
+    <td><%= graduate_school_ranking.name_cn %></td>
+    <td><%= graduate_school_ranking.tuition %></td>
+    <td><%= graduate_school_ranking.enrollment %></td>
+    <td><%= graduate_school_ranking.gpa %></td>
+    <td><%= graduate_school_ranking.gmat %></td>
+    <td><%= graduate_school_ranking.acceptance_rate %></td>
+    <td><%= graduate_school_ranking.salary %></td>
+    <td><%= graduate_school_ranking.graduation_rate %></td>
+    <td><%= graduate_school_ranking.college_list_id %></td>
+    <td><%= graduate_school_ranking.status %></td>
+    <td><%= graduate_school_ranking.year %></td>
+    <td><%= link_to 'Show', graduate_school_ranking %></td>
+    <td><%= link_to 'Edit', edit_graduate_school_ranking_path(graduate_school_ranking) %></td>
+    <td><%= link_to 'Destroy', graduate_school_ranking, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Graduate school ranking', new_graduate_school_ranking_path %>

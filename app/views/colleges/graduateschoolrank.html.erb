@@ -1,2 +1,40 @@
-<h1>Graduate School #rank</h1>
-<p>Find me in app/views/colleges/graduateschoolrank.html.erb</p>
+<h1><%= t("#{@titlelabel}") %></h1>
+
+<table>
+  <tr>
+    <th><%= t('label.college.label.rank') %></th>
+    <th><%= t('label.college.label.name') %></th>
+    <th></th>
+    <th><%= t('label.college.label.tuition') %></th>
+    <th><%= t('label.college.label.enrollment') %></th>
+	<!--
+	<th>GPA</th>
+	<th>GMAT</th>
+    <th>Acceptance rate</th>
+    <th>Graduation rate</th>
+    <th>Avg Salary/Bonus</th>
+	-->
+  </tr>
+
+<% @graduate_school_rankings.each do |graduate_school_ranking| %>
+<% graduate_school_ranking.force_utf %>
+  <tr>
+    <td><%= graduate_school_ranking.rank %></td>
+	<% if graduate_school_ranking.college_list_id.nil? %>
+		<td><%= graduate_school_ranking.name_en %></td>
+	<% else %>
+		<td><%= link_to "#{graduate_school_ranking.name_en}", colleges_collegedetail_path(:id=>graduate_school_ranking.college_list_id) %></td>
+	<% end %>
+    <td><%= graduate_school_ranking.name_cn %></td>
+    <td><%= graduate_school_ranking.tuition %></td>
+    <td><%= graduate_school_ranking.enrollment %></td>
+	<!--
+    <td><%= graduate_school_ranking.gpa %></td>
+	<td><%= graduate_school_ranking.gmat %></td>
+    <td><%= graduate_school_ranking.graduation_rate %></td>
+    <td><%= graduate_school_ranking.graduation_rate %></td>
+    <td><%= graduate_school_ranking.salary %></td>
+	-->
+  </tr>
+<% end %>
+</table>

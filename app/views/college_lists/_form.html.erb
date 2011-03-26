@@ -1,0 +1,193 @@
+ <% @college_list.force_utf %>
+ 
+<%= form_for(@college_list) do |f| %>
+  <% if @college_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@college_list.errors.count, "error") %> prohibited this college_list from being saved:</h2>
+
+      <ul>
+      <% @college_list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en, :size=>60 %>
+  </div>
+  <div class="field">
+    <%= f.label :name_cn %><br />
+    <%= f.text_field :name_cn, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, :size=>100 %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website, :size=>50 %>
+  </div>
+  <div class="field">
+    <%= f.label :school_type %><br />
+	<%= f.select(:school_type, ["Private", "Public"]) %>
+  </div>
+  <div class="field">
+    <%= f.label :founded %><br />
+    <%= f.text_field :founded, :size=>5 %>
+  </div>
+  <div class="field">
+    <%= f.label :total_student %><br />
+    <%= f.text_field :total_student, :size=>5 %>
+  </div>
+  <div class="field">
+    <%= f.label :enrollment %><br />
+    <%= f.text_field :enrollment, :size=>5 %>
+  </div>
+  <div class="field">
+    <%= f.label :acceptance_rate %><br />
+    <%= f.text_field :acceptance_rate, :size=>5 %>
+  </div>
+  <div class="field">
+    <%= f.label :teacher_student_ratio %><br />
+    <%= f.text_field :teacher_student_ratio, :size=>5 %>
+  </div>
+  <div class="field">
+    <%= f.label :student_info %><br />
+    <%= f.text_area :student_info, :cols=>80, :rows=>6 %>
+  </div>
+  <div class="field">
+    <%= f.label :faculty_info %><br />
+    <%= f.text_area :faculty_info, :cols=>80, :rows=>6 %>
+  </div>
+  <div class="field">
+    <%= f.label :sat_score %><br />
+    <%= f.text_field :sat_score, :size=>20 %>
+  </div>
+  <div class="field">
+    <%= f.label :ranking %><br />
+    <%= f.text_area :ranking, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :tuition_fee %><br />
+    <%= f.text_area :tuition_fee, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :financial_aid %><br />
+    <%= f.text_area :financial_aid, :cols=>80, :rows=>6 %>
+  </div>
+  <div class="field">
+    <%= f.label :about_school %><br />
+    <%= f.text_area :about_school, :cols=>80, :rows=>16 %>
+  </div>
+  <div class="field">
+    <%= f.label :academic_calendar %><br />
+    <%= f.text_field :academic_calendar %>
+  </div>
+  <div class="field">
+    <%= f.label :popular_major %><br />
+    <%= f.text_area :popular_major, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :special_feature %><br />
+    <%= f.text_area :special_feature, :cols=>80, :rows=>16 %>
+  </div>
+  <div class="field">
+    <%= f.label :degree %><br />
+    <%= f.text_area :degree, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_info %><br />
+    <%= f.text_area :contact_info, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :setting %><br />
+    <%= f.text_field :setting %>
+  </div>
+  <div class="field">
+    <%= f.label :pics %><br />
+    <%= f.text_field :pics, :size=>60 %>
+  </div>
+  <div class="field">
+    <%= f.label :application_deadline %><br />
+    <%= f.text_area :application_deadline, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :application_fee %><br />
+    <%= f.text_field :application_fee, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :application_method %><br />
+    <%= f.text_field :application_method %>
+  </div>
+  <div class="field">
+    <%= f.label :application_form %><br />
+    <%= f.text_field :application_form %>
+  </div>
+  <div class="field">
+    <%= f.label :application_material %><br />
+    <%= f.text_area :application_material, :cols=>80, :rows=>16 %>
+  </div>
+  <div class="field">
+    <%= f.label :application_mustknow %><br />
+    <%= f.text_area :application_mustknow, :cols=>80, :rows=>16 %>
+  </div>
+  <div class="field">
+    <%= f.label :double_admission %><br />
+    <%= f.text_field :double_admission %>
+  </div>
+  <div class="field">
+    <%= f.label :lang_requirement %><br />
+    <%= f.text_area :lang_requirement, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :d_lang_requirement %><br />
+    <%= f.text_area :d_lang_requirement, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :recommendation_form %><br />
+    <%= f.text_field :recommendation_form %>
+  </div>
+  <div class="field">
+    <%= f.label :financial_form %><br />
+    <%= f.text_field :financial_form %>
+  </div>
+  <div class="field">
+    <%= f.label :admission_requirement %><br />
+    <%= f.text_area :admission_requirement, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :mail_test_score %><br />
+    <%= f.text_field :mail_test_score %>
+  </div>
+  <div class="field">
+    <%= f.label :airport_help %><br />
+    <%= f.text_field :airport_help %>
+  </div>
+  <div class="field">
+    <%= f.label :boarding %><br />
+    <%= f.text_field :boarding %>
+  </div>
+  <div class="field">
+    <%= f.label :notice %><br />
+    <%= f.text_area :notice, :cols=>80, :rows=>10 %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br />
+    <%= f.text_area :remark, :cols=>80, :rows=>16 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :highest_degree %><br />
+	<%= f.select(:highest_degree, [["Associate", "as"], ["Becholar", "bs"], ["Master", "ms"], ["PhD", "phd"]]) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, ["", "Inactive", "Active"]) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

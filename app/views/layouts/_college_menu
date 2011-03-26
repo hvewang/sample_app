@@ -1,11 +1,25 @@
 <div class="menu">
 
 <%= t('label.college.college') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.collegelist'), colleges_collegelist_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.bachelor'), colleges_bachelor_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.msphd'), colleges_msphd_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.cc'), colleges_communitycollege_path %> <br />
 
 <%= t('label.college.rank') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.undergraduaterank'), colleges_undergraduaterank_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.graduateschoolrank'), colleges_graduateschoolrank_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.universityrank'), colleges_universityrank_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.collegerank'), colleges_collegerank_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= t('label.college.graduateschoolrank') %> <br />
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsbusiness'), colleges_graduateschoolrank_path(:category=>'business') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gseducation'), colleges_graduateschoolrank_path(:category=>'education') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsengineering'), colleges_graduateschoolrank_path(:category=>'engineering') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gslaw'), colleges_graduateschoolrank_path(:category=>'law') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsmedical'), colleges_graduateschoolrank_path(:category=>'medical') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsscience'), colleges_graduateschoolrank_path(:category=>'science') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gslibrary'), colleges_graduateschoolrank_path(:category=>'library') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gssocial'), colleges_graduateschoolrank_path(:category=>'social') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gshealth'), colleges_graduateschoolrank_path(:category=>'health') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gspublic'), colleges_graduateschoolrank_path(:category=>'public') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsfine'), colleges_graduateschoolrank_path(:category=>'fine') %> <br />
 </div>

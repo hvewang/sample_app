@@ -1,0 +1,76 @@
+<% @graduate_school_ranking.force_utf %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @graduate_school_ranking.category %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @graduate_school_ranking.rank %>
+</p>
+
+<p>
+  <b>Name en:</b>
+  <%= @graduate_school_ranking.name_en %>
+</p>
+
+<p>
+  <b>Name cn:</b>
+  <%= @graduate_school_ranking.name_cn %>
+</p>
+
+<p>
+  <b>Tuition:</b>
+  <%= @graduate_school_ranking.tuition %>
+</p>
+
+<p>
+  <b>Enrollment:</b>
+  <%= @graduate_school_ranking.enrollment %>
+</p>
+
+<p>
+  <b>Gpa:</b>
+  <%= @graduate_school_ranking.gpa %>
+</p>
+
+<p>
+  <b>Gmat:</b>
+  <%= @graduate_school_ranking.gmat %>
+</p>
+
+<p>
+  <b>Acceptance rate:</b>
+  <%= @graduate_school_ranking.acceptance_rate %>
+</p>
+
+<p>
+  <b>Salary:</b>
+  <%= @graduate_school_ranking.salary %>
+</p>
+
+<p>
+  <b>Graduation rate:</b>
+  <%= @graduate_school_ranking.graduation_rate %>
+</p>
+
+<p>
+  <b>College list:</b>
+  <%= @graduate_school_ranking.college_list_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @graduate_school_ranking.status %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @graduate_school_ranking.year %>
+</p>
+
+
+<%= link_to 'Edit', edit_graduate_school_ranking_path(@graduate_school_ranking) %> |
+<%= link_to 'Back', graduate_school_rankings_path %>

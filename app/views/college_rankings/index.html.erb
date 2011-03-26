@@ -1,0 +1,50 @@
+<h1>Listing college_rankings</h1>
+
+<table>
+  <tr>
+    <th>School type</th>
+    <th>Rank</th>
+    <th>Name en</th>
+    <th>Name cn</th>
+    <th>Tuition</th>
+    <th>Enrollment</th>
+    <th>Acceptance rate</th>
+    <th>Retention rate</th>
+    <th>Graduation rate</th>
+    <th>Class size</th>
+    <th>Sat act</th>
+    <th>College list</th>
+    <th>Status</th>
+    <th>Year</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @college_rankings.each do |college_ranking| %>
+<% college_ranking.force_utf %>
+  <tr>
+    <td><%= college_ranking.school_type %></td>
+    <td><%= college_ranking.rank %></td>
+    <td><%= college_ranking.name_en %></td>
+    <td><%= college_ranking.name_cn %></td>
+    <td><%= college_ranking.tuition %></td>
+    <td><%= college_ranking.enrollment %></td>
+    <td><%= college_ranking.acceptance_rate %></td>
+    <td><%= college_ranking.retention_rate %></td>
+    <td><%= college_ranking.graduation_rate %></td>
+    <td><%= college_ranking.class_size %></td>
+    <td><%= college_ranking.sat_act %></td>
+    <td><%= college_ranking.college_list_id %></td>
+    <td><%= college_ranking.status %></td>
+    <td><%= college_ranking.year %></td>
+    <td><%= link_to 'Show', college_ranking %></td>
+    <td><%= link_to 'Edit', edit_college_ranking_path(college_ranking) %></td>
+    <td><%= link_to 'Destroy', college_ranking, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New College ranking', new_college_ranking_path %>

@@ -1,0 +1,210 @@
+<%   @college_list.force_utf %>
+<p id="notice"><%= notice %></p>
+
+<fieldset>
+	<legend>
+		<%= link_to "#{@college_list.name_en} #{@college_list.name_cn}",  "http://#{@college_list.website}", :target=> :blank %>
+	</legend>
+	<table class="nhtabclass">
+	
+	   <% if !@pics.empty? %>
+		<tr>
+		    <% if @pics.size == 1 %>
+			<td colspan=6 class="nhtabtdclasstop"><%= image_tag("/images/college/#{@pics[0]}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			<% else %>
+				<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/college/#{@pics[0]}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+				<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/college/#{@pics[1]}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			<% end %>
+		</tr>
+		<% end %>
+		
+		<tr>
+			<td colspan=6 class="nhtabtdclasstop"><%= raw(truncate(@college_list.about_school, :length=> 1000)) %></td>
+		</tr>
+		
+		<tr>
+			<td colspan=6><br><h1><%= t('label.college.label.schoolfact') %></h1></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.address') %></td>
+			<td colspan=5>
+				<%= @college_list.address %>
+			</td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.url') %></td>
+			<td colspan=5>
+								<%= link_to @college_list.website,  "http://#{@college_list.website}", :target=> :blank %>
+			</td>
+			</tr>
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.founded') %></td>
+			<td><%= @college_list.founded %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.schooltype') %></td>
+			<td><%= @college_list.school_type %></td>
+			
+			<td class="nhtabtdclassright"><%= t('label.college.label.totalstudent') %></td>
+			<td><%= @college_list.total_student %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.enrollment') %></td>
+			<td><%= @college_list.enrollment %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.acceptancerate') %></td>
+			<td><%= @college_list.acceptance_rate %></td>
+			
+			<td class="nhtabtdclassright"><%= t('label.college.label.teacherstudentratio') %></td>
+			<td><%= @college_list.teacher_student_ratio %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.academiccalendar') %></td>
+			<td colspan=5><%= @college_list.academic_calendar %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.setting') %></td>
+			<td><%= @college_list.setting %></td>
+			
+			<td class="nhtabtdclassright"><%= t('label.college.label.satscore') %></td>
+			<td><%= @college_list.sat_score %></td>
+			
+			<td></td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.degree') %></td>
+			<td colspan=5><%= raw(@college_list.degree) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.ranking') %></td>
+			<td colspan=5><%= raw(@college_list.ranking) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.studentinfo') %></td>
+			<td colspan=5><%= raw(@college_list.student_info) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.facultyinfo') %></td>
+			<td colspan=5><%= raw(@college_list.faculty_info) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.tuitionfee') %></td>
+			<td colspan=5><%= raw(@college_list.tuition_fee) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.financialaid') %></td>
+			<td colspan=5><%= raw(@college_list.financial_aid) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.popularmajor') %></td>
+			<td colspan=5><%= raw(@college_list.popular_major) %></td>
+		</tr>
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.specialfeature') %></td>
+			<td colspan=5><%= raw(@college_list.special_feature) %></td>
+		</tr>
+		
+		<% if admin_user? %>
+			<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.contactinfo') %></td>
+			<td colspan=5>
+				<%= raw(@college_list.contact_info) %>
+			</td>
+			</tr>
+		<% end %>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.applicationdeadline') %></td>
+			<td colspan=5><%= raw(@college_list.application_deadline) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.applicationfee') %></td>
+			<td><%= raw(@college_list.application_fee) %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.applicationmethod') %></td>
+			<td><%= raw(@college_list.application_method) %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.applicationform') %></td>
+			<td><%= raw(@college_list.application_form) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.admissionrequirement') %></td>
+			<td colspan=5><%= raw(@college_list.admission_requirement) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.applicationmaterial') %></td>
+			<td colspan=5><%= raw(@college_list.application_material) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.applicationmustknow') %></td>
+			<td colspan=5><%= raw(@college_list.application_mustknow) %></td>
+		</tr>
+	
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.doubleadmission') %></td>
+			<td><%= raw(@college_list.double_admission) %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.recommendationform') %></td>
+			<td><%= raw(@college_list.recommendation_form) %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.financialform') %></td>
+			<td><%= raw(@college_list.financial_form) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.langrequirement') %></td>
+			<td colspan=5><%= raw(@college_list.lang_requirement) %></td>
+		</tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.dlangrequirement') %></td>
+			<td colspan=5><%= raw(@college_list.d_lang_requirement) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.mailtestscore') %></td>
+			<td><%= raw(@college_list.mail_test_score) %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.airporthelp') %></td>
+			<td><%= raw(@college_list.airport_help) %></td>
+			<td class="nhtabtdclassright"><%= t('label.college.label.boarding') %></td>
+			<td><%= raw(@college_list.boarding) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.notice') %></td>
+			<td colspan=5><%= raw(@college_list.notice) %></td>
+		</tr>
+		
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.remark') %></td>
+			<td colspan=5><%= raw(@college_list.remark) %></td>
+		</tr>
+		
+		<!--
+		<tr>
+			<td class="nhtabtdclassright"><%= t('label.college.label.status') %></td>
+			<td colspan=5><%= raw(@college_list.status) %></td>
+		</tr>
+		-->
+		
+	</table>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+

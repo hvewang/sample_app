@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110313020327
+# Schema version: 20110322035855
 #
 # Table name: host_family_infos
 #
@@ -41,7 +41,6 @@
 #  s_english_level     :string(255)
 #  s_primary_language  :string(255)
 #  s_second_language   :string(255)
-#  s_live_in           :string(255)
 #  number_of_kids      :string(255)
 #  kids_detail         :text
 #  house_ownership     :string(255)
@@ -56,9 +55,10 @@
 #  comment             :text
 #  way_to_know_nh      :string(255)
 #  ind_confirm         :string(255)
-#  status              :string(255)
 #  created_at          :datetime
 #  updated_at          :datetime
+#  status              :string(255)
+#  s_live_in           :string(255)
 #
 
 class HostFamilyInfo < ActiveRecord::Base

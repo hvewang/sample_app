@@ -10,7 +10,7 @@
 			<li><%= link_to t('header.label.services'), service_path %></li>
 			
 			<li><%= link_to t('header.label.highschool'), high_schools_allhighschool_path %></li>
-			<li><%= link_to t('header.label.university'), colleges_bachelor_path %></li>
+			<li><%= link_to t('header.label.university'), colleges_collegelist_path %></li>
 			<li><%= link_to t('header.label.hostfamily'), host_families_whatishomestay_path %></li>
 			
 			<li><%= link_to t('header.label.successcase'), successcase_path %></li>

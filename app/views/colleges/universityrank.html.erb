@@ -1,0 +1,36 @@
+<h1><%= t("#{@titlelabel}") %></h1>
+
+<table>
+  <tr>
+    <th><%= t('label.college.label.rank') %></th>
+    <th><%= t('label.college.label.name') %></th>
+    <th></th>
+    <th><%= t('label.college.label.tuition') %></th>
+    <th><%= t('label.college.label.enrollment') %></th>
+    <th><%= t('label.college.label.acceptancerate') %></th>
+    <th><%= t('label.college.label.retentionrate') %></th>
+    <th><%= t('label.college.label.graduationrate') %></th>
+    <th><%= t('label.college.label.classsize') %></th>
+    <th><%= t('label.college.label.satact') %></th>
+  </tr>
+
+<% @college_rankings.each do |college_ranking| %>
+<% college_ranking.force_utf %>
+  <tr>
+    <td><%= college_ranking.rank %></td>
+	<% if college_ranking.college_list_id.nil? %>
+		<td><%= college_ranking.name_en %></td>
+	<% else %>
+		<td><%= link_to "#{college_ranking.name_en}", colleges_collegedetail_path(:id=>college_ranking.college_list_id) %></td>
+	<% end %>
+    <td><%= college_ranking.name_cn %></td>
+    <td><%= college_ranking.tuition %></td>
+    <td><%= college_ranking.enrollment %></td>
+    <td><%= college_ranking.acceptance_rate %></td>
+    <td><%= college_ranking.retention_rate %></td>
+    <td><%= college_ranking.graduation_rate %></td>
+    <td><%= college_ranking.class_size %></td>
+    <td><%= college_ranking.sat_act %></td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,109 @@
+<h1><%= t("#{@titlelabel}") %></h1>
+
+<%= will_paginate @college_lists %>
+
+<table>
+  <tr>
+    <th><%= t('label.college.label.name') %></th>
+    <th></th>
+	<th><%= t('label.college.label.schooltype') %></th>
+    <th><%= t('label.college.label.founded') %></th>
+    <th><%= t('label.college.label.address') %></th>
+    <th><%= t('label.college.label.url') %></th>
+	<!--
+    <th>Total student</th>
+    <th>Enrollment</th>
+    <th>Acceptance rate</th>
+    <th>Teacher student ratio</th>
+    <th>Student info</th>
+	<th>Faculty info</th>
+    <th>Sat score</th>
+    <th>Ranking</th>
+    <th>Tuition fee</th>
+    <th>Financial aid</th>
+    <th>About school</th>
+    <th>Academic calendar</th>
+    <th>Popular major</th>
+    <th>Special feature</th>
+    <th>Degree</th>
+    <th>Contact info</th>
+    <th>Setting</th>
+    <th>Pics</th>
+    <th>Application deadline</th>
+    <th>Applciation fee</th>
+    <th>Application method</th>
+    <th>Application form</th>
+    <th>Application material</th>
+    <th>Application mustknow</th>
+    <th>Double admission</th>
+    <th>Lang requirement</th>
+    <th>D lang requirement</th>
+    <th>Recommendation form</th>
+    <th>Financial form</th>
+    <th>Admission requirement</th>
+    <th>Mail test score</th>
+    <th>Airport help</th>
+    <th>Boardidng</th>
+    <th>Notice</th>
+    <th>Remark</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+	-->
+  </tr>
+
+<% @college_lists.each do |college_list| %>
+<% college_list.force_utf %>
+  <tr>
+    <td><%= link_to "#{college_list.name_en}", colleges_collegedetail_path(:id=>college_list) %></td>
+    <td><%= college_list.name_cn %></td>
+	<td><%= college_list.school_type %></td>
+    <td><%= college_list.founded %></td>
+    <td><%= college_list.address %></td>
+    <td><%= link_to college_list.website,  "http://#{college_list.website}", :target=> :blank %></td>
+    
+	<!--
+    <td><%= college_list.total_student %></td>
+    <td><%= college_list.enrollment %></td>
+    <td><%= college_list.acceptance_rate %></td>
+    <td><%= college_list.teacher_student_ratio %></td>
+    <td><%= college_list.student_info %></td>
+	<td><%= college_list.faculty_info %></td>
+    <td><%= college_list.sat_score %></td>
+    <td><%= college_list.ranking %></td>
+    <td><%= college_list.tuition_fee %></td>
+    <td><%= college_list.financial_aid %></td>
+    <td><%= college_list.about_school %></td>
+    <td><%= college_list.academic_calendar %></td>
+    <td><%= college_list.popular_major %></td>
+    <td><%= college_list.special_feature %></td>
+    <td><%= college_list.degree %></td>
+    <td><%= college_list.contact_info %></td>
+    <td><%= college_list.setting %></td>
+    <td><%= college_list.pics %></td>
+    <td><%= college_list.application_deadline %></td>
+    <td><%= college_list.application_fee %></td>
+    <td><%= college_list.application_method %></td>
+    <td><%= college_list.application_form %></td>
+    <td><%= college_list.application_material %></td>
+    <td><%= college_list.application_mustknow %></td>
+    <td><%= college_list.double_admission %></td>
+    <td><%= college_list.lang_requirement %></td>
+    <td><%= college_list.d_lang_requirement %></td>
+    <td><%= college_list.recommendation_form %></td>
+    <td><%= college_list.financial_form %></td>
+    <td><%= college_list.admission_requirement %></td>
+    <td><%= college_list.mail_test_score %></td>
+    <td><%= college_list.airport_help %></td>
+    <td><%= college_list.boarding %></td>
+    <td><%= college_list.notice %></td>
+    <td><%= college_list.remark %></td>
+    <td><%= college_list.status %></td>
+    <td><%= link_to 'Show', college_list %></td>
+    <td><%= link_to 'Edit', edit_college_list_path(college_list) %></td>
+    <td><%= link_to 'Destroy', college_list, :confirm => 'Are you sure?', :method => :delete %></td>
+	-->
+  </tr>
+<% end %>
+</table>

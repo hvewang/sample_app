@@ -1,0 +1,77 @@
+<% @college_ranking.force_utf %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>School type:</b>
+  <%= @college_ranking.school_type %>
+</p>
+
+<p>
+  <b>Rank:</b>
+  <%= @college_ranking.rank %>
+</p>
+
+<p>
+  <b>Name en:</b>
+  <%= @college_ranking.name_en %>
+</p>
+
+<p>
+  <b>Name cn:</b>
+  <%= @college_ranking.name_cn %>
+</p>
+
+<p>
+  <b>Tuition:</b>
+  <%= @college_ranking.tuition %>
+</p>
+
+<p>
+  <b>Enrollment:</b>
+  <%= @college_ranking.enrollment %>
+</p>
+
+<p>
+  <b>Acceptance rate:</b>
+  <%= @college_ranking.acceptance_rate %>
+</p>
+
+<p>
+  <b>Retention rate:</b>
+  <%= @college_ranking.retention_rate %>
+</p>
+
+<p>
+  <b>Graduation rate:</b>
+  <%= @college_ranking.graduation_rate %>
+</p>
+
+<p>
+  <b>Class size:</b>
+  <%= @college_ranking.class_size %>
+</p>
+
+<p>
+  <b>Sat act:</b>
+  <%= @college_ranking.sat_act %>
+</p>
+
+<p>
+  <b>College list:</b>
+  <%= @college_ranking.college_list_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @college_ranking.status %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @college_ranking.year %>
+</p>
+
+
+<%= link_to 'Edit', edit_college_ranking_path(@college_ranking) %> |
+<%= link_to 'Back', college_rankings_path %>
