@@ -63,7 +63,7 @@ class ServiceRequestsController < ApplicationController
 
     respond_to do |format|
       if @service_request.save
-		#EmailNotifier.service_request(@service_request).deliver
+		EmailNotifier.service_request(@service_request).deliver
 	    if admin_user?
 			format.html { redirect_to(@service_request, :notice => 'Service request was successfully created.') }
 			format.xml  { render :xml => @service_request, :status => :created, :location => @service_request }

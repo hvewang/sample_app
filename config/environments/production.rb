@@ -46,4 +46,17 @@ SampleApp::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Email configuration
+	config.action_mailer.raise_delivery_errors = true
+	
+	# Gmail SMTP server setup
+	ActionMailer::Base.smtp_settings = {
+		:address => "smtp.gmail.com",
+		:enable_starttls_auto => true,
+		:port => 587,
+		:authentication => :plain,
+		:user_name => "baiqing.wang66@gmail.com",
+		:password => 'hvewang04'
+	}
 end
