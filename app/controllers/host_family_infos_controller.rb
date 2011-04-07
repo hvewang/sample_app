@@ -1,5 +1,5 @@
 class HostFamilyInfosController < ApplicationController
-  before_filter :admin_user, :except=>[:new]
+  before_filter :authenticate, :admin_user, :except=>[:new, :create]
   before_filter :set_layout, :except=>[:new]
   
   # GET /host_family_infos
@@ -57,6 +57,8 @@ class HostFamilyInfosController < ApplicationController
 
     respond_to do |format|
       if @host_family_info.save
+	    EmailNotifier.host_family_info(@host_family_info).deliver
+		
         #format.html { redirect_to(@host_family_info, :notice => 'Host family info was successfully created.') }
 		format.html { redirect_to new_host_family_info_url, :notice => 'Host family info was successfully created.'  }
         format.xml  { render :xml => @host_family_info, :status => :created, :location => @host_family_info }

@@ -1,0 +1,10 @@
+Hi All,
+<br><br>
+A new Service Request has been created: 
+<br>
+Student name: <%= @student_name %>
+<br>
+Parent name: <%= @parent_name %>
+<br><br>
+Please go check its details at: <%= link_to 'Show the New Service Request', service_request_url(@service_request_id, :host => "localhost:3000") %> 
+

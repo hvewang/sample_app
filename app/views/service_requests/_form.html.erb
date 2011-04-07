@@ -1,4 +1,5 @@
 <%= form_for(@service_request) do |f| %>
+  <% @service_request.force_utf %>
   <% if @service_request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@service_request.errors.count, "error") %> prohibited this service_request from being saved:</h2>

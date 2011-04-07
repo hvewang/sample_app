@@ -20,6 +20,7 @@
   </tr>
 
 <% @service_requests.each do |service_request| %>
+  <% service_request.force_utf %>
   <tr>
     <td><%= service_request.student_name %></td>
     <td><%= service_request.year_of_birth %></td>

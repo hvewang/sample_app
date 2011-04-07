@@ -22,5 +22,18 @@ SampleApp::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # Email configuration
+	config.action_mailer.raise_delivery_errors = true
+	
+	# Gmail SMTP server setup
+	ActionMailer::Base.smtp_settings = {
+	:address => "smtp.gmail.com",
+	:enable_starttls_auto => true,
+	:port => 587,
+	:authentication => :plain,
+	:user_name => "baiqing.wang66@gmail.com",
+	:password => 'hvewang04'
+	}
 end
 

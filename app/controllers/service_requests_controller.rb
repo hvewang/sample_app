@@ -1,5 +1,5 @@
 class ServiceRequestsController < ApplicationController
-  before_filter :admin_user, :except=>[:new]
+  before_filter :authenticate, :admin_user, :except=>[:new, :create]
   
   # GET /service_requests
   # GET /service_requests.xml
@@ -63,8 +63,14 @@ class ServiceRequestsController < ApplicationController
 
     respond_to do |format|
       if @service_request.save
-        format.html { redirect_to(@service_request, :notice => 'Service request was successfully created.') }
-        format.xml  { render :xml => @service_request, :status => :created, :location => @service_request }
+		EmailNotifier.service_request(@service_request).deliver
+	    if admin_user?
+			format.html { redirect_to(@service_request, :notice => 'Service request was successfully created.') }
+			format.xml  { render :xml => @service_request, :status => :created, :location => @service_request }
+		else
+			format.html { redirect_to(new_service_request_url, :notice => 'Service request was successfully created.') }
+			format.xml  { render :xml => @service_request, :status => :created, :location => @service_request }
+		end
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @service_request.errors, :status => :unprocessable_entity }
@@ -99,4 +105,5 @@ class ServiceRequestsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
 end
