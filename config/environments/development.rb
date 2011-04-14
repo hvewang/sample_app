@@ -32,7 +32,7 @@ SampleApp::Application.configure do
 		:enable_starttls_auto => true,
 		:port => 587,
 		:authentication => :plain,
-		:user_name => "baiqing.wang66@gmail.com",
+		:user_name => "newhopeinternationaledu@gmail.com",
 		:password => 'hvewang04'
 	}
 end
