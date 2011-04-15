@@ -1,0 +1,8 @@
+Hi <%= @user_name %>,
+<br><br>
+Thank you very for creating a New Hope online account. You have made a good choice! 
+
+<br><br>
+Please click following link to activate your account: <%= link_to 'Activate Your Account', "http://localhost:3000/signin?astr=#{@salt}" %> 
+<br>
+Thanks,

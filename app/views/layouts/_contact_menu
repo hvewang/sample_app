@@ -1,3 +1,6 @@
 <div class="menu">
-	<%= link_to t('header.label.contact'), contact_path %>
+	<%= link_to t('header.label.contact'), contact_path %><br/>
+	<br>
+	<%= link_to t('label.hostfamily.servicerequest.form'), new_service_request_path %> <br />
+	<%= link_to t('label.hostfamily.host.applicationform'), new_host_family_info_path %> <br />
 </div>

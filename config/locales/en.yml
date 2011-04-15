@@ -242,6 +242,18 @@ en:
         host: Host Family Application
         qualification: Family Qualification
         applicationform: Application Form
+    contactus:
+      msg: Please contact New Hope by phone or email if you have any questions or need more information. Thanks.
+      feedback: Your Feedback
+      china: China
+      usa: USA
+      xian: Xi'an Area
+      chicago: Chicago Area
+      address: Address
+      xianaddress: Rm 803A, No 88th S Guanzheng Street, Chang'an International Center Building B, Xi'an, Shaanxi
+      phone: Phone
+      fax: Fax
+      website: Web Site  
   general:
     are_you_sure: Are you sure?
     back: Back

@@ -35,11 +35,14 @@ class UsersController < ApplicationController
 		redirect_to root_path if signed_in?
 		
 		@user = User.new(params[:user])
-		if @user.save
+		if @user.save			
+			EmailNotifier.activate_user(@user).deliver
+			
 			# Handle a successful save.
-			sign_in @user
-			flash[:success] = "welcome to New Hope International Education"
-			redirect_to @user
+			#sign_in @user
+			flash[:success] = "You have successfully created your account. Please check your email and activate your account from there."
+			#redirect_to @user
+			redirect_to :action => "new"
 		else
 			@title = "Sign up"
 			render 'new'

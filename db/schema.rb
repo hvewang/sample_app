@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110326035621) do
+ActiveRecord::Schema.define(:version => 20110414194214) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -285,6 +285,7 @@ ActiveRecord::Schema.define(:version => 20110326035621) do
     t.integer  "user_type_id",       :default => 3
     t.string   "cellphone"
     t.string   "homephone"
+    t.string   "status"
   end
 
 end

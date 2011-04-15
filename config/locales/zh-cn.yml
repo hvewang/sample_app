@@ -242,6 +242,18 @@ zh-cn:
         host: 申请寄宿家庭
         qualification: 寄宿家庭的标准
         applicationform: 寄宿家庭申请表格
+    contactus:
+      msg: 如您有任何问题或想得到更多信息， 请给新希望打电话或发电子邮件，谢谢。
+      feedback: 您的反馈
+      china: 中国
+      usa: 北美
+      xian: 西安地区
+      chicago: 大芝加哥地区
+      address: 地址
+      xianaddress: 陕西省西安市南关正街88号长安国际中心B座803A室
+      phone: 电话
+      fax: 传真
+      website: 网址
   general:
     are_you_sure: Tem certeza?
     back: 返回

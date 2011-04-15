@@ -28,4 +28,12 @@ class EmailNotifier < ActionMailer::Base
 	
 	mail :to => "baiqing_wang@hotmail.com"
   end
+  
+  def activate_user(user)
+    @greeting = "Hi"
+    @user_name = user.name
+	@salt = user.salt
+	
+	mail :to => user.email
+  end
 end
