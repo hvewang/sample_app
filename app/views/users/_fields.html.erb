@@ -29,3 +29,12 @@
 	<%= t('label.homephone') %>&nbsp;(<%= t('label.phoneformat') %>)<br />
 	<%= f.text_field :homephone %>
 </div>
+
+<div class="field">
+	Status<br />
+	<%= f.select(:status, 
+						[	 
+							"", ["Active", "A"], ["Inactive", "I"]
+						]
+					) %>
+</div>
