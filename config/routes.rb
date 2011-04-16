@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+  resources :locations
+
   resources :graduate_school_rankings
 
   resources :college_rankings

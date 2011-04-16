@@ -6,8 +6,18 @@ class PagesController < ApplicationController
   end
 
   def contact
+    #http://upcomer.wordpress.com/2011/04/15/google-maps-in-rails-3/
+	#use gmaps4rails to add google maps
+	
 	@curr_menu = "layouts/contact_menu"
 	@title = "Contact New Hope"
+	
+	@locations = Location.all
+	@locations.each do |location|
+		location.force_utf
+	end
+	
+	@json = @locations.to_gmaps4rails
   end
   
   def about

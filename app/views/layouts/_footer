@@ -2,7 +2,9 @@
 	<nav class="round">
 		&copy; <%= t('footer.msg') %>
 		<ul>
-			<li><%= link_to t('header.label.about'),  about_path %></li>
+			<li>
+				<%= link_to t('header.label.about'),  about_path %>
+			</li>
 			<li><%= link_to t('header.label.latestnews'), '#' %></li>
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
 			<li><%= link_to t('header.label.help'), help_path %></li>		
