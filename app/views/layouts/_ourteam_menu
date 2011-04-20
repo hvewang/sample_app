@@ -12,7 +12,8 @@
 
 <%= link_to t('label.ourteam.advisor'), ourteam_path %> <br />
 
+<!--
 <%= link_to t('label.ourteam.legal'), ourteam_path %> <br />
-
+-->
 
 </div>

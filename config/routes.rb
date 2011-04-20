@@ -1,4 +1,13 @@
 SampleApp::Application.routes.draw do
+
+  get "success_cases/allstudent"
+  get "success_cases/highschool"
+  get "success_cases/undergraduate"
+  get "success_cases/graduate"
+  get "success_cases/other"
+  
+  resources :success_cases
+
   resources :locations
 
   resources :graduate_school_rankings
@@ -47,7 +56,7 @@ SampleApp::Application.routes.draw do
   get "testimonials/parent"
   get "testimonials/student"
   get "testimonials/hostfamily"
-
+  
   resources :sessions, :only => [:new, :create, :destroy]
 
   get "users/micropost"

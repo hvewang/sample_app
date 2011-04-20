@@ -1,0 +1,38 @@
+<h1>Listing success_cases</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+	<th>Student name</th>
+    <th>School name</th>
+    <th>School type</th>
+    <th>Pics</th>
+    <th>Status</th>
+    <th>User</th>
+    <th>Msg</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @success_cases.each do |success_case| %>
+  <% success_case.force_utf %>
+  <tr>
+    <td><%= success_case.record_type %></td>
+	<td><%= success_case.student_name %></td>
+    <td><%= success_case.school_name %></td>
+    <td><%= success_case.school_type %></td>
+    <td><%= success_case.pics %></td>
+    <td><%= success_case.status %></td>
+    <td><%= success_case.user_id %></td>
+    <td><%= success_case.msg %></td>
+    <td><%= link_to 'Show', success_case %></td>
+    <td><%= link_to 'Edit', edit_success_case_path(success_case) %></td>
+    <td><%= link_to 'Destroy', success_case, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Success case', new_success_case_path %>

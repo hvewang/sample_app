@@ -1,12 +1,13 @@
-<h1>Abailable Host Families in US</h1>
+<h1><%= t('label.hostfamily.servicerequest.availabehomestay') %></h1>
 
+<%= will_paginate @host_family_infos %>
 
 <table>
   <tr>
     <th> # </th>
-    <th>City</th>
-    <th>State</th>
-    <th>Zip</th>
+    <th><%= t('label.hostfamily.servicerequest.label.city') %></th>
+    <th><%= t('label.hostfamily.servicerequest.label.state') %></th>
+    <th><%= t('label.hostfamily.servicerequest.label.zipcode') %></th>
   </tr>
 
 <% i = 0 %>
@@ -21,3 +22,5 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @host_family_infos %>

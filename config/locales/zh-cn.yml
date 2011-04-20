@@ -238,6 +238,8 @@ zh-cn:
           newspaper: 报纸
           otherhowtoknownh: 其他途径
           submit: 递交服务申请
+          state: 州/省
+          zipcode: 邮编
       host:
         host: 申请寄宿家庭
         qualification: 寄宿家庭的标准
@@ -254,6 +256,13 @@ zh-cn:
       phone: 电话
       fax: 传真
       website: 网址
+    successcase:
+      successcase: 成功案例
+      all: 全部学生
+      highschool: 高中生
+      undergraduate: 本科生
+      graduate: 硕士/博士生
+      other: 其他
   general:
     are_you_sure: Tem certeza?
     back: 返回

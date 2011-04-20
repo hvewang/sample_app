@@ -52,6 +52,7 @@ class PagesController < ApplicationController
   end
   
   def successcase
+	@curr_menu = "layouts/successcase_menu"
 	@title = "Success cases"
   end
   

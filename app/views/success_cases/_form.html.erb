@@ -1,0 +1,68 @@
+<%= form_for(@success_case) do |f| %>
+  <% @success_case.force_utf %>
+  <% if @success_case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@success_case.errors.count, "error") %> prohibited this success_case from being saved:</h2>
+
+      <ul>
+      <% @success_case.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :record_type %><br />
+	<%= f.select(:record_type, 
+		[
+			"Success Case", "Testimonials-Student", "Testimonials-Parent", "Testimonials-HostFamily"
+		]
+		) 
+	%>
+  </div>
+  
+  <div class="field">
+    <%= "Student/Parent/Host Family name" %><br />
+    <%= f.text_field :student_name %>
+  </div>
+  <div class="field">
+    <%= f.label :school_name %><br />
+    <%= f.text_field :school_name %>
+  </div>
+  <div class="field">
+    <%= f.label :school_type %><br />
+	<%= f.select(:school_type, 
+		[
+			["High School", "High School"], ["Undergraduate", "Undergraduate"], ["Graduate", "Graduate"], "Other"
+		]
+		) 
+	%>
+  </div>
+  <div class="field">
+    <%= f.label :pics %><br />
+    <%= f.text_field :pics %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, 
+		[
+			"", "Active", "Inactive"
+		]
+		) 
+	%>
+  </div>
+  <!--
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  -->
+  <div class="field">
+    <%= f.label :msg %><br />
+	<%= f.text_area :msg, :cols=>80, :rows=>12 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

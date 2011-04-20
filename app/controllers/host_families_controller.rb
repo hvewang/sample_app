@@ -2,6 +2,8 @@ class HostFamiliesController < ApplicationController
   before_filter :set_layout
   
   def qualification
+	@title = "Why New Hope"
+	@translation = Translation.find_by_nm('hostfamily.qualification')
   end
 
   def applicationform
@@ -18,6 +20,8 @@ class HostFamiliesController < ApplicationController
   end
 
   def faq
+	@title = "Frequently Asked Questions"
+	@translation = Translation.find_by_nm('hostfamily.faq')
   end
 
   def homestayphoto
@@ -27,7 +31,7 @@ class HostFamiliesController < ApplicationController
   end
 
   def availablehomestay
-	@host_family_infos = HostFamilyInfo.find_all_by_status('Active')	
+	@host_family_infos = HostFamilyInfo.find_all_by_status('Active').paginate(:page => params[:page], :per_page => 10)
   end
 
   private

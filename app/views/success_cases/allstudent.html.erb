@@ -1,0 +1,43 @@
+<b><%= t("#{@titlelabel0}") %> -> <%= t("#{@titlelabel}") %></b>
+
+<br><br>
+<%= will_paginate @success_cases %>
+
+<table class="nhtabclass">
+<% @success_cases.each do |success_case| %>
+  <% success_case.force_utf %>
+  
+  <tr>
+    <td colspan=2><%= success_case.student_name %>: <%= success_case.school_name %></td>
+  </tr>
+  
+  <% if !success_case.pics.empty? %>
+  <% pics = success_case.pics.split %>
+		<tr>
+		    <% if pics.size == 1 %>
+			<td class="nhtabtdclasstop" width=35%><%= image_tag("/images/successcase/#{pics[0]}", :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
+			</td>
+			<% else %>
+				<td class="nhtabtdclasstop" width=35%>
+					<%= image_tag("/images/successcase/#{pics[0]}", :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
+					<!--
+					<br>
+					<%= image_tag("/images/successcase/#{pics[1]}", :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
+					-->
+				</td>
+			<% end %>
+			
+			<td class="nhtabtdclasstop"><%= raw(success_case.msg) %></td>
+		</tr>
+	<% else %>
+		<tr>
+			<td colspan=2><%= raw(success_case.msg) %></td>
+		  </tr>
+	<% end %>
+  
+    <tr><td colspan=2></td></tr>
+	<tr><td colspan=2></td></tr>
+<% end %>
+</table>
+
+<%= will_paginate @success_cases %>

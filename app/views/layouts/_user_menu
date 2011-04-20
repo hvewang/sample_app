@@ -14,5 +14,6 @@
 		<%= link_to "College/University List", college_lists_path %><br />
 		<%= link_to "National University Rankings", college_rankings_path %><br />
 		<%= link_to "Graduate School Rankings", graduate_school_rankings_path %><br />
+		<%= link_to "Success Cases", success_cases_path %><br />
 	<% end %>
 </div>

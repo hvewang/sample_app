@@ -1,0 +1,47 @@
+<% @success_case.force_utf %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @success_case.record_type %>
+</p>
+
+<p>
+  <b>Student name:</b>
+  <%= @success_case.student_name %>
+</p>
+
+<p>
+  <b>School name:</b>
+  <%= @success_case.school_name %>
+</p>
+
+<p>
+  <b>School type:</b>
+  <%= @success_case.school_type %>
+</p>
+
+<p>
+  <b>Pics:</b>
+  <%= @success_case.pics %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @success_case.status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @success_case.user_id %>
+</p>
+
+<p>
+  <b>Msg:</b>
+  <%= @success_case.msg %>
+</p>
+
+
+<%= link_to 'Edit', edit_success_case_path(@success_case) %> |
+<%= link_to 'Back', success_cases_path %>

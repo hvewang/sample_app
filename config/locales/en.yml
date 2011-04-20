@@ -238,9 +238,11 @@ en:
           newspaper: Newspaper
           otherhowtoknownh: Others
           submit: Submit service request
+          state: State
+          zipcode: Zip Code
       host:
         host: Host Family Application
-        qualification: Family Qualification
+        qualification: Host Family Qualification
         applicationform: Application Form
     contactus:
       msg: Please contact New Hope by phone or email if you have any questions or need more information. Thanks.
@@ -254,6 +256,13 @@ en:
       phone: Phone
       fax: Fax
       website: Web Site  
+    successcase:
+      successcase: Success Cases
+      all: All Students
+      highschool: High School
+      undergraduate: Undergraduate
+      graduate: Graduate
+      other: Other
   general:
     are_you_sure: Are you sure?
     back: Back
