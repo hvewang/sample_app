@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	before_filter :set_layout, :except => [:home]
+	before_filter :set_layout, :except => [:home, :news]
 	
   def home
 	@title = "Home"
@@ -48,12 +48,15 @@ class PagesController < ApplicationController
   end
   
   def news
-	@title = "News"
+	@title = "Latest News"
+	@curr_menu = "layouts/news_menu"
+	@curr_layout = "layouts/user_layout"
   end
   
   def successcase
 	@curr_menu = "layouts/successcase_menu"
 	@title = "Success cases"
+	@curr_menu = "layouts/about_menu"
   end
   
   private

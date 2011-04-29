@@ -1,24 +1,24 @@
 <div class="menu">
 
-<%= link_to t('label.service.newhope'), service_path %> <br />
+<%= link_to t('label.service.newhope'), services_general_path %> <br />
 
 
 <%= t('label.service.applyforhs') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.privatehs'), service_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.boardinghs'), service_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), service_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.privatehs'), services_dayschool_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.boardinghs'), services_boardingschool_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), services_publicschool_path %> <br />
 
 
 <%= t('label.service.applyforcollege') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.undergraduate'), service_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.msphd'), service_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.undergraduate'), services_undergraduate_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.msphd'), services_graduate_path %> <br />
 
 <%= t('label.service.boardingfamily') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.requesthostfamily'), service_path %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.applyforhostfamily'), service_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.requesthostfamily'), services_hostfamily_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.applyforhostfamily'), services_hostfamilyapplication_path %> <br />
 
-<%= link_to t('label.service.wenshu'), service_path %> <br />
+<%= link_to t('label.service.wenshu'), services_docwriting_path %> <br />
 
-<%= link_to t('label.service.afterservice'), service_path %> <br />
+<%= link_to t('label.service.afterservice'), services_followup_path %> <br />
 
 </div>

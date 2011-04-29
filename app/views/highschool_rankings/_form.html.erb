@@ -1,0 +1,60 @@
+<%= form_for(@highschool_ranking) do |f| %>
+  <% @highschool_ranking.force_utf %>
+  
+  <% if @highschool_ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@highschool_ranking.errors.count, "error") %> prohibited this highschool_ranking from being saved:</h2>
+
+      <ul>
+      <% @highschool_ranking.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rank %><br />
+    <%= f.text_field :rank, :size => 3 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year, :size => 4 %>
+  </div>
+  <div class="field">
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en, :size => 60 %>
+  </div>
+  <div class="field">
+    <%= f.label :name_cn %><br />
+    <%= f.text_field :name_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, :size => 80 %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :usnews_link %><br />
+    <%= f.text_field :usnews_link %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_field :comments, :size => 100 %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, ["Active", "Inactive"]) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

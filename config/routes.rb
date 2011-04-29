@@ -1,5 +1,35 @@
 SampleApp::Application.routes.draw do
 
+  get "news_updates/newslist"
+  get "news_updates/newsdetails"
+  resources :news_updates
+
+  get "newhope_teams/advisor"
+  
+  resources :newhope_teams
+
+  get "services/general"
+
+  get "services/dayschool"
+
+  get "services/boardingschool"
+
+  get "services/publicschool"
+
+  get "services/undergraduate"
+
+  get "services/graduate"
+
+  get "services/hostfamily"
+
+  get "services/hostfamilyapplication"
+
+  get "services/docwriting"
+
+  get "services/followup"
+
+  resources :highschool_rankings
+
   get "success_cases/allstudent"
   get "success_cases/highschool"
   get "success_cases/undergraduate"
@@ -34,6 +64,10 @@ SampleApp::Application.routes.draw do
   get "host_families/homestayphoto"
   get "host_families/servicerequestform"
   get "host_families/availablehomestay"
+  get "host_families/responsibility"
+  get "host_families/guideline"
+  get "host_families/question"
+  post "host_families/submitquestion"
 
   get "colleges/collegedetail"
   get "colleges/collegelist"
@@ -56,6 +90,11 @@ SampleApp::Application.routes.draw do
   get "testimonials/parent"
   get "testimonials/student"
   get "testimonials/hostfamily"
+  get "testimonials/other"
+  get "testimonials/parent1"
+  get "testimonials/student1"
+  get "testimonials/hostfamily1"
+  get "testimonials/other1"
   
   resources :sessions, :only => [:new, :create, :destroy]
 

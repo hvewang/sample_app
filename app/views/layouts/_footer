@@ -5,7 +5,10 @@
 			<li>
 				<%= link_to t('header.label.about'),  about_path %>
 			</li>
-			<li><%= link_to t('header.label.latestnews'), '#' %></li>
+			<li><%= link_to t('header.label.latestnews'), news_updates_newslist_path %></li>
+			<% if !signed_in? %>
+				<li><%= link_to t('header.label.signup'), signup_path %></li>
+			<% end %>
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
 			<li><%= link_to t('header.label.help'), help_path %></li>		
 		</ul>

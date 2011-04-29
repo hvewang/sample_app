@@ -1,0 +1,14 @@
+<h1><%= t("header.label.latestnews") %> -> <%= t("#{@titlelabel}") %></h1>
+
+<table>
+
+<% i = 0 %>
+<% @news_updates.each do |news_update| %>
+  <% news_update.force_utf %>
+  <% i = i + 1 %>
+  <tr>
+    <td width=1%><%= i %></td>
+    <td><%= link_to news_update.title_cn, news_updates_newsdetails_path(:id => news_update, :news_type => news_update.news_type) %></td>
+  </tr>
+<% end %>
+</table>

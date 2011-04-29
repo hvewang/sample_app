@@ -33,6 +33,15 @@ zh-cn:
     cellphone: 手机号码
     homephone: 座机号码
     phoneformat: 国家代码-区号-电话号码
+    news:
+      overseasnews: 留学资讯
+      applicationnews: 申请快报
+      guidelines: 出国指南
+      mustknown: 留学须知
+      us: 美国资讯
+      usnews: 美国新闻
+      usstudylife: 学习生活
+      usfoodliving: 衣食住行
     service:
       newhope: 新希望服务项目
       applyforhs: 美国高中申请
@@ -59,7 +68,7 @@ zh-cn:
       schoolapplication:
         schoolapplication: 高中申请
         procedure: 申请程序
-        otherservice: 额外服务
+        otherservice: 其它额外服务
       label:
         schoolname: 学校名
         schooltype: 走读/寄宿
@@ -92,6 +101,8 @@ zh-cn:
         facility: 学校设施
         clubandactivity: 俱乐部和课外活动
         nearbycity: 附近大城市
+        rank: 排名
+        addressphone: 地址/电话
     college:
       college: 美国大学
       collegelist: 大学名单
@@ -244,6 +255,9 @@ zh-cn:
         host: 申请寄宿家庭
         qualification: 寄宿家庭的标准
         applicationform: 寄宿家庭申请表格
+        responsibility: 寄宿家庭的责任
+        guideline: 寄宿家庭指导手册
+        question: 告诉我们你的问题
     contactus:
       msg: 如您有任何问题或想得到更多信息， 请给新希望打电话或发电子邮件，谢谢。
       feedback: 您的反馈

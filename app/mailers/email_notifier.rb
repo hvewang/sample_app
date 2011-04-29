@@ -29,6 +29,16 @@ class EmailNotifier < ActionMailer::Base
 	mail :to => "baiqing_wang@hotmail.com"
   end
   
+  def host_family_question(name, phone, email, question)
+    @greeting = "Host Family Question"
+    @name = name
+	@phone = phone
+	@email = email
+	@question = question
+	
+	mail :to => "baiqing_wang@hotmail.com"
+  end
+  
   def activate_user(user)
     @greeting = "Hi"
     @user_name = user.name

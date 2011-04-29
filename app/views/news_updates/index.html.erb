@@ -1,0 +1,36 @@
+<h1>Listing news_updates</h1>
+
+<table>
+  <tr>
+    <th>Title en</th>
+    <th>Title cn</th>
+    <th>News type</th>
+	<!--
+    <th>Context</th>
+	-->
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @news_updates.each do |news_update| %>
+  <% news_update.force_utf %>
+  <tr>
+    <td><%= news_update.title_en %></td>
+    <td><%= news_update.title_cn %></td>
+    <td><%= news_update.news_type %></td>
+	<!--
+    <td><%= news_update.context %></td>
+	-->
+    <td><%= news_update.status %></td>
+    <td><%= link_to 'Show', news_update %></td>
+    <td><%= link_to 'Edit', edit_news_update_path(news_update) %></td>
+    <td><%= link_to 'Destroy', news_update, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New News update', new_news_update_path %>

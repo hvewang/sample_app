@@ -12,8 +12,11 @@
 		<%= link_to "Host Family Request", host_family_infos_path %><br />
 		<%= link_to "High School List", high_school_lists_path %><br />
 		<%= link_to "College/University List", college_lists_path %><br />
+		<%= link_to "High School Rankings", highschool_rankings_path %><br />
 		<%= link_to "National University Rankings", college_rankings_path %><br />
 		<%= link_to "Graduate School Rankings", graduate_school_rankings_path %><br />
 		<%= link_to "Success Cases", success_cases_path %><br />
+		<%= link_to "New Hope Team", newhope_teams_path %><br />
+		<%= link_to "News", news_updates_path %><br />
 	<% end %>
 </div>

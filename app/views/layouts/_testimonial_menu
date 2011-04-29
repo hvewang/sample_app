@@ -1,5 +1,23 @@
 <div class="menu">
-	<%= link_to t('label.testimonial.student'), testimonials_student_path %><br/>
-	<%= link_to t('label.testimonial.parent'), testimonials_parent_path %><br \>
-	<%= link_to t('label.testimonial.host'), testimonials_hostfamily_path %><br \>
+
+
+
+
+<%= t('header.label.testimonial') %><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.student'), testimonials_student_path %><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.parent'), testimonials_parent_path %><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.host'), testimonials_hostfamily_path %><br \>
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.other'), testimonials_other_path %><br \>
+
+<!--
+<br>
+
+<%= t('label.successcase.successcase') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.all'), success_cases_allstudent_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.highschool'), success_cases_highschool_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.undergraduate'), success_cases_undergraduate_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.graduate'), success_cases_graduate_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.other'), success_cases_other_path %> <br />
+-->
+	
 </div>

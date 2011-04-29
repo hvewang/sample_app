@@ -33,6 +33,15 @@ en:
     cellphone: Cell Phone
     homephone: Home Phone
     phoneformat: Country Code-Area Code-Phone Number
+    news:
+      applicationnews: Latest Application News
+      overseasnews: Overseas News
+      guidelines: Go Abroad Guidelines
+      mustknown: Things Must Known
+      us: US 
+      usnews: US News
+      usstudylife: Study & Life in US
+      usfoodliving: Food & Loving in US     
     service:
       newhope: New Hope's Services
       applyforhs: US High School
@@ -92,6 +101,8 @@ en:
         facility: Facility
         clubandactivity: Clubs and Activities
         nearbycity: Nearby City
+        rank: Rank
+        addressphone: Address/Phone
     college:
       college: US College
       collegelist: College List
@@ -244,6 +255,9 @@ en:
         host: Host Family Application
         qualification: Host Family Qualification
         applicationform: Application Form
+        responsibility: Host Family's Responsibilities
+        guideline: Host Family Guideline
+        question: Email us your questions
     contactus:
       msg: Please contact New Hope by phone or email if you have any questions or need more information. Thanks.
       feedback: Your Feedback

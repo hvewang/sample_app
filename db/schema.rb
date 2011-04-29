@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110420045229) do
+ActiveRecord::Schema.define(:version => 20110428201403) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -155,6 +155,21 @@ ActiveRecord::Schema.define(:version => 20110420045229) do
     t.string   "contact"
   end
 
+  create_table "highschool_rankings", :force => true do |t|
+    t.string   "year"
+    t.string   "name_en"
+    t.string   "name_cn"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "url"
+    t.string   "usnews_link"
+    t.string   "comments"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "rank"
+  end
+
   create_table "host_family_infos", :force => true do |t|
     t.string   "f_nm"
     t.string   "l_nm"
@@ -226,6 +241,36 @@ ActiveRecord::Schema.define(:version => 20110420045229) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "newhope_teams", :force => true do |t|
+    t.string   "name_en"
+    t.string   "name_cn"
+    t.string   "title_en"
+    t.string   "title_cn"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "record_type"
+    t.string   "branch_name_en"
+    t.string   "branch_name_cn"
+    t.string   "country_en"
+    t.string   "country_cn"
+    t.string   "pic"
+    t.text     "resume"
+    t.integer  "sort_order"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "news_updates", :force => true do |t|
+    t.string   "title_en"
+    t.string   "title_cn"
+    t.string   "news_type"
+    t.text     "context"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

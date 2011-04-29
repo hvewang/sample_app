@@ -1,0 +1,94 @@
+<%= form_for(@newhope_team) do |f| %>
+  
+  <% @newhope_team.force_utf %>
+  <% if @newhope_team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newhope_team.errors.count, "error") %> prohibited this newhope_team from being saved:</h2>
+
+      <ul>
+      <% @newhope_team.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_en %><br />
+    <%= f.text_field :name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :name_cn %><br />
+    <%= f.text_field :name_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :title_en %><br />
+	<%= f.select(:title_en, 
+					[
+					    "Employee", "Senior Advisor", "CEO", "CFO", "CIO", "Other"
+					]
+	) %>
+  </div>
+  <div class="field">
+    <%= f.label :title_cn %><br />
+    <%= f.text_field :title_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :record_type %><br />
+	<%= f.select(:record_type, 
+					[
+					    "Employee", "Advisor", "Other"
+					]
+	) %>
+  </div>
+  <div class="field">
+    <%= f.label :branch_name_en %><br />
+    <%= f.text_field :branch_name_en %>
+  </div>
+  <div class="field">
+    <%= f.label :branch_name_cn %><br />
+    <%= f.text_field :branch_name_cn %>
+  </div>
+  <div class="field">
+	<%= f.select(:country_en, 
+					[
+					    "China", "USA", "Other"
+					]
+	) %>
+  </div>
+  <div class="field">
+    <%= f.label :country_cn %><br />
+    <%= f.text_field :country_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :pic %><br />
+    <%= f.text_field :pic %>
+  </div>
+  <div class="field">
+    <%= f.label :resume %><br />
+    <%= f.text_area :resume, :rows => 20, :cols => 80 %>
+  </div>
+  <div class="field">
+    <%= f.label :sort_order %><br />
+    <%= f.text_field :sort_order, :size => 3 %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, 
+					[
+					    "Active", "Inactive"
+					]
+	) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

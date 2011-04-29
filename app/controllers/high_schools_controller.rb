@@ -30,14 +30,20 @@ class HighSchoolsController < ApplicationController
 
   def rank	
 	@title = "US High School Ranking"
+	
+	@highschool_rankings = HighschoolRanking.all.paginate(:page => params[:page], :per_page => 10)
   end
   
   def applicationprocedure
 	@title = "High School Application Procedure"
+	
+	@translation = Translation.find_by_nm('highschool.applicationprocedure')
   end
   
   def otherservice
 	@title = "Other Services"
+	
+	@translation = Translation.find_by_nm('highschool.otherservice')
   end
   
   def highschooldetail

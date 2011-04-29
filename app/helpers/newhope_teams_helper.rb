@@ -1,0 +1,2 @@
+module NewhopeTeamsHelper
+end

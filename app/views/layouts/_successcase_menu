@@ -7,10 +7,12 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.graduate'), success_cases_graduate_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.successcase.other'), success_cases_other_path %> <br />
 
+<!--
 <br>
 <%= t('header.label.testimonial') %><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.student'), testimonials_student_path %><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.parent'), testimonials_parent_path %><br \>
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.host'), testimonials_hostfamily_path %><br \>
+-->
 	
 </div>

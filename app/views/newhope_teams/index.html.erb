@@ -1,0 +1,56 @@
+<h1>Listing newhope_teams</h1>
+
+<table>
+  <tr>
+    <th>Name en</th>
+    <th>Name cn</th>
+    <th>Title en</th>
+    <th>Title cn</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Record type</th>
+	<!--
+    <th>Branch name en</th>
+    <th>Branch name cn</th>
+    <th>Country en</th>
+    <th>Country cn</th>
+    <th>Pic</th>
+    <th>Resume</th>
+    <th>Sort order</th>
+    <th>Status</th>
+	-->
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @newhope_teams.each do |newhope_team| %>
+  <% newhope_team.force_utf %>
+  <tr>
+    <td><%= newhope_team.name_en %></td>
+    <td><%= newhope_team.name_cn %></td>
+    <td><%= newhope_team.title_en %></td>
+    <td><%= newhope_team.title_cn %></td>
+    <td><%= newhope_team.email %></td>
+    <td><%= newhope_team.phone %></td>
+    <td><%= newhope_team.record_type %></td>
+	<!--
+    <td><%= newhope_team.branch_name_en %></td>
+    <td><%= newhope_team.branch_name_cn %></td>
+    <td><%= newhope_team.country_en %></td>
+    <td><%= newhope_team.country_cn %></td>
+    <td><%= newhope_team.pic %></td>
+    <td><%= newhope_team.resume %></td>
+    <td><%= newhope_team.sort_order %></td>
+	-->
+    <td><%= newhope_team.status %></td>
+    <td><%= link_to 'Show', newhope_team %></td>
+    <td><%= link_to 'Edit', edit_newhope_team_path(newhope_team) %></td>
+    <td><%= link_to 'Destroy', newhope_team, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Newhope team', new_newhope_team_path %>

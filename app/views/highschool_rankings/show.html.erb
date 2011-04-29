@@ -1,0 +1,52 @@
+<% @highschool_ranking.force_utf %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Year:</b>
+  <%= @highschool_ranking.year %>
+</p>
+
+<p>
+  <b>Name en:</b>
+  <%= @highschool_ranking.name_en %>
+</p>
+
+<p>
+  <b>Name cn:</b>
+  <%= @highschool_ranking.name_cn %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @highschool_ranking.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @highschool_ranking.phone %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @highschool_ranking.url %>
+</p>
+
+<p>
+  <b>Usnews link:</b>
+  <%= @highschool_ranking.usnews_link %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @highschool_ranking.comments %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @highschool_ranking.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_highschool_ranking_path(@highschool_ranking) %> |
+<%= link_to 'Back', highschool_rankings_path %>

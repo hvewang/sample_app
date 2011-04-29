@@ -32,6 +32,10 @@ module ApplicationHelper
 			link_to(name, 'javascript:history.go(-1);', :class => 'cancel')
 	end
 	
+	def back_button(name='Back')
+		link_to(name, 'javascript:history.go(-1);', :class => 'cancel')
+	end
+	
 	def tt(transobj)
 		if I18n.locale == :en
 			raw(transobj.en_txt)

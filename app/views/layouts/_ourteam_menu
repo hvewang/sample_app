@@ -10,7 +10,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.ourteam.usa.chicago'), ourteam_path %> <br />
 
 
-<%= link_to t('label.ourteam.advisor'), ourteam_path %> <br />
+<%= link_to t('label.ourteam.advisor'), newhope_teams_advisor_path %> <br />
 
 <!--
 <%= link_to t('label.ourteam.legal'), ourteam_path %> <br />

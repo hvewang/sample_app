@@ -1,0 +1,32 @@
+<% @news_update.force_utf %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title en:</b>
+  <%= @news_update.title_en %>
+</p>
+
+<p>
+  <b>Title cn:</b>
+  <%= @news_update.title_cn %>
+</p>
+
+<p>
+  <b>News type:</b>
+  <%= @news_update.news_type %>
+</p>
+
+<p>
+  <b>Context:</b><br>
+  <%= raw(@news_update.context) %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @news_update.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_update_path(@news_update) %> |
+<%= link_to 'Back', news_updates_path %>

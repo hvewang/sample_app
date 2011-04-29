@@ -1,0 +1,54 @@
+<%= form_for(@news_update) do |f| %>
+  <% @news_update.force_utf %>
+  
+  <% if @news_update.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news_update.errors.count, "error") %> prohibited this news_update from being saved:</h2>
+
+      <ul>
+      <% @news_update.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title_en %><br />
+    <%= f.text_field :title_en %>
+  </div>
+  <div class="field">
+    <%= f.label :title_cn %><br />
+    <%= f.text_field :title_cn %>
+  </div>
+  <div class="field">
+    <%= f.label :news_type %><br />
+	<%= f.select(:news_type, 
+					[
+					    ["Application News", "ApplicationNews"], 
+						["Overseas News", "OverseasNews"], 
+						["Go Abroad Guidelines", "Guidelines"], 
+						["Overseas Must-known", "Mustknown"], 
+						["US News", "USNews"], 
+						["Study & Life in US", "USStudyLife"],
+						["Food & Living in US", "USFoodLiving"],
+						["Others", "Others"]
+					]
+	) %>
+  </div>
+  <div class="field">
+    <%= f.label :context %><br />
+    <%= f.text_area :context, :rows => 40, :cols => 80 %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+	<%= f.select(:status, 
+					[
+					    "Active", "Inactive"
+					]
+	) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

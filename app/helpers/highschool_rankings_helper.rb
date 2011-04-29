@@ -1,0 +1,2 @@
+module HighschoolRankingsHelper
+end

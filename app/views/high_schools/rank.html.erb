@@ -1,2 +1,28 @@
-<h1>HighSchools#rank</h1>
-<p>Find me in app/views/high_schools/rank.html.erb</p>
+<h1><%= t('label.highschool.rank') %></h1>
+
+<%= will_paginate @highschool_rankings %>
+
+<table>
+  <tr>
+    <th><%= t('label.highschool.label.rank') %></th>
+    <th><%= t('label.highschool.label.schoolname') %></th>
+    <th><%= t('label.highschool.label.addressphone') %></th>
+  </tr>
+
+<% @highschool_rankings.each do |highschool_ranking| %>
+  <% highschool_ranking.force_utf %>
+  <tr>
+    <td><%= link_to highschool_ranking.rank, highschool_ranking.usnews_link, :target=> :blank %></td>
+    <td><%= link_to highschool_ranking.name_en, highschool_ranking.url, :target=> :blank %>
+		<br>
+		<%= highschool_ranking.name_cn %>
+	</td>
+    <td><%= highschool_ranking.address %>
+		<br>
+		<%= highschool_ranking.phone %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @highschool_rankings %>

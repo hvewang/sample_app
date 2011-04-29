@@ -1,0 +1,14 @@
+<h1><%= t('label.ourteam.advisor') %></h1>
+
+<table class="nhtabclass">
+
+<% @newhope_teams.each do |newhope_team| %>
+  <% newhope_team.force_utf %>
+  <tr>
+    <td class="nhtabtdclasstop" width=20%><%= image_tag("/images/newhopeteam/#{newhope_team.pic}", :height => '200', :width => '180', :alt => "New Hope International Education", :class => "round") %>
+	</td>
+    <td><%= raw(newhope_team.resume) %></td>
+  </tr>
+<% end %>
+</table>
+
