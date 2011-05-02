@@ -275,3 +275,17 @@ form.new_micropost textarea {
 	height: 4em;
 	margin-bottom: 0;
 }
+
+
+.depot_form fieldset {
+background: #efe;
+}
+
+.depot_form legend {
+	color: #000;
+	background: #fff;
+	font-family: sans-serif;
+	padding: 0.1em 0.1em;
+	margin-top: 0;
+	margin-bottom: 0;
+}

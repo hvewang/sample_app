@@ -1,7 +1,21 @@
+<table>
+	<tr>
+		<td width=50%>
+			<%= render :template => 'pages/home_news' %>
+		</td>
+		<td width=50%>
+			<%= render :template => 'pages/home_school' %>
+		</td>
+	</tr>
+	
+	<tr>
+		<td width=50%>
+			<%= render :template => 'pages/home_hostfamily' %>
+		</td>
+		<td width=50%>
+			<%= render :template => 'pages/home_testimonial' %>
+		</td>
+	</tr>
+</table>
 
-<h1>New Hope</h1>
-<p>
-	This is the home page for New Hope International Education Consulting LLC. Thanks for visiting us.
-</p>
-
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<%= render :template => 'pages/home_contact' %>

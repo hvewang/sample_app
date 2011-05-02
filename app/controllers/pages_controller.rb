@@ -3,6 +3,11 @@ class PagesController < ApplicationController
 	
   def home
 	@title = "Home"
+	@curr_layout = "layouts/home_layout"
+	
+	@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 8)
+	@college_lists = CollegeList.paginate(:page => params[:page], :per_page => 4)
+	@high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 4)
   end
 
   def contact

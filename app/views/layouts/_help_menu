@@ -1,3 +1,7 @@
-<div class="menu">
-	<%= link_to t('header.label.help'), help_path %>
-</div>
+<table class="profile" summary="Profile information">
+	<tr>		
+		<td class="main">
+			<%= yield %>
+		</td>
+	</tr>
+</table>

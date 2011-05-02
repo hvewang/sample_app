@@ -1,0 +1,10 @@
+<div class="depot_form" >
+	<fieldset>
+		<legend>Latest News</legend>
+		<% @news_updates.each do |news_update| %>
+		    <% news_update.force_utf %>
+			<%= link_to news_update.title_cn,  news_updates_newsdetails_path(:id=>news_update, :news_type=>news_update.news_type) %><br/>
+		<% end %>
+		<%= link_to "more...", news_updates_newslist_path %>
+	</fieldset>
+</div>
