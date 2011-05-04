@@ -1,5 +1,7 @@
 <h1><%= t("header.label.latestnews") %> -> <%= t("#{@titlelabel}") %></h1>
 
+<%= will_paginate @news_updates %>
+
 <table>
 
 <% i = 0 %>
@@ -12,3 +14,5 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @news_updates %>

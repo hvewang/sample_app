@@ -1,6 +1,23 @@
 <div class="depot_form" >
 	<fieldset>
-		<legend>Testimonials</legend>
-
+		<legend><%= t('label.home.testimonial') %>&nbsp;&nbsp;<font size=1><%= link_to t('label.home.more'), testimonial_path %></font></legend>
+		<!--
+		<table>
+			<% @testimonials.each do |testimonial| %>
+				<%   testimonial.force_utf %>
+			  <tr>
+				<td><%= image_tag("/images/star_1.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
+				<%= testimonial.student_name %></td>
+				<td><%= truncate(testimonial.msg, :length => 40) %></td>
+			  </tr>
+			<% end %>
+		</table>
+		-->
+		
+		<% @testimonials.each do |testimonial| %>
+			<%   testimonial.force_utf %>
+			<%= image_tag("/images/star_1.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
+			<%= testimonial.student_name %>: <%= truncate(testimonial.msg, :length => 40) %><br/>
+		<% end %>
 	</fieldset>
 </div>

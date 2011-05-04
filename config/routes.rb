@@ -95,6 +95,7 @@ SampleApp::Application.routes.draw do
   get "testimonials/student1"
   get "testimonials/hostfamily1"
   get "testimonials/other1"
+  get "testimonials/detail"
   
   resources :sessions, :only => [:new, :create, :destroy]
 
@@ -122,7 +123,7 @@ SampleApp::Application.routes.draw do
 	match '/help', :to => 'pages#help'
 	match '/news', :to => 'pages#news'
 	match '/successcase', :to => 'pages#successcase'
-	match 'testimonial', :to=> 'testimonials#student'
+	match 'testimonial', :to=> 'testimonials#testimoniallist'
 	
 	match '/signup', :to => 'users#new'
 	match '/signin', :to => 'sessions#new'

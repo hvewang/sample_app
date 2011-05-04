@@ -1,10 +1,10 @@
 <div class="menu">
-<%= link_to t('label.news.overseasnews'), news_updates_newslist_path(:news_type => 'OverseasNews') %> <br />
-<%= link_to t('label.news.applicationnews'), news_updates_newslist_path(:news_type => 'ApplicationNews') %> <br />
-<%= link_to t('label.news.guidelines'), news_updates_newslist_path(:news_type => 'Guidelines') %> <br />
-<%= link_to t('label.news.mustknown'), news_updates_newslist_path(:news_type => 'Mustknown') %> <br />
+<%= t('header.label.latestnews') %><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.news.overseasnews'), news_updates_newslist_path(:news_type => 'OverseasNews') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.news.applicationnews'), news_updates_newslist_path(:news_type => 'ApplicationNews') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.news.guidelines'), news_updates_newslist_path(:news_type => 'Guidelines') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.news.mustknown'), news_updates_newslist_path(:news_type => 'Mustknown') %> <br />
 
-<br />
 <%= t('label.news.us') %><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.news.usnews'), news_updates_newslist_path(:news_type => 'USNews') %><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.news.usstudylife'), news_updates_newslist_path(:news_type => 'USStudyLife') %><br \>

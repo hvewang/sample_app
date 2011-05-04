@@ -1,6 +1,27 @@
 <div class="depot_form" >
 	<fieldset>
-		<legend>Host Families</legend>
-
+		<legend><%= t('label.home.hostfamily') %>&nbsp;&nbsp;<font size=1><%= link_to t('label.home.more'), host_families_availablehomestay_path %></font></legend>
+		<!--
+		<table>
+			<% @host_family_infos.each do |host_family_info| %>
+				<%   host_family_info.force_utf %>
+			  <tr>
+				<td>
+				<%= image_tag("/images/star_2.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
+				<%= host_family_info.city %></td>
+				<td><%= host_family_info.state %></td>
+				<td><%= host_family_info.zip %></td>
+			  </tr>
+			<% end %>
+		</table>
+		-->
+		
+		<% @host_family_infos.each do |host_family_info| %>
+			<%   host_family_info.force_utf %>
+			<%= image_tag("/images/star_2.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
+				<%= host_family_info.city %>,&nbsp;
+				<%= host_family_info.state %>
+				<%= host_family_info.zip %><br>
+		<% end %>
 	</fieldset>
 </div>

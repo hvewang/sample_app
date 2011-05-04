@@ -33,6 +33,12 @@ en:
     cellphone: Cell Phone
     homephone: Home Phone
     phoneformat: Country Code-Area Code-Phone Number
+    home:
+      latestnews: Latest News
+      participatingschool: Participating Schools
+      hostfamily: Host Families
+      testimonial: Testimonials
+      more: more
     news:
       applicationnews: Latest Application News
       overseasnews: Overseas News

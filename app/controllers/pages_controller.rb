@@ -2,12 +2,17 @@ class PagesController < ApplicationController
 	before_filter :set_layout, :except => [:home, :news]
 	
   def home
-	@title = "Home"
+	@title = "New Hope's Home"
 	@curr_layout = "layouts/home_layout"
 	
 	@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 8)
 	@college_lists = CollegeList.paginate(:page => params[:page], :per_page => 4)
 	@high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 4)
+	
+	@host_family_infos = HostFamilyInfo.all.paginate(:page => params[:page], :per_page => 8)
+	@testimonials = SuccessCase.all(:conditions => ["status = 'Active' and record_type in ('Testimonials-Student', 'Testimonials-Parent', 'Testimonials-HostFamily', 'Testimonials-Other')"]).paginate(:page => params[:page], :per_page => 8)
+	
+	@host_family_infos = HostFamilyInfo.find_all_by_status('Active').paginate(:page => params[:page], :per_page => 8)
   end
 
   def contact

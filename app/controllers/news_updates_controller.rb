@@ -90,17 +90,34 @@ class NewsUpdatesController < ApplicationController
 	
     news_type = params[:news_type]
 	if (news_type.nil? || news_type.empty?) 
-		news_type = "overseasnews"
+		news_type = ""
 	end
 	
 	set_label(news_type)
-	@news_updates = NewsUpdate.find_all_by_news_type(news_type)
+	if (news_type.nil? || news_type.empty?)
+		@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 10)
+	else
+		@news_updates = NewsUpdate.find_all_by_news_type(news_type).paginate(:page => params[:page], :per_page => 10)
+	end
   end
   
   def newsdetails
 	@title = "News Details"
 	set_label(params[:news_type])
-	@news_update = NewsUpdate.find(params[:id])
+	
+	news_id = params[:id]
+	if news_id.nil?
+		if I18n.locale != session[:prev_locale]
+			news_id = session[:prec_news_id]
+		else
+			redirect_to news_updates_newslist_path
+		end
+	end
+	
+	@news_update = NewsUpdate.find(news_id)
+
+	session[:prev_locale] = I18n.locale
+	session[:prec_news_id] = news_id
   end
   
   private
@@ -130,7 +147,7 @@ class NewsUpdatesController < ApplicationController
 		elsif news_type == "USFoodLiving"
 			@titlelabel = "label.news.usfoodliving"
 		else
-			@titlelabel = "label.news.overseasnews"
+			@titlelabel = "header.label.latestnews"
 		end
 	end
 end

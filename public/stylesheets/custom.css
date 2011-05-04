@@ -289,3 +289,12 @@ background: #efe;
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
+li.htm
+{
+	background-image: url(/images/arrow.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	padding: 3px 0 3px 20px;
+	margin: .4em 0;
+}

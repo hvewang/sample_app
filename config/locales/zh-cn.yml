@@ -33,6 +33,12 @@ zh-cn:
     cellphone: 手机号码
     homephone: 座机号码
     phoneformat: 国家代码-区号-电话号码
+    home:
+      latestnews: 最新消息
+      participatingschool: 合作院校
+      hostfamily: 寄宿家庭
+      testimonial: 感言集锦
+      more: 更多
     news:
       overseasnews: 留学资讯
       applicationnews: 申请快报
