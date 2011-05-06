@@ -1,13 +1,13 @@
 <div class="menu">
 
-<%= link_to t('label.ourteam.newhope'), ourteam_path %> <br />
+<%= link_to t('label.ourteam.newhope'), newhope_teams_all_path %> <br />
 
 
 <%= t('label.ourteam.china.china') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.ourteam.china.xian'), ourteam_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.ourteam.china.xian'), newhope_teams_team_path(:branch_name => 'Xian') %> <br />
 
 <%= t('label.ourteam.usa.usa') %> <br />
-&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.ourteam.usa.chicago'), ourteam_path %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.ourteam.usa.chicago'), newhope_teams_team_path(:branch_name => 'Chicago') %> <br />
 
 
 <%= link_to t('label.ourteam.advisor'), newhope_teams_advisor_path %> <br />

@@ -1,6 +1,7 @@
 <b><%= t("#{@titlelabel0}") %> -> <%= t("#{@titlelabel}") %></b>
 
-<br><br>
+<hr size=10></hr>
+
 <%= will_paginate @success_cases %>
 
 <table class="nhtabclass">
@@ -27,16 +28,20 @@
 				</td>
 			<% end %>
 			
-			<td class="nhtabtdclasstop"><%= raw(success_case.msg) %></td>
+			<td class="nhtabtdclasstop"><%= raw(success_case.msg) %>
+				<hr size=10></hr>
+			</td>
 		</tr>
 	<% else %>
 		<tr>
-			<td colspan=2><%= raw(success_case.msg) %></td>
+			<td colspan=2>
+				<%= raw(success_case.msg) %>
+				<hr size=10></hr>
+			</td>
 		  </tr>
 	<% end %>
   
-    <tr><td colspan=2></td></tr>
-	<tr><td colspan=2></td></tr>
+    
 <% end %>
 </table>
 

@@ -1,8 +1,8 @@
-<h1><%= t('header.label.ourteam') %> -> <%= t('label.ourteam.advisor') %></h1>
-
-<%= will_paginate @newhope_teams %>
+<h1><%= t('header.label.ourteam') %> -> <%= t("#{@titlelabel}") %></h1>
 
 <hr size=10></hr>
+
+<%= will_paginate @newhope_teams %>
 
 <table class="nhtabclass">
 
@@ -14,11 +14,15 @@
     <td>
 		<b><%= raw(newhope_team.name_cn) %></b><br />
 		<%= raw(newhope_team.resume) %>
+		<br><br>
+		<font size=1><%= t('label.ourteam.phone') %>:</font>&nbsp;<%= raw(newhope_team.phone) %>&nbsp;&nbsp;&nbsp;<font size=1>
+		<%= t('label.ourteam.email') %>:</font>&nbsp;<%= raw(newhope_team.email) %>
+		<hr size=10></hr>
 	</td>
   </tr>
 <% end %>
-
 </table>
+
 
 <%= will_paginate @newhope_teams %>
 

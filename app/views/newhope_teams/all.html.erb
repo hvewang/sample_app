@@ -1,6 +1,13 @@
-<h1><%= t('header.label.ourteam') %> -> <%= t('label.ourteam.advisor') %></h1>
-
+<h1><%= t('label.ourteam.newhope') %></h1> 
 <%= will_paginate @newhope_teams %>
+
+<hr size=10></hr>
+
+<%   @translation.force_utf %>
+
+<p>
+	<%= tt(@translation) %>
+</p>
 
 <hr size=10></hr>
 
@@ -14,6 +21,7 @@
     <td>
 		<b><%= raw(newhope_team.name_cn) %></b><br />
 		<%= raw(newhope_team.resume) %>
+	<hr size=10></hr>
 	</td>
   </tr>
 <% end %>

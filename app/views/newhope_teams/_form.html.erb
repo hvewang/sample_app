@@ -51,13 +51,18 @@
   </div>
   <div class="field">
     <%= f.label :branch_name_en %><br />
-    <%= f.text_field :branch_name_en %>
+	<%= f.select(:branch_name_en, 
+					[
+					   "", ["Xi'an", "Xian"], "Chicago"
+					]
+	) %>
   </div>
   <div class="field">
     <%= f.label :branch_name_cn %><br />
     <%= f.text_field :branch_name_cn %>
   </div>
   <div class="field">
+    <%= f.label :country_en %><br />
 	<%= f.select(:country_en, 
 					[
 					    "China", "USA", "Other"

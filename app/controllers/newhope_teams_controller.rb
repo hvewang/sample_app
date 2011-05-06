@@ -1,7 +1,7 @@
 class NewhopeTeamsController < ApplicationController
-  before_filter :admin_user, :except => [:advisor]
-  before_filter :set_layout, :except => [:advisor]
-  before_filter :set_layout1, :only => [:advisor]
+  before_filter :admin_user, :except => [:advisor, :team, :all]
+  before_filter :set_layout, :except => [:advisor, :team, :all]
+  before_filter :set_layout1, :only => [:advisor, :team, :all]
   
   # GET /newhope_teams
   # GET /newhope_teams.xml
@@ -85,9 +85,41 @@ class NewhopeTeamsController < ApplicationController
     end
   end
   
-  def advisor
+  def all
 	@title = "New Hope Team"
-	@newhope_teams = NewhopeTeam.all
+	@newhope_teams = NewhopeTeam.all.paginate(:page => params[:page], :per_page => 2)
+	@translation = Translation.find_by_nm('newhopeteam.introduction')
+  end
+  
+  def advisor
+	@title = "New Hope Team - Advisor"
+	@newhope_teams = NewhopeTeam.find_all_by_record_type('Advisor').paginate(:page => params[:page], :per_page => 3)
+  end
+  
+  def team
+    branch_name = params[:branch_name]
+	if (branch_name.nil?) 
+		if I18n.locale != session[:prev_locale]
+			branch_name = session[:prec_branch_name]
+		else
+			redirect_to ourteam_path
+		end
+	end
+	
+	
+	if (branch_name == "Xian")
+		@titlelabel = 'label.ourteam.china.xian'
+	elsif (branch_name == "Chicago")
+		@titlelabel = 'label.ourteam.usa.chicago'
+	else
+		@titlelabel = ""
+	end
+	
+	@title = "New Hope Team - #{branch_name}"
+	@newhope_teams = NewhopeTeam.find_all_by_branch_name_en(branch_name).paginate(:page => params[:page], :per_page => 3)
+
+	session[:prev_locale] = I18n.locale
+	session[:prec_branch_name] = branch_name
   end
   
   private

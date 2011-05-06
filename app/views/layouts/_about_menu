@@ -1,4 +1,6 @@
 <div class="menu">
 	<%= link_to t('header.label.about'), about_path %><br \>
-	<%= link_to t('label.company.whynewhope'), whynewhope_path %>
+	<%= link_to t('label.company.whynewhope'), whynewhope_path %><br />
+	<%= link_to t('header.label.contact'), contact_path %>
+	
 </div>

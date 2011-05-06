@@ -5,6 +5,8 @@ SampleApp::Application.routes.draw do
   resources :news_updates
 
   get "newhope_teams/advisor"
+  get "newhope_teams/team"
+  get "newhope_teams/all"
   
   resources :newhope_teams
 

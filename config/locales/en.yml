@@ -204,6 +204,8 @@ en:
         chicago: Chicago
       advisor: Senior overseas advisor
       legal: Senior legal advisor
+      phone: Phone
+      email: E-Mail
     testimonial:
       parent: Parent Testimonials
       student: Student Testimonials
