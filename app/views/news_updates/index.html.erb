@@ -1,10 +1,12 @@
 <h1>Listing news_updates</h1>
 
+<%= will_paginate @news_updates %>
+
 <table>
   <tr>
+	<th>News type</th>
     <th>Title en</th>
     <th>Title cn</th>
-    <th>News type</th>
 	<!--
     <th>Context</th>
 	-->
@@ -17,9 +19,9 @@
 <% @news_updates.each do |news_update| %>
   <% news_update.force_utf %>
   <tr>
+     <td><%= news_update.news_type %></td>
     <td><%= news_update.title_en %></td>
     <td><%= news_update.title_cn %></td>
-    <td><%= news_update.news_type %></td>
 	<!--
     <td><%= news_update.context %></td>
 	-->
@@ -30,6 +32,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @news_updates %>
 
 <br />
 

@@ -1,13 +1,17 @@
 <h1>Listing newhope_teams</h1>
 
+<%= will_paginate @newhope_teams %>
+
 <table>
   <tr>
     <th>Name en</th>
     <th>Name cn</th>
     <th>Title en</th>
     <th>Title cn</th>
+	<!--
     <th>Email</th>
     <th>Phone</th>
+	-->
     <th>Record type</th>
 	<!--
     <th>Branch name en</th>
@@ -31,8 +35,10 @@
     <td><%= newhope_team.name_cn %></td>
     <td><%= newhope_team.title_en %></td>
     <td><%= newhope_team.title_cn %></td>
+	<!--
     <td><%= newhope_team.email %></td>
     <td><%= newhope_team.phone %></td>
+	-->
     <td><%= newhope_team.record_type %></td>
 	<!--
     <td><%= newhope_team.branch_name_en %></td>
@@ -50,6 +56,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @newhope_teams %>
 
 <br />
 

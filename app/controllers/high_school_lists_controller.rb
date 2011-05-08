@@ -5,7 +5,7 @@ class HighSchoolListsController < ApplicationController
   # GET /high_school_lists
   # GET /high_school_lists.xml
   def index
-    @high_school_lists = HighSchoolList.all
+    @high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

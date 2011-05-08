@@ -5,7 +5,7 @@ class HostFamilyInfosController < ApplicationController
   # GET /host_family_infos
   # GET /host_family_infos.xml
   def index
-    @host_family_infos = HostFamilyInfo.all
+    @host_family_infos = HostFamilyInfo.all.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

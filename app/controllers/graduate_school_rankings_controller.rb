@@ -5,7 +5,7 @@ class GraduateSchoolRankingsController < ApplicationController
   # GET /graduate_school_rankings
   # GET /graduate_school_rankings.xml
   def index
-    @graduate_school_rankings = GraduateSchoolRanking.all
+    @graduate_school_rankings = GraduateSchoolRanking.all.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

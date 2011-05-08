@@ -1,11 +1,14 @@
 <h1>Listing service_requests</h1>
 
+<%= will_paginate @service_requests %>
+
 <table>
   <tr>
     <th>Student name</th>
     <th>Year of birth</th>
     <th>Gender</th>
     <th>Parent name</th>
+	<!--
     <th>Relationship</th>
     <th>Street</th>
     <th>City</th>
@@ -14,6 +17,7 @@
     <th>Cell phone</th>
     <th>Home phone</th>
     <th>Email</th>
+	-->
     <th></th>
     <th></th>
     <th></th>
@@ -26,6 +30,7 @@
     <td><%= service_request.year_of_birth %></td>
     <td><%= service_request.gender %></td>
     <td><%= service_request.parent_name %></td>
+	<!--
     <td><%= service_request.relationship %></td>
     <td><%= service_request.street %></td>
     <td><%= service_request.city %></td>
@@ -34,9 +39,12 @@
     <td><%= service_request.cell_phone %></td>
     <td><%= service_request.home_phone %></td>
     <td><%= service_request.email %></td>
+	-->
     <td><%= link_to 'Show', service_request %></td>
     <td><%= link_to 'Edit', edit_service_request_path(service_request) %></td>
     <td><%= link_to 'Destroy', service_request, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @service_requests %>

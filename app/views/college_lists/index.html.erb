@@ -1,9 +1,13 @@
 <h1>List All Colleges</h1>
 
+<%= will_paginate @college_lists %>
+
 <table>
   <tr>
-    <th>Name en</th>
+    <th>Name/th>
+	<!--
     <th>Name cn</th>
+	-->
     <th>Address</th>
     <th>Website</th>
     <th>School type</th>
@@ -54,8 +58,10 @@
 <% @college_lists.each do |college_list| %>
 <% college_list.force_utf %>
   <tr>
-    <td><%= college_list.name_en %></td>
+    <td><%= college_list.name_en %><br><%= college_list.name_cn %></td>
+	<!--
     <td><%= college_list.name_cn %></td>
+	-->
     <td><%= college_list.address %></td>
     <td><%= college_list.website %></td>
     <td><%= college_list.school_type %></td>
@@ -104,6 +110,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @college_lists %>
 
 <br />
 

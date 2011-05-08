@@ -4,7 +4,7 @@ class ServiceRequestsController < ApplicationController
   # GET /service_requests
   # GET /service_requests.xml
   def index
-    @service_requests = ServiceRequest.all
+    @service_requests = ServiceRequest.all.paginate(:page => params[:page], :per_page => 10)
 	@curr_menu = "layouts/user_menu"
 	@curr_layout = "layouts/user_layout"
 	

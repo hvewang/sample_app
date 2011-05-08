@@ -1,14 +1,20 @@
 <h1>Listing translations</h1>
 
+<%= will_paginate @translations %>
+
 <table>
   <tr>
     <th>Nm</th>
+	<!--
     <th>Controller nm</th>
     <th>Model nm</th>
     <th>Action nm</th>
     <th>Func</th>
-    <th>En txt</th>
+	-->
     <th>Cn txt</th>
+	<!--
+    <th>En txt</th>
+	-->
     <th></th>
     <th></th>
     <th></th>
@@ -18,18 +24,24 @@
 	<%   translation.force_utf %>
   <tr>
     <td><%= translation.nm %></td>
+	<!--
     <td><%= translation.controller_nm %></td>
     <td><%= translation.model_nm %></td>
     <td><%= translation.action_nm %></td>
     <td><%= translation.func %></td>
+	-->
     <td><%= truncate(translation.zw_txt) %></td>
+	<!--
     <td><%= truncate(translation.en_txt) %></td>
+	-->
     <td><%= link_to 'Show', translation %></td>
     <td><%= link_to 'Edit', edit_translation_path(translation) %></td>
     <td><%= link_to 'Destroy', translation, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @translations %>
 
 <br />
 

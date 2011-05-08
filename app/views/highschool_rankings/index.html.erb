@@ -1,11 +1,15 @@
 <h1>Listing highschool_rankings</h1>
 
+<%= will_paginate @highschool_rankings %>
+
 <table>
   <tr>
     <th>Rank</th>
     <th>Year</th>
-    <th>Name en</th>
+    <th>Name</th>
+	<!--
     <th>Name cn</th>
+	-->
     <th>Status</th>
     <th></th>
     <th></th>
@@ -17,8 +21,10 @@
   <tr>
     <td><%= highschool_ranking.rank %></td>
 	<td><%= highschool_ranking.year %></td>
-    <td><%= highschool_ranking.name_en %></td>
+    <td><%= highschool_ranking.name_en %><br><%= highschool_ranking.name_cn %></td>
+	<!--
     <td><%= highschool_ranking.name_cn %></td>
+	-->
     <td><%= highschool_ranking.status %></td>
     <td><%= link_to 'Show', highschool_ranking %></td>
     <td><%= link_to 'Edit', edit_highschool_ranking_path(highschool_ranking) %></td>
@@ -26,6 +32,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @highschool_rankings %>
 
 <br />
 

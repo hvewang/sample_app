@@ -4,7 +4,7 @@ class CollegeRankingsController < ApplicationController
   # GET /college_rankings
   # GET /college_rankings.xml
   def index
-    @college_rankings = CollegeRanking.all
+    @college_rankings = CollegeRanking.all.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb

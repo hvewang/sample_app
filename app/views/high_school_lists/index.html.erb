@@ -1,9 +1,13 @@
 <h1>Listing high_school_lists</h1>
 
+<%= will_paginate @high_school_lists %>
+
 <table>
   <tr>
-    <th>Name en</th>
+    <th>Name</th>
+	<!--
     <th>Name cn</th>
+	-->
     <th>Hs type</th>
     <th>Address</th>
     <th>State</th>
@@ -63,8 +67,10 @@
 <% @high_school_lists.each do |high_school_list| %>
   <%   high_school_list.force_utf %>
   <tr>
-    <td><%= high_school_list.name_en %></td>
+    <td><%= high_school_list.name_en %><br><%= high_school_list.name_cn %></td>
+	<!--
     <td><%= high_school_list.name_cn %></td>
+	-->
     <td><%= high_school_list.hs_type %></td>
     <td><%= high_school_list.address %></td>
     <td><%= high_school_list.state %></td>
@@ -122,6 +128,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @high_school_lists %>
 
 <br />
 

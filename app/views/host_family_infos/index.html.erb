@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>F nm</th>
-    <th>L nm</th>
+    <th>Name</th>
 	<!--
+    <th>L nm</th>
     <th>Sex</th>
     <th>Dob</th>
     <th>Street</th>
@@ -66,9 +66,9 @@
 <% @host_family_infos.each do |host_family_info| %>
 	<%   host_family_info.force_utf %>
   <tr>
-    <td><%= host_family_info.f_nm %></td>
-    <td><%= host_family_info.l_nm %></td>
+    <td><%= host_family_info.l_nm %>, <%= host_family_info.f_nm %></td>
 	<!--
+    <td><%= host_family_info.l_nm %></td>
     <td><%= host_family_info.sex %></td>
     <td><%= host_family_info.dob %></td>
     <td><%= host_family_info.street %></td>

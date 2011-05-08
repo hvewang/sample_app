@@ -1,11 +1,14 @@
 <h1>Listing graduate_school_rankings</h1>
 
+<%= will_paginate @graduate_school_rankings %>
+
 <table>
   <tr>
     <th>Category</th>
     <th>Rank</th>
     <th>Name en</th>
     <th>Name cn</th>
+	<!--
     <th>Tuition</th>
     <th>Enrollment</th>
     <th>Gpa</th>
@@ -16,6 +19,7 @@
     <th>College list</th>
     <th>Status</th>
     <th>Year</th>
+	-->
     <th></th>
     <th></th>
     <th></th>
@@ -28,6 +32,7 @@
     <td><%= graduate_school_ranking.rank %></td>
     <td><%= graduate_school_ranking.name_en %></td>
     <td><%= graduate_school_ranking.name_cn %></td>
+	<!--
     <td><%= graduate_school_ranking.tuition %></td>
     <td><%= graduate_school_ranking.enrollment %></td>
     <td><%= graduate_school_ranking.gpa %></td>
@@ -38,12 +43,15 @@
     <td><%= graduate_school_ranking.college_list_id %></td>
     <td><%= graduate_school_ranking.status %></td>
     <td><%= graduate_school_ranking.year %></td>
+	-->
     <td><%= link_to 'Show', graduate_school_ranking %></td>
     <td><%= link_to 'Edit', edit_graduate_school_ranking_path(graduate_school_ranking) %></td>
     <td><%= link_to 'Destroy', graduate_school_ranking, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @graduate_school_rankings %>
 
 <br />
 
