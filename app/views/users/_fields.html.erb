@@ -38,3 +38,14 @@
 						]
 					) %>
 </div>
+
+<% if admin_user? %>
+<div class="field">
+	Status<br />
+	<%= f.select(:user_type_id, 
+						[	 
+							["Regular User", "3"], ["Administrator", "0"], ["Manager", "1"], ["Employee", "2"]
+						]
+					) %>
+</div>
+<% end %>

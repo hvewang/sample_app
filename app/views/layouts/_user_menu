@@ -1,22 +1,22 @@
 <div class="menu">
-	<%= link_to "My account", current_user %><br />
-	<%= link_to "Profile", edit_user_path(current_user) %><br />
+	<%= link_to t('header.label.profile'), current_user %><br />
+	<%= link_to t('label.myaccount.editmyaccount'), edit_user_path(current_user) %><br />
 	<% if admin_user? %>
-		<%= link_to "All users", users_path %><br />
+		<%= link_to t('label.myaccount.alluser'), users_path %><br />
 	<% end %>
-	<%= link_to "My posts", mypost_path %><br />
+	<%= link_to t('label.myaccount.mypost'), mypost_path %><br />
 	<% if admin_user? %>
-		<%= link_to "Translations", translations_path %><br />
-		<%= link_to "Service Grade", service_grades_path %><br />
-		<%= link_to "Service Request", service_requests_path %><br />
-		<%= link_to "Host Family Request", host_family_infos_path %><br />
-		<%= link_to "High School List", high_school_lists_path %><br />
-		<%= link_to "College/University List", college_lists_path %><br />
-		<%= link_to "High School Rankings", highschool_rankings_path %><br />
-		<%= link_to "National University Rankings", college_rankings_path %><br />
-		<%= link_to "Graduate School Rankings", graduate_school_rankings_path %><br />
-		<%= link_to "Success Cases", success_cases_path %><br />
-		<%= link_to "New Hope Team", newhope_teams_path %><br />
-		<%= link_to "News", news_updates_path %><br />
+		<%= link_to t('label.myaccount.translation'), translations_path %><br />
+		<%= link_to t('label.myaccount.servicegrade'), service_grades_path %><br />
+		<%= link_to t('label.myaccount.servicerequest'), service_requests_path %><br />
+		<%= link_to t('label.myaccount.hostfamilyrequest'), host_family_infos_path %><br />
+		<%= link_to t('label.myaccount.highschoollist'), high_school_lists_path %><br />
+		<%= link_to t('label.myaccount.collegelist'), college_lists_path %><br />
+		<%= link_to t('label.myaccount.highschoolranking'), highschool_rankings_path %><br />
+		<%= link_to t('label.myaccount.collegeranking'), college_rankings_path %><br />
+		<%= link_to t('label.myaccount.graduateschoolranking'), graduate_school_rankings_path %><br />
+		<%= link_to t('label.myaccount.successcase'), success_cases_path %><br />
+		<%= link_to t('label.myaccount.newhopeteam'), newhope_teams_path %><br />
+		<%= link_to t('label.myaccount.news'), news_updates_path %><br />
 	<% end %>
 </div>

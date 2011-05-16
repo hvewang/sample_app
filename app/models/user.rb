@@ -19,7 +19,7 @@ require 'digest'
 
 class User < ActiveRecord::Base
 	attr_accessor :password
-	attr_accessible :name, :email, :password, :password_confirmation, :cellphone, :homephone, :status
+	attr_accessible :name, :email, :password, :password_confirmation, :cellphone, :homephone, :status, :user_type_id
 	
 	has_many :microposts, :dependent => :destroy
 	has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
@@ -77,7 +77,9 @@ class User < ActiveRecord::Base
 	end
 	
 	def force_utf
-		#attributes.each {|key, value| value.force_encoding('utf-8') if value.encoding != 'utf-8' if value.kind_of?(String) }
+		if Rails.env.development? 
+			attributes.each {|key, value| value.force_encoding('utf-8') if value.encoding != 'utf-8' if value.kind_of?(String) }
+		end
 	end
 	
 	private

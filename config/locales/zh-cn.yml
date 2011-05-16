@@ -285,6 +285,23 @@ zh-cn:
       undergraduate: 本科生
       graduate: 硕士/博士生
       other: 其他
+    myaccount:
+      myaccount: 我的账户
+      editmyaccount: 编辑我的帐号
+      alluser: 全部用户
+      mypost: 我的Posts
+      translation: 中英文翻译
+      servicegrade: 服务年级
+      servicerequest: 服务要求
+      hostfamilyrequest: 寄宿家庭要求
+      highschoollist: 高中学校名单
+      collegelist: 大学名单
+      highschoolranking: 高中排名
+      collegeranking: 大学排名
+      graduateschoolranking: 研究生院排名
+      successcase: 成功案例/感言
+      newhopeteam: 新希望团队
+      news: 新闻
   general:
     are_you_sure: Tem certeza?
     back: 返回

@@ -285,6 +285,23 @@ en:
       undergraduate: Undergraduate
       graduate: Graduate
       other: Other
+    myaccount:
+      myaccount: My Account
+      editmyaccount: Edit My Account
+      alluser: All Users
+      mypost: My Posts
+      translation: Translations
+      servicegrade: Service Grades
+      servicerequest: Service Requests
+      hostfamilyrequest: Host Family Requests
+      highschoollist: High School List
+      collegelist: College/university List
+      highschoolranking: High School Rankings
+      collegeranking: National University Rankings
+      graduateschoolranking: Graduate School Rankings
+      successcase: Success Cases
+      newhopeteam: New Hope Team
+      news: News
   general:
     are_you_sure: Are you sure?
     back: Back
