@@ -19,7 +19,7 @@
 			<% while j < picperrow %>
 				<% if i * picperrow + j < totalpic %>
 					<td class="nhtabtdclasstop" width=20%>
-						<%= image_tag @student_hostfamily_pictures[i * picperrow + j].pic.url(:medium) %>
+						<%= image_tag @student_hostfamily_pictures[i * picperrow + j].pic.url(:thumb) %>
 						<br>
 						<%= link_to @student_hostfamily_pictures[i * picperrow + j].location, host_families_showhomestayphoto_path(:id => @student_hostfamily_pictures[i * picperrow + j]) %>
 					</td>
