@@ -37,8 +37,6 @@ class HostFamiliesController < ApplicationController
   
   def showhomestayphoto
     id = params[:id]
-	puts "id is:"
-	puts id
 	
 	if id.empty?
 		redirect_to host_families_homestayphoto_path
