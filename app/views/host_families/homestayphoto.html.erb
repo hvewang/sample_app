@@ -1,8 +1,38 @@
-<h1><%= t('label.hostfamily.homestay.photo') %></h1>
-<br>
+<h1><%= t('label.myaccount.studenthostfamilypicture') %></h1> 
+<%= will_paginate @student_hostfamily_pictures %>
 
-Thanks for visiting this page.<br><br>
+<hr size=10></hr>
 
-This page is under construction. Please come back later. Thanks.
+<table class="nhtabclass">
 
-<br><br><br><br><br><br>
+<% 
+	totalpic = @student_hostfamily_pictures.size
+	picperrow = @picperrow
+	totalrow = (totalpic + picperrow - 1)/ picperrow;
+	i = 0
+%>
+
+<% if totalpic > 0 %>
+	<% while i < totalrow %>
+		<tr>
+		    <% j = 0 %>
+			<% while j < picperrow %>
+				<% if i * picperrow + j < totalpic %>
+					<td class="nhtabtdclasstop" width=20%>
+						<%= image_tag("/images/testpic.jpg", :height => '120', :width => '160', :alt => "New Hope International Education", :class => "round") %>
+						<br>
+						<%= link_to @student_hostfamily_pictures[i * picperrow + j].location, host_families_showhomestayphoto_path(:id => 1) %>
+					</td>
+				<% else %>
+					<td></td>
+				<% end %>
+				<% j = j + 1 %>
+			<% end %>
+		</tr>
+		<% i = i + 1 %>
+	<% end %>
+<% end %>
+
+</table>
+
+<%= will_paginate @student_hostfamily_pictures %>

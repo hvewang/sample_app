@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428201403) do
+ActiveRecord::Schema.define(:version => 20110519210018) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -314,6 +314,18 @@ ActiveRecord::Schema.define(:version => 20110428201403) do
     t.integer  "updated_by"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "student_hostfamily_pictures", :force => true do |t|
+    t.string   "student_info"
+    t.string   "family_info"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
   end
 
   create_table "success_cases", :force => true do |t|

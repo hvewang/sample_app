@@ -31,8 +31,22 @@ class HostFamiliesController < ApplicationController
   end
   
   def homestayphoto
+    @picperrow = 4
+	@student_hostfamily_pictures = StudentHostfamilyPicture.all.paginate(:page => params[:page], :per_page => @picperrow * 2)
   end
-
+  
+  def showhomestayphoto
+    id = params[:id]
+	puts "id is:"
+	puts id
+	
+	if id.empty?
+		redirect_to host_families_homestayphoto_path
+	end
+	
+	@student_hostfamily_picture = StudentHostfamilyPicture.find(id)
+  end
+  
   def servicerequestform  
   end
   

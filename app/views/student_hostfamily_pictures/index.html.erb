@@ -1,0 +1,27 @@
+<h1>Listing student_hostfamily_pictures</h1>
+
+<table>
+  <tr>
+    <th>Student info</th>
+    <th>Family info</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @student_hostfamily_pictures.each do |student_hostfamily_picture| %>
+  <tr>
+    <td><%= student_hostfamily_picture.student_info %></td>
+    <td><%= student_hostfamily_picture.family_info %></td>
+    <td><%= student_hostfamily_picture.location %></td>
+    <td><%= link_to 'Show', student_hostfamily_picture %></td>
+    <td><%= link_to 'Edit', edit_student_hostfamily_picture_path(student_hostfamily_picture) %></td>
+    <td><%= link_to 'Destroy', student_hostfamily_picture, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student hostfamily picture', new_student_hostfamily_picture_path %>

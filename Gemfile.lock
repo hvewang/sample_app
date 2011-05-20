@@ -31,6 +31,10 @@ GEM
     activesupport (3.0.3)
     annotate-models (1.0.4)
     arel (2.0.7)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     builder (2.1.2)
     crack (0.1.8)
     diff-lcs (1.1.2)
@@ -54,6 +58,9 @@ GEM
     mime-types (1.16)
     mysql (2.8.1-x86-mingw32)
     nokogiri (1.4.4.1-x86-mingw32)
+    paperclip (2.3.11)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -96,6 +103,7 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5.3)
     will_paginate (3.0.pre2)
+    xml-simple (1.0.15)
 
 PLATFORMS
   x86-mingw32
@@ -103,11 +111,13 @@ PLATFORMS
 DEPENDENCIES
   ZenTest
   annotate-models
+  aws-s3
   factory_girl_rails
   faker
   gmaps4rails
   gravatar_image_tag
   mysql
+  paperclip
   rails (= 3.0.3)
   rspec
   rspec-rails

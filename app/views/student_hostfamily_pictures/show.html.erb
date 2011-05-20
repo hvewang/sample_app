@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student info:</b>
+  <%= @student_hostfamily_picture.student_info %>
+</p>
+
+<p>
+  <b>Family info:</b>
+  <%= @student_hostfamily_picture.family_info %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @student_hostfamily_picture.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_hostfamily_picture_path(@student_hostfamily_picture) %> |
+<%= link_to 'Back', student_hostfamily_pictures_path %>

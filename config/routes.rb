@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  resources :student_hostfamily_pictures
+
   get "news_updates/newslist"
   get "news_updates/newsdetails"
   resources :news_updates
@@ -64,6 +66,7 @@ SampleApp::Application.routes.draw do
   get "host_families/whatishomestay"
   get "host_families/faq"
   get "host_families/homestayphoto"
+  get "host_families/showhomestayphoto"
   get "host_families/servicerequestform"
   get "host_families/availablehomestay"
   get "host_families/responsibility"
