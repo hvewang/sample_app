@@ -15,6 +15,10 @@
   <%= @student_hostfamily_picture.location %>
 </p>
 
+<p>
+  <b>Pic:</b>
+  <%= image_tag @user.pic.url %>
+</p>
 
 <%= link_to 'Edit', edit_student_hostfamily_picture_path(@student_hostfamily_picture) %> |
 <%= link_to 'Back', student_hostfamily_pictures_path %>
