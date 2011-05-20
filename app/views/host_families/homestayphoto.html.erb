@@ -21,7 +21,7 @@
 					<td class="nhtabtdclasstop" width=20%>
 						<%= image_tag @student_hostfamily_pictures[i * picperrow + j].pic.url(:medium) %>
 						<br>
-						<%= link_to @student_hostfamily_pictures[i * picperrow + j].location, host_families_showhomestayphoto_path(:id => @student_hostfamily_pictures[i * picperrow + j].) %>
+						<%= link_to @student_hostfamily_pictures[i * picperrow + j].location, host_families_showhomestayphoto_path(:id => @student_hostfamily_pictures[i * picperrow + j]) %>
 					</td>
 				<% else %>
 					<td></td>
