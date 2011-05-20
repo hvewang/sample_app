@@ -19,9 +19,9 @@
 			<% while j < picperrow %>
 				<% if i * picperrow + j < totalpic %>
 					<td class="nhtabtdclasstop" width=20%>
-						<%= image_tag("/images/testpic.jpg", :height => '120', :width => '160', :alt => "New Hope International Education", :class => "round") %>
+						<%= image_tag @student_hostfamily_pictures[i + picperrow + j].pic.url(:medium) %>
 						<br>
-						<%= link_to @student_hostfamily_pictures[i * picperrow + j].location, host_families_showhomestayphoto_path(:id => 1) %>
+						<%= link_to @student_hostfamily_pictures[i * picperrow + j].location, host_families_showhomestayphoto_path(:id => @student_hostfamily_pictures[i * picperrow + j]) %>
 					</td>
 				<% else %>
 					<td></td>
