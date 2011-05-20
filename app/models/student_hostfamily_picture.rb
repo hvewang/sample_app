@@ -7,7 +7,7 @@ class StudentHostfamilyPicture < ActiveRecord::Base
 		:storage => :s3,
 		:s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
 		:path => ":attachment/:id/:style.:extension",
-		:bucket => 'NewHope-Devl'
+		:bucket => 'NewHope-Prod'
 		
 	def force_utf
 		if Rails.env.development? 
