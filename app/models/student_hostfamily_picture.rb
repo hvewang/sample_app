@@ -3,7 +3,7 @@ class StudentHostfamilyPicture < ActiveRecord::Base
 	validates :pic_file_name, :presence => true
 	
 	has_attached_file :pic, 
-		:styles => { :medium => "350x300>", :thumb => "150x100>", :large => "600x400" },
+		:styles => { :medium => "320x240>", :thumb => "160x120>", :large => "640x480" },
 		:storage => :s3,
 		:s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
 		:path => ":attachment/:id/:style.:extension",
