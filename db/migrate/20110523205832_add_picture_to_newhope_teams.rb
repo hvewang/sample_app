@@ -6,6 +6,7 @@ class AddPictureToNewhopeTeams < ActiveRecord::Migration
     add_column :newhope_teams, :newhope_team_pic_updated_at, :datetime
   end
 
+
   def self.down
 	remove_column :newhope_teams, :newhope_team_pic_file_name
     remove_column :newhope_teams, :newhope_team_pic_content_type
