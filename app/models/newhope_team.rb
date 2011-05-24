@@ -1,5 +1,5 @@
 class NewhopeTeam < ActiveRecord::Base
-	has_attached_file :newhope_team_pic, 
+	has_attached_file :nhteampic, 
 		:styles => { :medium => "320x240>", :thumb => "160x120>", :large => "640x480>" },
 		:storage => :s3,
 		:s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
