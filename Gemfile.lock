@@ -119,6 +119,7 @@ DEPENDENCIES
   mysql
   paperclip
   rails (= 3.0.3)
+  rake (~> 0.8.7)
   rspec
   rspec-rails
   webrat
