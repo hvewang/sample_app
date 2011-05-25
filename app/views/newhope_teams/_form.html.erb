@@ -1,4 +1,4 @@
-<%= form_for(@newhope_team) do |f| %>
+<%= form_for @newhope_team, :html => { :multipart => true } do |f| %>
   
   <% @newhope_team.force_utf %>
   <% if @newhope_team.errors.any? %>
