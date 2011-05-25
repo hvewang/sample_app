@@ -13,7 +13,7 @@
 		<!--
 		<%= image_tag("/images/newhopeteam/#{newhope_team.pic}", :height => '200', :width => '160', :alt => "New Hope International Education", :class => "round") %>
 		-->
-		<%= image_tag(newhope_team.newhope_team_pic.url, :height => '200', :width => '160', :alt => "New Hope International Education", :class => "round") %>
+		<%= image_tag(newhope_team.newhope_team_pic.url(:large), :height => '200', :width => '160', :alt => "New Hope International Education", :class => "round") %>
 	</td>
     <td>
 		<b><%= raw(newhope_team.name_cn) %></b><br />

@@ -58,8 +58,8 @@
 </p>
 
 <p>
-  <b>Pic:</b>
-  <%= @newhope_team.newhope_team_pic.url %>
+  <b>Pic: <%= @newhope_team.newhope_team_pic.url %></b>
+  <%= image_tag(@newhope_team.newhope_team_pic.url(:thumb)) %>
 </p>
 
 <p>
