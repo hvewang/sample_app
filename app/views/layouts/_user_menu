@@ -18,6 +18,7 @@
 		<%= link_to t('label.myaccount.successcase'), success_cases_path %><br />
 		<%= link_to t('label.myaccount.newhopeteam'), newhope_teams_path %><br />
 		<%= link_to t('label.myaccount.news'), news_updates_path %><br />
+		<%= link_to t('label.myaccount.hostfamilypicture'), host_family_photos_path %><br />
 		<%= link_to t('label.myaccount.studenthostfamilypicture'), student_hostfamily_pictures_path %><br />
 	<% end %>
 </div>

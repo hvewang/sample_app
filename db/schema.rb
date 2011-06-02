@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110525035550) do
+ActiveRecord::Schema.define(:version => 20110601200826) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -226,6 +226,16 @@ ActiveRecord::Schema.define(:version => 20110525035550) do
     t.datetime "updated_at"
     t.string   "status"
     t.string   "s_live_in"
+  end
+
+  create_table "host_family_photos", :force => true do |t|
+    t.integer  "host_family_info_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "host_family_pic_file_name"
+    t.string   "host_family_pic_content_type"
+    t.integer  "host_family_pic_file_size"
+    t.datetime "host_family_pic_updated_at"
   end
 
   create_table "locations", :force => true do |t|

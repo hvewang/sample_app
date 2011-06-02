@@ -1,6 +1,6 @@
 development:
   access_key_id: AKIAIMQYMOHZCIBUA67Q
-  encoding: Q57yKKjUfFkdxhYuYx4/XDBBY7SCbSHyNQBcZEW2
+  secret_access_key: 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
 
 test:
   access_key_id: AKIAIMQYMOHZCIBUA67Q

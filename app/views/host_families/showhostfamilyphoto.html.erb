@@ -1,0 +1,28 @@
+<h1><%= t('label.myaccount.studenthostfamilypicture') %></h1> 
+
+<hr size=10></hr>
+
+<table class="nhtabclass">	
+	<% if !@host_family_info.host_family_photos.empty? %>
+		<tr>
+				<td class="nhtabtdclasmiddle" width=100%>
+					<%= @host_family_info.city %>, <%= @host_family_info.state %> <%= @host_family_info.zip %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<%= link_to back_button %>
+				</td>
+		</tr>
+			
+		<% @host_family_info.host_family_photos.each do |host_family_photo| %>
+			<tr>
+				<td class="nhtabtdclasmiddle" width=100%>
+					<%= image_tag(host_family_photo.host_family_pic.url(:large), :alt => "New Hope International Education", :class => "round") %>
+				</td>
+			</tr>
+		<% end %>
+		
+		<tr>
+				<td class="nhtabtdclasmiddle" width=100%>
+					<%= link_to back_button %>
+				</td>
+		</tr>
+	<% end %>		
+</table>

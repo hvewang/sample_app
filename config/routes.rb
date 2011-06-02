@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  resources :host_family_photos
+
   resources :student_hostfamily_pictures
 
   get "news_updates/newslist"
@@ -73,6 +75,7 @@ SampleApp::Application.routes.draw do
   get "host_families/guideline"
   get "host_families/question"
   post "host_families/submitquestion"
+  get "host_families/showhostfamilyphoto"
 
   get "colleges/collegedetail"
   get "colleges/collegelist"

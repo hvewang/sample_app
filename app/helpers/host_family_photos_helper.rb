@@ -1,0 +1,2 @@
+module HostFamilyPhotosHelper
+end

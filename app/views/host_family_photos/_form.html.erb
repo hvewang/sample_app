@@ -1,0 +1,36 @@
+<%= form_for @host_family_photo, :html => { :multipart => true } do |f| %>
+  <% @host_family_photo.force_utf %>
+  
+  <% if @host_family_photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@host_family_photo.errors.count, "error") %> prohibited this host_family_photo from being saved:</h2>
+
+      <ul>
+      <% @host_family_photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+	<% @host_family_infos.each do |host_family_info| %>
+		<% host_family_info.force_utf %>
+	<% end %>
+	
+    <%= f.label :host_family_info_id %><br />
+	<!--
+    <%= f.text_field :host_family_info_id %>
+	-->
+	<%= select_tag "host_family_photo[host_family_info_id]", options_from_collection_for_select(@host_family_infos, "id", "full_name") %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :picture %>:<%= @host_family_photo.host_family_pic.url %><br />
+    <%= f.file_field :host_family_pic %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

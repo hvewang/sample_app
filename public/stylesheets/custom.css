@@ -219,6 +219,12 @@ table.nhtabclass tr td.nhtabtdclasstop {
 	vertical-align: top;
 }
 
+table.nhtabclass tr td.nhtabtdclasmiddle {
+	text-align: center;
+	vertical-align: middle;
+	background: #fff;
+}
+
 table.nhtabclass tr td.nhtabtdclassright {
 	text-align: right;
 	vertical-align: middle;

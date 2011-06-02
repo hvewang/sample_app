@@ -1,0 +1,16 @@
+<h1><%= t('label.myaccount.studenthostfamilypicture') %></h1> 
+
+<table class="nhtabclass">
+		<tr>
+					<td class="nhtabtdclasstop" width=100%>
+						<%= @student_hostfamily_picture.location %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<%= link_to back_button %>
+						<br>
+						<hr size=10></hr>
+						<%= image_tag(@student_hostfamily_picture.pic.url(:large), :alt => "New Hope International Education", :class => "round") %>
+					</td>
+
+		</tr>
+</table>
+
+<%= link_to back_button %>

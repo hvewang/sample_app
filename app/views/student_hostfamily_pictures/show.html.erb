@@ -17,7 +17,7 @@
 
 <p>
   <b>Pic:</b>
-  <%= image_tag @student_hostfamily_picture.pic.url %>
+  <%= image_tag @student_hostfamily_picture.pic.url(:thumb) %>
 </p>
 
 <%= link_to 'Edit', edit_student_hostfamily_picture_path(@student_hostfamily_picture) %> |

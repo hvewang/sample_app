@@ -78,6 +78,24 @@ class HostFamiliesController < ApplicationController
   def availablehomestay
 	@host_family_infos = HostFamilyInfo.find_all_by_status('Active').paginate(:page => params[:page], :per_page => 10)
   end
+  
+  def showhostfamilyphoto
+	@title = "Host Family Photos"
+	host_family_info_id = params[:id]
+	if host_family_info_id.nil?
+		if I18n.locale != session[:prev_locale]
+			host_family_info_id = session[:prec_host_family_info_id]
+		else
+			redirect_to host_families_availablehomestay_path
+		end
+	end
+	
+	@host_family_info = HostFamilyInfo.find(host_family_info_id)
+	#@host_family_photos = @host_family_info.host_family_photos
+	
+	session[:prev_locale] = I18n.locale
+	session[:prec_host_family_info_id] = host_family_info_id
+  end
 
   private
 	

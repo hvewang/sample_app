@@ -1,5 +1,7 @@
 <h1><%= t('label.hostfamily.servicerequest.availabehomestay') %></h1>
 
+<hr size=10></hr>
+
 <%= will_paginate @host_family_infos %>
 
 <table>
@@ -15,7 +17,11 @@
 	<%   host_family_info.force_utf %>
 	<% i = i + 1 %>
   <tr>
-    <td><%= i %></td> 
+    <% if host_family_info.host_family_photos.empty? %>
+		<td><%= i %></td> 
+	<% else %>
+		<td><%= link_to i, host_families_showhostfamilyphoto_path(:id => host_family_info.id) %></td> 
+	<% end %>
     <td><%= host_family_info.city %></td>
     <td><%= host_family_info.state %></td>
     <td><%= host_family_info.zip %></td>

@@ -67,6 +67,8 @@ class HostFamilyInfo < ActiveRecord::Base
 	attr_accessor :student_group3
 	attr_accessor :student_group4
 	
+	has_many :host_family_photos, :dependent => :destroy
+	
 	before_save :format_student_group
 	
 	def self.activeHostFamily
@@ -77,6 +79,10 @@ class HostFamilyInfo < ActiveRecord::Base
 		if Rails.env.development? 
 			attributes.each {|key, value| value.force_encoding('utf-8') if value.encoding != 'utf-8' if value.kind_of?(String) }
 		end
+	end
+	
+	def full_name
+		self.l_nm + ', ' + self.f_nm
 	end
 		
 	private 
