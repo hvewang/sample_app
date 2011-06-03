@@ -1,6 +1,6 @@
  <%   @high_school_list.force_utf %>
  
-<%= form_for(@high_school_list) do |f| %>
+<%= form_for @high_school_list, :html => { :multipart => true } do |f| %>
   <% if @high_school_list.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@high_school_list.errors.count, "error") %> prohibited this high_school_list from being saved:</h2>
@@ -61,8 +61,12 @@
     <%= f.text_area :about_cn, :cols=>80, :rows=>6  %>
   </div>
   <div class="field">
+	<!--
     <%= f.label :school_pics %><br />
     <%= f.text_field :school_pics %>
+	-->
+	<%= f.label :high_school_pic %>:<%= @high_school_list.high_school_pic.url %><br />
+    <%= f.file_field :high_school_pic %>
   </div>
   <div class="field">
     <%= f.label :founded %><br />
@@ -217,8 +221,12 @@
     <%= f.text_area :about_nearby_city_cn, :cols=>80, :rows=>6  %>
   </div>
   <div class="field">
+	<!--
     <%= f.label :nearby_city_pics %><br />
     <%= f.text_field :nearby_city_pics, :size=>60 %>
+	-->
+	<%= f.label :high_school_city_pic %>:<%= @high_school_list.high_school_city_pic.url %><br />
+    <%= f.file_field :high_school_city_pic %>
   </div>
   <div class="field">
     <%= f.label :school_level %><br />

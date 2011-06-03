@@ -53,8 +53,13 @@
 </p>
 
 <p>
+  <!--
   <b>School pics:</b>
   <%= @high_school_list.school_pics %>
+  -->
+  
+  <b>High school pic:</b><%= @high_school_list.high_school_pic.url %><br>
+  <%= image_tag(@high_school_list.high_school_pic.url(:thumb)) %>
 </p>
 
 <p>
@@ -248,8 +253,13 @@
 </p>
 
 <p>
+  <!--
   <b>Nearby city pics:</b>
   <%= @high_school_list.nearby_city_pics %>
+  -->
+  
+  <b>High school City pic:</b><%= @high_school_list.high_school_city_pic.url %><br>
+  <%= image_tag(@high_school_list.high_school_city_pic.url(:thumb)) %>
 </p>
 
 <p>

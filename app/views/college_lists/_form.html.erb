@@ -1,6 +1,6 @@
  <% @college_list.force_utf %>
  
-<%= form_for(@college_list) do |f| %>
+<%= form_for @college_list, :html => {:multipart => true} do |f| %>
   <% if @college_list.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@college_list.errors.count, "error") %> prohibited this college_list from being saved:</h2>
@@ -105,10 +105,12 @@
     <%= f.label :setting %><br />
     <%= f.text_field :setting %>
   </div>
+  <!--
   <div class="field">
     <%= f.label :pics %><br />
     <%= f.text_field :pics, :size=>60 %>
   </div>
+  -->
   <div class="field">
     <%= f.label :application_deadline %><br />
     <%= f.text_area :application_deadline, :cols=>80, :rows=>10 %>
@@ -184,9 +186,20 @@
   </div>
   
   <div class="field">
+    <%= f.label :college_pic_1 %>:<%= @college_list.college_pic_1.url %> <br />
+    <%= f.file_field :college_pic_1, :size=>60 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :college_pic_2 %>:<%= @college_list.college_pic_2.url %><br />
+    <%= f.file_field :college_pic_2, :size=>60 %>
+  </div>
+  
+  <div class="field">
     <%= f.label :status %><br />
 	<%= f.select(:status, ["", "Inactive", "Active"]) %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

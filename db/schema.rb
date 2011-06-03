@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110601200826) do
+ActiveRecord::Schema.define(:version => 20110603033919) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -58,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20110601200826) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "highest_degree"
+    t.string   "college_pic_1_file_name"
+    t.string   "college_pic_1_content_type"
+    t.integer  "college_pic_1_file_size"
+    t.datetime "college_pic_1_updated_at"
+    t.string   "college_pic_2_file_name"
+    t.string   "college_pic_2_content_type"
+    t.integer  "college_pic_2_file_size"
+    t.datetime "college_pic_2_updated_at"
   end
 
   create_table "college_rankings", :force => true do |t|
@@ -153,6 +161,14 @@ ActiveRecord::Schema.define(:version => 20110601200826) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "contact"
+    t.string   "high_school_pic_file_name"
+    t.string   "high_school_pic_content_type"
+    t.integer  "high_school_pic_file_size"
+    t.datetime "high_school_pic_updated_at"
+    t.string   "high_school_city_pic_file_name"
+    t.string   "high_school_city_pic_content_type"
+    t.integer  "high_school_city_pic_file_size"
+    t.datetime "high_school_city_pic_updated_at"
   end
 
   create_table "highschool_rankings", :force => true do |t|

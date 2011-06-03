@@ -5,7 +5,10 @@
 	<legend><%= @high_school_list.name_en %>&nbsp;&nbsp;<%= @high_school_list.name_cn %></legend>
 	<table class="nhtabclass">
 		<tr>
+			<!--
 			<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/highschool/#{@high_school_list.school_pics}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			-->
+			<td colspan=3 class="nhtabtdclasstop"><%= image_tag(@high_school_list.high_school_pic.url(:large), :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
 			<% if I18n.locale == :en %>
 				<td colspan=3 class="nhtabtdclasstop"><%= raw(truncate(@high_school_list.about_en, :length=> 600)) %></td>
 			<% else %>
@@ -167,7 +170,10 @@
 			<% end %>
 		</tr>
 		<tr>
+			<!--
 			<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/highschool/#{@high_school_list.nearby_city_pics}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			-->
+			<td colspan=3 class="nhtabtdclasstop"><%= image_tag(@high_school_list.high_school_city_pic.url(:large), :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
 			<% if I18n.locale == :en %>
 				<td colspan=3 class="nhtabtdclasstop"><%= raw(truncate(@high_school_list.about_neary_city_en, :length=> 600)) %></td>
 			<% else %>

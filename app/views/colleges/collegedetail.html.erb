@@ -9,12 +9,8 @@
 	
 	   <% if !@pics.empty? %>
 		<tr>
-		    <% if @pics.size == 1 %>
-			<td colspan=6 class="nhtabtdclasstop"><%= image_tag("/images/college/#{@pics[0]}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
-			<% else %>
-				<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/college/#{@pics[0]}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
-				<td colspan=3 class="nhtabtdclasstop"><%= image_tag("/images/college/#{@pics[1]}", :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
-			<% end %>
+			<td colspan=3 class="nhtabtdclasstop"><%= image_tag(@college_list.college_pic_1.url(:large), :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
+			<td colspan=3 class="nhtabtdclasstop"><%= image_tag(@college_list.college_pic_2.url(:large), :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
 		</tr>
 		<% end %>
 		
