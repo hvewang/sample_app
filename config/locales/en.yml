@@ -23,7 +23,7 @@ en:
     msg: 2011 New Hope International Education Consulting, LLC. All Rights Reserved.
   label:
     name: Name
-    email: Email
+    email: E-mail
     password: Password
     confirmation: Confirmation
     signup: Sign up

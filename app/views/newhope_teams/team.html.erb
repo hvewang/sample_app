@@ -8,6 +8,7 @@
 
 <% @newhope_teams.each do |newhope_team| %>
   <% newhope_team.force_utf %>
+  <% theemail = "<A href='mailto:" + newhope_team.email + "'>" + newhope_team.email + "</a>" %>
   <tr>
     <td class="nhtabtdclasstop" width=20%>
 		<!--
@@ -20,7 +21,7 @@
 		<%= raw(newhope_team.resume) %>
 		<br><br>
 		<font size=1><%= t('label.ourteam.phone') %>:</font>&nbsp;<%= raw(newhope_team.phone) %>&nbsp;&nbsp;&nbsp;<font size=1>
-		<%= t('label.ourteam.email') %>:</font>&nbsp;<%= raw(newhope_team.email) %>
+		<%= t('label.ourteam.email') %>:</font>&nbsp;<%= raw(theemail) %>
 		<hr size=10></hr>
 	</td>
   </tr>
