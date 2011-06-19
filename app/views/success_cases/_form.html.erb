@@ -1,4 +1,4 @@
-<%= form_for(@success_case) do |f| %>
+<%= form_for @success_case, :html => { :multipart => true } do |f| %>
   <% @success_case.force_utf %>
   <% if @success_case.errors.any? %>
     <div id="error_explanation">
@@ -39,10 +39,20 @@
 		) 
 	%>
   </div>
+  
+  <!--
   <div class="field">
     <%= f.label :pics %><br />
     <%= f.text_field :pics %>
   </div>
+  -->
+  
+  <div class="field">
+    <%= f.label :picture %>:<%= @success_case.success_case_pic.url %><br />
+    <%= f.file_field :success_case_pic %>
+  </div>
+ 
+  
   <div class="field">
     <%= f.label :status %><br />
 	<%= f.select(:status, 

@@ -12,36 +12,15 @@
     <td colspan=2><%= success_case.student_name %>: <%= success_case.school_name %></td>
   </tr>
   
-  <% if !success_case.pics.empty? %>
-  <% pics = success_case.pics.split %>
-		<tr>
-		    <% if pics.size == 1 %>
-			<td class="nhtabtdclasstop" width=35%><%= image_tag("/images/successcase/#{pics[0]}", :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
-			</td>
-			<% else %>
-				<td class="nhtabtdclasstop" width=35%>
-					<%= image_tag("/images/successcase/#{pics[0]}", :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
-					<!--
-					<br>
-					<%= image_tag("/images/successcase/#{pics[1]}", :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
-					-->
-				</td>
-			<% end %>
-			
-			<td class="nhtabtdclasstop"><%= raw(success_case.msg) %>
-				<hr size=10></hr>
-			</td>
-		</tr>
-	<% else %>
-		<tr>
-			<td colspan=2>
-				<%= raw(success_case.msg) %>
-				<hr size=10></hr>
-			</td>
-		  </tr>
-	<% end %>
-  
-    
+  <tr>
+		<td class="nhtabtdclasstop" width=35%>
+			<%= image_tag(success_case.success_case_pic.url(:large), :height => '200', :width => '260', :alt => "New Hope International Education", :class => "round") %>
+		</td>
+		<td class="nhtabtdclasstop"><%= raw(success_case.msg) %>
+			<hr size=10></hr>
+		</td>
+  </tr>
+
 <% end %>
 </table>
 
