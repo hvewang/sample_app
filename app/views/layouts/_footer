@@ -13,8 +13,13 @@
 				<li><%= link_to t('header.label.signup'), signup_path %></li>
 				-->
 			<% end %>
+			
+			<li><%= link_to t('header.label.services'), services_general_path %></li>
+			
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
-			<li><%= link_to t('header.label.help'), help_path %></li>		
+			<!--
+			<li><%= link_to t('header.label.help'), help_path %></li>	
+			-->	
 		</ul>
 	</nav>
 </footer>
