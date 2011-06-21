@@ -6,7 +6,11 @@
 		<ul>
 			<li><%= link_to t('header.label.home'), root_path %></li>
 			<li><%= link_to t('header.label.about'), about_path %></li>
+			
+			<!--
 			<li><%= link_to t('header.label.latestnews'), news_updates_newslist_path %></li>
+			-->
+			
 			<li><%= link_to t('header.label.services'), services_general_path %></li>
 			
 			<li><%= link_to t('header.label.highschool'), high_schools_allhighschool_path %></li>
@@ -28,7 +32,9 @@
 			    <!--
 				<li><%= link_to t('header.label.signup'), signup_path %></li>
 				-->
+				<!--
 				<li><%= link_to t('header.label.signin'), signin_path %></li>
+				-->
 			<% end %>
 			
 			<!--

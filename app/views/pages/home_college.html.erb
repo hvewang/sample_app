@@ -1,0 +1,10 @@
+<div class="depot_form" >
+	<fieldset>
+		<legend><%= t('label.home.participatingcollege') %>&nbsp;&nbsp;<font size=1><%= link_to t('label.home.more'), colleges_collegelist_path %></font></legend>
+		<% @college_lists.each do |college_list| %>
+		    <% college_list.force_utf %>
+			<%= image_tag("/images/right.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
+			<%= link_to college_list.name_cn,  colleges_collegedetail_path(:id=>college_list) %><br/>
+		<% end %>
+	</fieldset>
+</div>

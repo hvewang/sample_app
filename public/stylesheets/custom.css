@@ -71,7 +71,7 @@ nav ul {
 nav ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.1em 2px;
+	padding: 0.2em 10px;
 }
 
 nav ul li img {

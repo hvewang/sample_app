@@ -35,7 +35,8 @@ en:
     phoneformat: Country Code-Area Code-Phone Number
     home:
       latestnews: Latest News
-      participatingschool: Participating Schools
+      participatinghighschool: Participating High Schools
+      participatingcollege: Participating Colleges
       hostfamily: Host Families
       testimonial: Testimonials
       more: more

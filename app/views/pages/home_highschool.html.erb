@@ -1,0 +1,10 @@
+<div class="depot_form" >
+	<fieldset>
+		<legend><%= t('label.home.participatinghighschool') %>&nbsp;&nbsp;<font size=1><%= link_to t('label.home.more'), high_schools_allhighschool_path %></font></legend>
+		<% @high_school_lists.each do |high_school_list| %>
+		    <% high_school_list.force_utf %>
+			<%= image_tag("/images/right.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
+			<%= link_to high_school_list.name_cn,  high_schools_highschooldetail_path(:id=>high_school_list) %><br/>
+		<% end %>
+	</fieldset>
+</div>
