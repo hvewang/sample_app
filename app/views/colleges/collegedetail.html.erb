@@ -10,12 +10,12 @@
 	</legend>
 	<table class="nhtabclass">
 	
-	   <% if !@pics.empty? %>
+
 		<tr>
 			<td colspan=3 class="nhtabtdclasstop"><%= image_tag(@college_list.college_pic_1.url(:large), :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
 			<td colspan=3 class="nhtabtdclasstop"><%= image_tag(@college_list.college_pic_2.url(:large), :height => '250', :width => '400', :alt => "New Hope International Education", :class => "round") %></td>
 		</tr>
-		<% end %>
+
 		
 		<tr>
 			<td colspan=6 class="nhtabtdclasstop"><%= raw(truncate(@college_list.about_school, :length=> 1000)) %></td>

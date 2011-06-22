@@ -108,7 +108,7 @@ class CollegesController < ApplicationController
 	
 	@college_list = CollegeList.find_by_id(college_id)
 	
-	@pics = @college_list.pics.split
+	#@pics = @college_list.pics.split
 
 	session[:prev_locale] = I18n.locale
 	session[:prec_college_id] = college_id
