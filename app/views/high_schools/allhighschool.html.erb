@@ -68,15 +68,23 @@
   <tr>
   <% if I18n.locale == :en %>
         <td><%= link_to i, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<td><%= link_to high_school_list.name_en, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<td><%= link_to high_school_list.name_cn, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<!--
 		<td><%= high_school_list.name_en %></td>
 		<td><%= high_school_list.name_cn  %></td>
+		-->
 		<td><%= high_school_list.hs_type %></td>
 		<td><%= high_school_list.state %> <%= high_school_list.zip %></td>
 		<td><%= high_school_list.city_nearby_en %></td>
 	<% else %>
 	    <td><%= link_to i, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<td><%= link_to high_school_list.name_en, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<td><%= link_to high_school_list.name_cn, high_schools_highschooldetail_path(:id=>high_school_list) %></td>
+		<!--
 		<td><%= high_school_list.name_en  %></td>
 		<td><%= high_school_list.name_cn  %></td>
+		-->
 		<td><%= high_school_list.hs_type %></td>
 		<td><%= high_school_list.state %> <%= high_school_list.zip %></td>
 		<td><%= high_school_list.city_nearby_cn %></td>
