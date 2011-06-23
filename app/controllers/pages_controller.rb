@@ -6,8 +6,8 @@ class PagesController < ApplicationController
 	@curr_layout = "layouts/home_layout"
 	
 	@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 8)
-	@college_lists = CollegeList.paginate(:page => params[:page], :per_page => 4)
-	@high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 4)
+	@college_lists = CollegeList.paginate(:page => params[:page], :per_page => 8)
+	@high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 8)
 	
 	@host_family_infos = HostFamilyInfo.all.paginate(:page => params[:page], :per_page => 8)
 	@testimonials = SuccessCase.all(:conditions => ["status = 'Active' and record_type in ('Testimonials-Student', 'Testimonials-Parent', 'Testimonials-HostFamily', 'Testimonials-Other')"]).paginate(:page => params[:page], :per_page => 8)

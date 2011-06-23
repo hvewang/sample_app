@@ -17,7 +17,7 @@
 		<% @testimonials.each do |testimonial| %>
 			<%   testimonial.force_utf %>
 			<%= image_tag("/images/star_1.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
-			<%= testimonial.student_name %>: <%= truncate(testimonial.msg, :length => 40) %><br/>
+			<%= testimonial.student_name %>: <%= truncate(testimonial.msg, :length => 30) %><br/>
 		<% end %>
 	</fieldset>
 </div>
