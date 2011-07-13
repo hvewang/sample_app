@@ -68,6 +68,12 @@
 	<%= f.label :high_school_pic %>:<%= @high_school_list.high_school_pic.url %><br />
     <%= f.file_field :high_school_pic %>
   </div>
+  
+  <div class="field">
+	<%= f.label :high_school_pdf %>:<%= @high_school_list.high_school_pdf.url %><br />
+    <%= f.file_field :high_school_pdf %>
+  </div>
+  
   <div class="field">
     <%= f.label :founded %><br />
     <%= f.text_field :founded %>

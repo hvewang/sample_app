@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110621193845) do
+ActiveRecord::Schema.define(:version => 20110712034240) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -170,6 +170,10 @@ ActiveRecord::Schema.define(:version => 20110621193845) do
     t.integer  "high_school_city_pic_file_size"
     t.datetime "high_school_city_pic_updated_at"
     t.text     "characteristics"
+    t.string   "high_school_pdf_file_name"
+    t.string   "high_school_pdf_content_type"
+    t.integer  "high_school_pdf_file_size"
+    t.datetime "high_school_pdf_updated_at"
   end
 
   create_table "highschool_rankings", :force => true do |t|

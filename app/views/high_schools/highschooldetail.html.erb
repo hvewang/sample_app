@@ -1,11 +1,15 @@
-<h1><%= t('label.school.highschool') %></h1>
+<h1><%= t('label.school.highschool') %></h1>  
 <hr size=10></hr>
 
 <%   @high_school_list.force_utf %>
 <p id="notice"><%= notice %></p>
 
 <fieldset>
-	<legend><%= @high_school_list.name_en %>&nbsp;&nbsp;<%= @high_school_list.name_cn %></legend>
+	<legend>
+		<%= @high_school_list.name_en %>&nbsp;&nbsp;<%= @high_school_list.name_cn %>
+	</legend>
+	
+	<% if @high_school_list.high_school_pdf.url == "/high_school_pdfs/original/missing.png" %>
 	<table class="nhtabclass">
 		<tr>
 			<!--
@@ -189,7 +193,16 @@
 			<% end %>
 		</tr>
 	</table>
+	<% else %>
+		<iframe src="http://docs.google.com/gview?url=<%= @high_school_list.high_school_pdf.url %>&embedded=true" style="width:800px; height:1135px;" frameborder="0"></iframe>
+	<% end %>
 </fieldset>
+
+
+<nav class="text">
+	<%= link_to back_button %>
+</nav>
+
 
 
 

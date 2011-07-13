@@ -116,6 +116,12 @@ a.signup_button {
 	border-radius: 10px;
 }
 
+.text {
+	font-size: 100%;
+	text-align: center;
+	background-color: #fff;
+}
+
 footer {
 	text-align: center;
 	margin-top: 10px;

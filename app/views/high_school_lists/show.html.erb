@@ -63,6 +63,16 @@
 </p>
 
 <p>
+  <b>High school pdf:</b><%= @high_school_list.high_school_pdf.url %><br>
+  <a href="<%= @high_school_list.high_school_pdf.url %> "><b> File attached </b></a>
+</p>
+
+<p>
+  <b>High school pdf:</b><%= @high_school_list.high_school_pdf.url %><br>
+  <%= image_tag(@high_school_list.high_school_pdf.url) %>
+</p>
+
+<p>
   <b>Founded:</b>
   <%= @high_school_list.founded %>
 </p>
