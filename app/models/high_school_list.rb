@@ -61,7 +61,9 @@
 #
 
 class HighSchoolList < ActiveRecord::Base
-	validates :name_en, :presence => true, :uniqueness=> true 
+	validates :name_en, :presence => true, :uniqueness=> true
+	
+	default_scope :order => "updated_at desc"
 	
 	has_attached_file :high_school_pic, 
 		:styles => { :medium => "320x240>", :thumb => "160x120>", :large => "640x480>" },

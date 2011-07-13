@@ -3,7 +3,7 @@ class HighSchoolsController < ApplicationController
   
   def allhighschool
 	@title = "All High School"
-	@high_school_lists = HighSchoolList.all
+	@high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 10)
 	@titlelabel = 'label.highschool.allhighschool'
   end
   
