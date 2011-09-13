@@ -39,7 +39,7 @@ gem 'aws-s3'
 # end
 group :development do
 	gem 'rspec-rails'
-	#gem 'ZenTest'
+	gem 'ZenTest', '4.6.0'
 	#gem 'annotate-models'
 	gem 'annotate', '2.4.0'
 	gem 'faker'
@@ -50,5 +50,4 @@ group :test do
 	gem 'webrat' 
 	gem 'factory_girl_rails'
 	#gem 'will_paginate', '3.0.pre2'
-	gem 'ZenTest'
 end
