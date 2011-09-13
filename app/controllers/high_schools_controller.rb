@@ -10,7 +10,7 @@ class HighSchoolsController < ApplicationController
   def privateday
 	@title = "Private Day School"
 	@titlelabel = 'label.service.privatehs'
-	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Day School")
+	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Day School").paginate(:page => params[:page], :per_page => 10)
 	
 	render :action => "allhighschool"
   end
@@ -19,7 +19,7 @@ class HighSchoolsController < ApplicationController
 	@title = "Private Boarding School"
 	
 	@titlelabel = 'label.service.boardinghs'
-	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Boarding School")
+	@high_school_lists = HighSchoolList.find_all_by_hs_type("Private Boarding School").paginate(:page => params[:page], :per_page => 10)
 	
 	render :action => "allhighschool"
   end
