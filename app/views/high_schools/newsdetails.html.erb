@@ -1,0 +1,20 @@
+<% @news_update.force_utf %>
+ 
+<h1><%= t("label.school.highschool") %> -> <%= t("#{@titlelabel}") %></h1>
+
+<hr size=10></hr>
+
+<%= link_to back_button %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= @news_update.title_cn %></b>
+</p>
+
+
+<p>
+  <%= raw(@news_update.context) %>
+</p>
+
+<%= link_to back_button %>

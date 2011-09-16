@@ -1,0 +1,36 @@
+<h1><%= t("label.service.newhope") %> -> <%= t('label.hostfamily.homestay.faq') %></h1>
+
+<hr size=10></hr>
+
+<%= will_paginate @news_updates %>
+
+<table>
+
+<% i = 0 %>
+<% @news_updates.each do |news_update| %>
+  <% news_update.force_utf %>
+  <% i = i + 1 %>
+  <tr>
+    <td width=1%><%= i %></td>
+	
+	<!--
+    <td>
+		<%= link_to title, host_families_newsdetails_path(:id => news_update, :news_type => news_update.news_type) %>
+	</td>
+	-->
+	
+	<% if I18n.locale == :en %>
+		<td>
+			<%= link_to news_update.title_en, services_newsdetails_path(:id => news_update, :news_type => news_update.news_type) %>
+		</td>
+	<% else %>
+		<td>
+			<%= link_to news_update.title_cn, services_newsdetails_path(:id => news_update, :news_type => news_update.news_type) %>
+		</td>
+	<% end %>
+		
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @news_updates %>

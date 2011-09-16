@@ -33,6 +33,8 @@ SampleApp::Application.routes.draw do
   get "services/docwriting"
 
   get "services/followup"
+  get "services/news"
+  get "services/newsdetails"
 
   resources :highschool_rankings
 
@@ -76,6 +78,8 @@ SampleApp::Application.routes.draw do
   get "host_families/question"
   post "host_families/submitquestion"
   get "host_families/showhostfamilyphoto"
+  get "host_families/news"
+  get "host_families/newsdetails"
 
   get "colleges/collegedetail"
   get "colleges/collegelist"
@@ -85,6 +89,8 @@ SampleApp::Application.routes.draw do
   get "colleges/universityrank"
   get "colleges/collegerank"
   get "colleges/graduateschoolrank"
+  get "colleges/news"
+  get "colleges/newsdetails"
 
   get "high_schools/highschooldetail"
   get "high_schools/allhighschool"
@@ -94,7 +100,10 @@ SampleApp::Application.routes.draw do
   get "high_schools/rank"
   get "high_schools/applicationprocedure"
   get "high_schools/otherservice"
-
+  get "high_schools/academicservice"
+  get "high_schools/news"
+  get "high_schools/newsdetails"
+  
   get "testimonials/parent"
   get "testimonials/student"
   get "testimonials/hostfamily"

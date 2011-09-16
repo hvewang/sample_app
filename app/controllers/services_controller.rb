@@ -60,6 +60,35 @@ class ServicesController < ApplicationController
 	@titlelabel = 'label.service.afterservice'
 	findservice 'services.followup'
   end
+  
+  def news
+	@title = "FAQs"
+	
+	#if (news_type.nil? || news_type.empty?)
+	#	@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 10)
+	#else
+	#	@news_updates = NewsUpdate.find_all_by_news_type(news_type).paginate(:page => params[:page], :per_page => 10)
+	#end
+	@news_updates = NewsUpdate.find_by_sql("select * from news_updates where news_type in ('HFFAQ', 'HSFAQ', 'CollegeFAQ') order by updated_at desc").paginate(:page => params[:page], :per_page => 10)
+  end
+  
+  def newsdetails
+	@title = "FAQ Details"
+	
+	news_id = params[:id]
+	if news_id.nil?
+		if I18n.locale != session[:prev_locale]
+			news_id = session[:prec_news_id]
+		else
+			redirect_to high_school_news_path
+		end
+	end
+	
+	@news_update = NewsUpdate.find(news_id)
+
+	session[:prev_locale] = I18n.locale
+	session[:prec_news_id] = news_id
+  end
 
   private
     def findservice(servicetype)

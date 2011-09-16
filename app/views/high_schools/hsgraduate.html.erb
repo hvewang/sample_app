@@ -1,0 +1,20 @@
+<h1><%= t("label.school.highschool") %> -> <%= t("#{@titlelabel}") %></h1>
+
+<hr size=10></hr>
+
+<%= will_paginate @news_updates %>
+
+<table>
+
+<% i = 0 %>
+<% @news_updates.each do |news_update| %>
+  <% news_update.force_utf %>
+  <% i = i + 1 %>
+  <tr>
+    <td width=1%><%= i %></td>
+    <td><%= link_to news_update.title_cn, high_schools_newsdetails_path(:id => news_update) %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= will_paginate @news_updates %>

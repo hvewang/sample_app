@@ -1,5 +1,5 @@
 zh-cn: 
-  langimg: en.png
+  langimg: english.png
   header:
     label:
       home: 首页
@@ -18,7 +18,8 @@ zh-cn:
       help: 帮助
       hostfamily: 寄宿家庭
       highschool: 美国中学
-      university: 美国大学 
+      university: 美国大学
+      chinabranch: 中国分公司 
   footer:
     msg: 2011 新希望国际教育咨询有限公司.  版权所有.
   label:
@@ -76,6 +77,9 @@ zh-cn:
         schoolapplication: 高中申请
         procedure: 申请程序
         otherservice: 其它额外服务
+      academicservice: 学术监管服务
+      news: 最新高中留学动态
+      hsgraduate: 高中毕业生跟踪
       label:
         schoolname: 学校名
         schooltype: 走读/寄宿
@@ -111,6 +115,8 @@ zh-cn:
         rank: 排名
         addressphone: 地址/电话
         characteristic: 学校特色
+        latestnews: 最新留学动态
+        hsgraduate: 毕业生跟踪
     college:
       college: 美国大学
       collegelist: 大学名单
@@ -124,7 +130,9 @@ zh-cn:
       rank: 美国大学排名
       universityrank: 大学
       collegerank: 文理学院
-      graduateschoolrank: 研究生院
+      graduateschoolrank: 研究生院排名
+      news: 最新大学留学动态
+      cgraduate: 大学/研究生毕业跟踪
       label:
         contactinfo: 联系信息
         name: 校名

@@ -19,7 +19,9 @@
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
 			<!--
 			<li><%= link_to t('header.label.help'), help_path %></li>	
-			-->	
+			-->
+			
+			<li><a href="http://www.newhope2011.com" target=_blank><%= t('header.label.chinabranch') %></a></li>
 		</ul>
 	</nav>
 </footer>

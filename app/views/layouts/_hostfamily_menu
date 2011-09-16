@@ -3,7 +3,11 @@
 <%= t('label.hostfamily.homestay.homestay') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.whatisahomestay'), host_families_whatishomestay_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.whynewhope'), host_families_whynewhope_path %> <br />
+
+<!--
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.faq'), host_families_faq_path %> <br />
+-->
+
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.homestay.photo'), host_families_homestayphoto_path %> <br />
 
 <%= t('label.hostfamily.servicerequest.servicerequest') %> <br />
@@ -20,6 +24,8 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.responsibility'), host_families_responsibility_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.guideline'), host_families_guideline_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.hostfamily.host.question'), host_families_question_path %> <br />
+
+<%= link_to t('label.hostfamily.homestay.faq'), host_families_news_path(:news_type => 'HFFAQ') %> <br />
 
 <%= t('header.label.testimonial') %><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.testimonial.student'), testimonials_student1_path %><br/>

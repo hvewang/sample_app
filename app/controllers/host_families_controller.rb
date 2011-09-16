@@ -96,11 +96,56 @@ class HostFamiliesController < ApplicationController
 	session[:prev_locale] = I18n.locale
 	session[:prec_host_family_info_id] = host_family_info_id
   end
+  
+  def news
+	@title = "Homestay FAQs"
+	
+    news_type = params[:news_type]
+	if (news_type.nil? || news_type.empty?) 
+		news_type = "HFFAQ"
+	end
+	
+	set_label(news_type)
+	if (news_type.nil? || news_type.empty?)
+		@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 10)
+	else
+		@news_updates = NewsUpdate.find_all_by_news_type(news_type).paginate(:page => params[:page], :per_page => 10)
+	end
+  end
+  
+  def newsdetails
+	@title = "Host Family FAQ Details"
+	set_label(params[:news_type])
+	
+	news_id = params[:id]
+	if news_id.nil?
+		if I18n.locale != session[:prev_locale]
+			news_id = session[:prec_news_id]
+		else
+			redirect_to high_school_news_path
+		end
+	end
+	
+	@news_update = NewsUpdate.find(news_id)
 
+	session[:prev_locale] = I18n.locale
+	session[:prec_news_id] = news_id
+  end
+  
   private
 	
 	def set_layout
 		@curr_menu = "layouts/hostfamily_menu"
 		@curr_layout = "layouts/user_layout"
+	end
+	
+	def set_label(news_type)
+		if news_type == "HighschoolNews"
+			@titlelabel = "label.highschool.label.latestnews"
+		elsif news_type == "HighschoolGraduate"
+			@titlelabel = "label.highschool.label.hsgraduate"
+		else
+			@titlelabel = "header.label.latestnews"
+		end
 	end
 end

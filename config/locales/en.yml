@@ -1,5 +1,5 @@
 en:
-  langimg: zh.png
+  langimg: chinese.png
   header:
     label:
       home: Home
@@ -19,6 +19,7 @@ en:
       hostfamily: Host Family
       highschool: High School
       university: Univeristy
+      chinabranch: China Branch
   footer:
     msg: 2011 New Hope International Education Consulting, LLC. All Rights Reserved.
   label:
@@ -68,7 +69,7 @@ en:
     school:
       highschool: US High School
       college: College
-      graduate: Graduate school
+      graduate: Graduate School
     highschool:
       allhighschool: All High School
       rank: Top US High School Ranking
@@ -76,6 +77,9 @@ en:
         schoolapplication: High School Application
         procedure: Application Procedures
         otherservice: Additional Services
+      academicservice: Academic Guardianship Service
+      news: Latest High School News
+      hsgraduate: Our High School Graduates
       label:
         schoolname: Name
         schooltype: School Type
@@ -111,6 +115,8 @@ en:
         rank: Rank
         addressphone: Address/Phone
         characteristic: School Characteristics
+        latestnews: Latest News
+        hsgraduate: High School Graduates
     college:
       college: US College
       collegelist: College List
@@ -124,7 +130,9 @@ en:
       rank: US University Rankings
       universityrank: National University
       collegerank: Liberal Arts College
-      graduateschoolrank: Graduate School
+      graduateschoolrank: Graduate School Rankings
+      news: Latest College News
+      cgraduate: Our College Graduates
       label:
         contactinfo: Contact Info
         name: Name
@@ -217,7 +225,7 @@ en:
         homestay: Homestay
         whatisahomestay: What is a Homestay
         whynewhope: Why New Hope
-        faq: Frquently Asked Questions
+        faq: FAQs
         photo: Homestay Photos
       servicerequest:
         servicerequest: Service Request

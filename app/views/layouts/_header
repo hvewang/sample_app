@@ -22,6 +22,7 @@
 			<li><%= link_to t('header.label.testimonial'), testimonial_path %></li>
 
 			<li><%= link_to t('header.label.ourteam'), newhope_teams_all_path %></li>
+			
 			<li><%= link_to t('header.label.contact'), contact_path %></li>
 			
 			
