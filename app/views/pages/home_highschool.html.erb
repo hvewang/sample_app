@@ -4,7 +4,13 @@
 		<% @high_school_lists.each do |high_school_list| %>
 		    <% high_school_list.force_utf %>
 			<%= image_tag("/images/right.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
-			<%= link_to high_school_list.name_cn,  high_schools_highschooldetail_path(:id=>high_school_list) %><br/>
+			
+			<% if I18n.locale == :en %>
+				<%= link_to high_school_list.name_en,  high_schools_highschooldetail_path(:id=>high_school_list) %><br/>
+			<% else %>
+				<%= link_to high_school_list.name_cn,  high_schools_highschooldetail_path(:id=>high_school_list) %><br/>
+			<% end %>
+			
 		<% end %>
 	</fieldset>
 </div>

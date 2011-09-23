@@ -4,7 +4,13 @@
 		<% @college_lists.each do |college_list| %>
 		    <% college_list.force_utf %>
 			<%= image_tag("/images/right.gif", :height => '8', :width => '12', :alt => "New Hope International Education", :class => "round") %>
-			<%= link_to college_list.name_cn,  colleges_collegedetail_path(:id=>college_list) %><br/>
+			
+			<% if I18n.locale == :en %>
+				<%= link_to college_list.name_en,  colleges_collegedetail_path(:id=>college_list) %><br/>
+			<% else %>
+				<%= link_to college_list.name_cn,  colleges_collegedetail_path(:id=>college_list) %><br/>
+			<% end %>
+			
 		<% end %>
 	</fieldset>
 </div>
