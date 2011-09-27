@@ -5,7 +5,7 @@ class CollegeListsController < ApplicationController
   # GET /college_lists
   # GET /college_lists.xml
   def index
-    @college_lists = CollegeList.all.paginate(:page => params[:page], :per_page => 10)
+    @college_lists = CollegeList.all.paginate(:page => params[:page], :per_page => 8)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -5,7 +5,7 @@ class HostFamilyPhotosController < ApplicationController
   # GET /host_family_photos
   # GET /host_family_photos.xml
   def index
-    @host_family_photos = HostFamilyPhoto.all
+    @host_family_photos = HostFamilyPhoto.all.paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
