@@ -31,7 +31,8 @@ class HighSchoolsController < ApplicationController
   def rank	
 	@title = "US High School Ranking"
 	
-	@highschool_rankings = HighschoolRanking.all.paginate(:page => params[:page], :per_page => 10)
+	#@highschool_rankings = HighschoolRanking.all.paginate(:page => params[:page], :per_page => 10)
+	@highschool_rankings = HighschoolRanking.find(:all, :order => "id").paginate(:page => params[:page], :per_page => 10)
   end
   
   def applicationprocedure
