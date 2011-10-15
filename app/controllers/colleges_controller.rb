@@ -92,7 +92,7 @@ class CollegesController < ApplicationController
 	@title = "US College List"
 	@titlelabel = 'label.college.allcollegelist'
 	
-	@college_lists = CollegeList.paginate(:page => params[:page], :per_page => 10)
+	@college_lists = CollegeList.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 10)
   end
   
   def collegedetail
