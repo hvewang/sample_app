@@ -5,14 +5,15 @@ class PagesController < ApplicationController
 	@title = "New Hope's Home"
 	@curr_layout = "layouts/home_layout"
 	
-	@news_updates = NewsUpdate.all.paginate(:page => params[:page], :per_page => 8)
-	@college_lists = CollegeList.paginate(:page => params[:page], :per_page => 8)
-	@high_school_lists = HighSchoolList.all.paginate(:page => params[:page], :per_page => 8)
+	@news_updates = NewsUpdate.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
+	@college_lists = CollegeList.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
+	@high_school_lists = HighSchoolList.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
 	
-	@host_family_infos = HostFamilyInfo.all.paginate(:page => params[:page], :per_page => 8)
-	@testimonials = SuccessCase.all(:conditions => ["status = 'Active' and record_type in ('Testimonials-Student', 'Testimonials-Parent', 'Testimonials-HostFamily', 'Testimonials-Other')"]).paginate(:page => params[:page], :per_page => 8)
+	@host_family_infos = HostFamilyInfo.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
+	@testimonials = SuccessCase.find(:all, :order => "updated_at desc", :conditions => ["status = 'Active' and record_type in ('Testimonials-Student', 'Testimonials-Parent', 'Testimonials-HostFamily', 'Testimonials-Other')"]).paginate(:page => params[:page], :per_page => 8)
 	
-	@host_family_infos = HostFamilyInfo.find_all_by_status('Active').paginate(:page => params[:page], :per_page => 8)
+	#@host_family_infos = HostFamilyInfo.find_all_by_status('Active').paginate(:page => params[:page], :per_page => 8)
+	@host_family_infos = HostFamilyInfo.find(:all, :order => "updated_at desc", :conditions => ["status = 'Active'"]).paginate(:page => params[:page], :per_page => 8)
   end
 
   def contact
