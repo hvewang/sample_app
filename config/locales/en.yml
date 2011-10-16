@@ -229,7 +229,7 @@ en:
         photo: Homestay Photos
       servicerequest:
         servicerequest: Service Request
-        form: Service Request Form
+        form: Service Req Form
         availabehomestay: Available Host Families
         label:
           studentname: Student name
@@ -275,7 +275,7 @@ en:
         applicationform: Application Form
         responsibility: Host Family's Responsibilities
         guideline: Host Family Guideline
-        question: Email us your questions
+        question: Submit Question
     contactus:
       msg: Please contact New Hope by phone or email if you have any questions or need more information. Thanks.
       feedback: Your Feedback
