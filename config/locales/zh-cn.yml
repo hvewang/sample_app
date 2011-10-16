@@ -295,6 +295,12 @@ zh-cn:
       undergraduate: 本科生
       graduate: 硕士/博士生
       other: 其他
+    summercamp:
+      summercamp: 夏令营
+      china2us: 美国夏令营
+      us2china: 中国夏令营
+      ussummercamp: 美国夏令营
+      chinasummercamp: 中国夏令营
     myaccount:
       myaccount: 我的账户
       editmyaccount: 编辑我的帐号

@@ -35,6 +35,7 @@ SampleApp::Application.routes.draw do
   get "services/followup"
   get "services/news"
   get "services/newsdetails"
+  get "services/summercamp"
 
   resources :highschool_rankings
 

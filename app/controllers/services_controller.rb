@@ -61,6 +61,19 @@ class ServicesController < ApplicationController
 	findservice 'services.followup'
   end
   
+  def summercamp
+	@title = "Summer Camp Service"
+	sctype = params[:type]
+	
+	if sctype == "us2china"
+		@titlelabel = 'label.summercamp.chinasummercamp'
+		findservice 'services.summercamp.us2china'
+	else
+		@titlelabel = 'label.summercamp.ussummercamp'
+		findservice 'services.summercamp.china2us'
+	end
+  end
+  
   def news
 	@title = "FAQs"
 	

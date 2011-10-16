@@ -295,6 +295,12 @@ en:
       undergraduate: Undergraduate
       graduate: Graduate
       other: Other
+    summercamp:
+      summercamp: Summer Camp
+      china2us: China to US
+      us2china: US to China
+      ussummercamp: Summer Camp in US
+      chinasummercamp: Summer Camp in China
     myaccount:
       myaccount: My Account
       editmyaccount: Edit My Account

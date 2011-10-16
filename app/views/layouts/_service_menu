@@ -18,6 +18,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.requesthostfamily'), services_hostfamily_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.applyforhostfamily'), services_hostfamilyapplication_path %> <br />
 
+<%= t('label.summercamp.summercamp') %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.summercamp.china2us'), services_summercamp_path(:type=>"china2us") %> <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.summercamp.us2china'), services_summercamp_path(:type=>"us2china") %> <br />
+
 <!--
 <%= link_to t('label.service.wenshu'), services_docwriting_path %> <br />
 -->
