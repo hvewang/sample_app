@@ -31,6 +31,14 @@ class PagesController < ApplicationController
 	@json = @locations.to_gmaps4rails
   end
   
+  def question
+    #http://upcomer.wordpress.com/2011/04/15/google-maps-in-rails-3/
+	#use gmaps4rails to add google maps
+	
+	@curr_menu = "layouts/contact_menu"
+	@title = "Email New Hope Your Question"
+  end
+  
   def about
 	@curr_menu = "layouts/about_menu"
 	@title = "About New Hope"

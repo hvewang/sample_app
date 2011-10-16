@@ -137,6 +137,7 @@ SampleApp::Application.routes.draw do
   
     match '/home', :to => 'pages#home'
 	match '/contact', :to => 'pages#contact'
+	match '/question', :to => 'pages#question'
 	match '/about', :to => 'pages#about'
 	match '/help', :to => 'pages#help'
 	match '/news', :to => 'pages#news'

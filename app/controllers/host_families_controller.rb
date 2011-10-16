@@ -72,7 +72,8 @@ class HostFamiliesController < ApplicationController
 	EmailNotifier.host_family_question(name, phone, email, question).deliver
 	
 	flash[:notice] = 'Your question has been successfully submitted. We will contact you very soon. Thank you.'
-	redirect_to host_families_question_path
+	#redirect_to host_families_question_path
+	redirect_to contact_path
   end
 
   def availablehomestay

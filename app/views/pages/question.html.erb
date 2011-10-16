@@ -1,0 +1,27 @@
+<h1><%= t('label.contactus.sendquestion') %></h1>
+
+<%= form_tag host_families_submitquestion_path do %>
+<div class="field">
+<%= t('label.contactus.name') %><br />
+<%= text_field_tag :name, '', :size => 40 %>
+</div>
+
+<div class="field">
+<%= t('label.contactus.phone') %><br />
+<%= text_field_tag :phone, '', :size => 40 %>
+</div>
+
+<div class="field">
+<%= t('label.contactus.email') %><br />
+<%= text_field_tag :email, '', :size => 40 %>
+</div>
+
+<div class="field">
+<%= t('label.contactus.questionmsg') %><br />
+<%= text_area_tag :question, nil, :rows => 10, :cols => 80 %>
+</div>
+
+<div class="actions">
+<%= submit_tag t('label.button.submit') %>
+</div>
+<% end %>

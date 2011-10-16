@@ -288,6 +288,10 @@ zh-cn:
       phone: 电话
       fax: 传真
       website: 网址
+      sendquestion: 请发送你的问题至新希望
+      name: 姓名
+      email: 电子邮件
+      questionmsg: 问题细节 
     successcase:
       successcase: 成功案例
       all: 全部学生
@@ -320,6 +324,8 @@ zh-cn:
       news: 新闻
       studenthostfamilypicture: 学生和寄宿家庭照片
       hostfamilypicture: 寄宿家庭照片
+    button:
+      submit: 提交
   general:
     are_you_sure: Tem certeza?
     back: 返回
