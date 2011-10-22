@@ -87,7 +87,7 @@ class NewhopeTeamsController < ApplicationController
   
   def all
 	@title = "New Hope Team"
-	@newhope_teams = NewhopeTeam.all.paginate(:page => params[:page], :per_page => 2)
+	@newhope_teams = NewhopeTeam.find(:all, :order=>"updated_at desc").paginate(:page => params[:page], :per_page => 2)
 	@translation = Translation.find_by_nm('newhopeteam.introduction')
   end
   
