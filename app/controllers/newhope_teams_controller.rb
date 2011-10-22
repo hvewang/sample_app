@@ -116,8 +116,9 @@ class NewhopeTeamsController < ApplicationController
 	end
 	
 	@title = "New Hope Team - #{branch_name}"
-	@newhope_teams = NewhopeTeam.find_all_by_branch_name_en(branch_name).paginate(:page => params[:page], :per_page => 3)
-
+	#@newhope_teams = NewhopeTeam.find_all_by_branch_name_en(branch_name).paginate(:page => params[:page], :per_page => 3)
+	@newhope_teams = NewhopeTeam.find(:all, :conditions=>['branch_name_en=?', branch_name], :order=>"updated_at desc").paginate(:page => params[:page], :per_page => 3)
+	
 	session[:prev_locale] = I18n.locale
 	session[:prec_branch_name] = branch_name
   end
