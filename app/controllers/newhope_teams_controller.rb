@@ -6,7 +6,7 @@ class NewhopeTeamsController < ApplicationController
   # GET /newhope_teams
   # GET /newhope_teams.xml
   def index
-    @newhope_teams = NewhopeTeam.find(:all, :order=> 'updated_at desc').paginate(:page => params[:page], :per_page => 10)
+    @newhope_teams = NewhopeTeam.find(:all, :order=> 'sort_order, updated_at desc').paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -87,14 +87,14 @@ class NewhopeTeamsController < ApplicationController
   
   def all
 	@title = "New Hope Team"
-	@newhope_teams = NewhopeTeam.find(:all, :order=>"updated_at desc").paginate(:page => params[:page], :per_page => 2)
+	@newhope_teams = NewhopeTeam.find(:all, :order=>"sort_order, updated_at desc").paginate(:page => params[:page], :per_page => 2)
 	@translation = Translation.find_by_nm('newhopeteam.introduction')
   end
   
   def advisor
 	@title = "New Hope Team - Advisor"
 	#@newhope_teams = NewhopeTeam.find_all_by_record_type('Advisor').paginate(:page => params[:page], :per_page => 3)
-	@newhope_teams = NewhopeTeam.find(:all, :conditions=>['record_type=?', 'Advisor'], :order=>'updated_at desc').paginate(:page => params[:page], :per_page => 3)
+	@newhope_teams = NewhopeTeam.find(:all, :conditions=>['record_type=?', 'Advisor'], :order=>'sort_order, updated_at desc').paginate(:page => params[:page], :per_page => 3)
   end
   
   def team
@@ -118,7 +118,7 @@ class NewhopeTeamsController < ApplicationController
 	
 	@title = "New Hope Team - #{branch_name}"
 	#@newhope_teams = NewhopeTeam.find_all_by_branch_name_en(branch_name).paginate(:page => params[:page], :per_page => 3)
-	@newhope_teams = NewhopeTeam.find(:all, :conditions=>['branch_name_en=?', branch_name], :order=>"updated_at desc").paginate(:page => params[:page], :per_page => 3)
+	@newhope_teams = NewhopeTeam.find(:all, :conditions=>['branch_name_en=?', branch_name], :order=>"sort_order, updated_at desc").paginate(:page => params[:page], :per_page => 3)
 	
 	session[:prev_locale] = I18n.locale
 	session[:prec_branch_name] = branch_name
