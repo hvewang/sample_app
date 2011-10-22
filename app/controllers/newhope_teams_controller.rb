@@ -93,7 +93,8 @@ class NewhopeTeamsController < ApplicationController
   
   def advisor
 	@title = "New Hope Team - Advisor"
-	@newhope_teams = NewhopeTeam.find_all_by_record_type('Advisor').paginate(:page => params[:page], :per_page => 3)
+	#@newhope_teams = NewhopeTeam.find_all_by_record_type('Advisor').paginate(:page => params[:page], :per_page => 3)
+	@newhope_teams = NewhopeTeam.find(:all, :conditions=>['record_type=?', 'Advisor'], :order=>'updated_at desc').paginate(:page => params[:page], :per_page => 3)
   end
   
   def team
