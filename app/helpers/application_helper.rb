@@ -10,7 +10,7 @@ module ApplicationHelper
 	end
 	
 	def logo
-		image_tag("newhope.gif", :alt => "New Hope International Education", :class => "round")
+		image_tag("newhope2-1-1-1.gif", :alt => "New Hope International Education", :class => "round")
 	end
 	
 	def langImg

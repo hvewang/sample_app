@@ -3,7 +3,7 @@
 }
 
 body {
-	background: #cff;
+	background: #94C5EB;
 }
 
 header {
@@ -48,7 +48,16 @@ nav {
 nav {
 	font-size: 100%;
 	text-align: center;
-	background-color: #cff;
+	background-color: #015287;
+	padding: 0 0.1em;
+	white-space: nowrap;
+	padding-top: 1px;
+}
+
+nav.footer{
+	font-size: 100%;
+	text-align: center;
+	background-color: #015287;
 	padding: 0 0.1em;
 	white-space: nowrap;
 	padding-top: 1px;
@@ -85,10 +94,12 @@ nav ul li img {
 nav ul li a {
 	padding: 0 5px;
 	font-weight: bold;
+	color: #ffffff;
 }
 
 nav ul li a:visited {
-	color: #09c;
+	/*color: #09c;*/
+	color: #ffffff;
 }
 
 nav ul li a:hover {

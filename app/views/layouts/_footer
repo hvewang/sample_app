@@ -1,6 +1,6 @@
 <footer>
-	<nav class="round">
-		&copy; <%= t('footer.msg') %>
+	<nav class="footer round">
+		
 		<ul>
 			<li>
 				<%= link_to t('header.label.about'),  about_path %>
@@ -24,4 +24,5 @@
 			<li><a href="http://www.newhope2011.com" target=_blank><%= t('header.label.chinabranch') %></a></li>
 		</ul>
 	</nav>
+	&copy; <%= t('footer.msg') %>
 </footer>
