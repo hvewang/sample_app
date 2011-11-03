@@ -6,13 +6,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.msphd'), colleges_msphd_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.cc'), colleges_communitycollege_path %> <br />
 
-<%= link_to t('label.college.cgraduate'), colleges_news_path(:news_type => 'CollegeGraduate') %> <br />
-<%= link_to t('label.college.news'), colleges_news_path(:news_type => 'CollegeNews') %> <br />
-<%= link_to t('label.hostfamily.homestay.faq'), colleges_news_path(:news_type => 'CollegeFAQ') %> <br />
+<br>
 
 <%= t('label.college.rank') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.universityrank'), colleges_universityrank_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.college.collegerank'), colleges_collegerank_path %> <br />
+
+<br>
 
 <%= t('label.college.graduateschoolrank') %> <br />
 &nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsbusiness'), colleges_graduateschoolrank_path(:category=>'business') %> <br />
@@ -26,4 +26,11 @@
 &nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gshealth'), colleges_graduateschoolrank_path(:category=>'health') %> <br />
 &nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gspublic'), colleges_graduateschoolrank_path(:category=>'public') %> <br />
 &nbsp;&nbsp;&nbsp;<%= link_to t('label.college.label.gsfine'), colleges_graduateschoolrank_path(:category=>'fine') %> <br />
+
+<br>
+
+<%= link_to t('label.college.cgraduate'), colleges_news_path(:news_type => 'CollegeGraduate') %> <br />
+<%= link_to t('label.college.news'), colleges_news_path(:news_type => 'CollegeNews') %> <br />
+<%= link_to t('label.hostfamily.homestay.faq'), colleges_news_path(:news_type => 'CollegeFAQ') %> <br />
+
 </div>

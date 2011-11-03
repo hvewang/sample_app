@@ -2,6 +2,7 @@
 
 <%= link_to t('label.service.newhope'), services_general_path %> <br />
 
+<br>
 
 <%= t('label.service.applyforhs') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.privatehs'), services_dayschool_path %> <br />
@@ -10,13 +11,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), services_publicschool_path %> <br />
 -->
 
+<br>
+
 <%= t('label.service.applyforcollege') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.undergraduate'), services_undergraduate_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.msphd'), services_graduate_path %> <br />
 
+<br>
+
 <%= t('label.service.boardingfamily') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.requesthostfamily'), services_hostfamily_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.applyforhostfamily'), services_hostfamilyapplication_path %> <br />
+
+<br>
 
 <%= t('label.summercamp.summercamp') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.summercamp.china2us'), services_summercamp_path(:type=>"china2us") %> <br />
@@ -26,7 +33,11 @@
 <%= link_to t('label.service.wenshu'), services_docwriting_path %> <br />
 -->
 
+<br>
+
 <%= link_to t('label.service.afterservice'), services_followup_path %> <br />
+
+<br>
 
 <%= link_to t('label.hostfamily.homestay.faq'), services_news_path %> <br />
 

@@ -12,17 +12,30 @@
 <!--
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.service.publichs'), high_schools_public_path %> <br />
 -->
+
+<br>
+
 <%= t('label.highschool.schoolapplication.schoolapplication') %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.highschool.schoolapplication.procedure'), high_schools_applicationprocedure_path %> <br />
 &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t('label.highschool.schoolapplication.otherservice'), high_schools_otherservice_path %> <br />
 
+<br>
+
 <%= link_to t('label.highschool.academicservice'), high_schools_academicservice_path %> <br />
+
+<br>
 
 <%= link_to t('label.highschool.hsgraduate'), high_schools_news_path(:news_type => 'HighschoolGraduate') %> <br />
 
+<br>
+
 <%= link_to t('label.highschool.news'), high_schools_news_path(:news_type => 'HighschoolNews') %> <br />
 
+<br>
+
 <%= link_to t('label.hostfamily.homestay.faq'), high_schools_news_path(:news_type => 'HSFAQ') %> <br />
+
+<br>
 
 <%= link_to t('label.highschool.rank'), high_schools_rank_path %> <br />
 
