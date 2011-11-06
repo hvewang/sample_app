@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110712034240) do
+ActiveRecord::Schema.define(:version => 20111106044145) do
 
   create_table "college_lists", :force => true do |t|
     t.string   "name_en"
@@ -66,6 +66,10 @@ ActiveRecord::Schema.define(:version => 20110712034240) do
     t.string   "college_pic_2_content_type"
     t.integer  "college_pic_2_file_size"
     t.datetime "college_pic_2_updated_at"
+    t.string   "college_pdf_file_name"
+    t.string   "college_pdf_content_type"
+    t.integer  "college_pdf_file_size"
+    t.datetime "college_pdf_updated_at"
   end
 
   create_table "college_rankings", :force => true do |t|

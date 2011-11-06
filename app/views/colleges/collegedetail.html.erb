@@ -1,4 +1,5 @@
-<h1><%= t('label.college.college') %> </h1>
+<h1><%= t('label.college.college') %> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size=2><%= link_to back_button %></font> </h1>
+
 <hr size=10></hr>
 
 <%   @college_list.force_utf %>
@@ -8,6 +9,8 @@
 	<legend>
 		<%= link_to "#{@college_list.name_en} #{@college_list.name_cn}",  "http://#{@college_list.website}", :target=> :blank %>
 	</legend>
+	
+	<% if @college_list.college_pdf.url == "/college_pdfs/original/missing.png" %>
 	<table class="nhtabclass">
 	
 
@@ -196,9 +199,14 @@
 		-->
 		
 	</table>
+	<% else %>
+		<iframe src="http://docs.google.com/gview?url=<%= @college_list.college_pdf.url %>&embedded=true" style="width:700px; height:1000px;" frameborder="0"></iframe>
+	<% end %>
 </fieldset>
 
-
+<nav class="text">
+	<%= link_to back_button %>
+</nav>
 
 
 

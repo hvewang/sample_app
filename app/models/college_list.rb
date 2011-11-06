@@ -66,6 +66,11 @@ class CollegeList < ActiveRecord::Base
 		:s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
 		:path => ":attachment/:id/:style.:extension",
 		:bucket => 'NewHope-Prod'
+	has_attached_file :college_pdf,
+		:storage => :s3,
+		:s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+		:path => ":attachment/:id/:style.:extension",
+		:bucket => 'NewHope-Prod'
 		
 	def force_utf
 		if Rails.env.development? 
