@@ -53,7 +53,7 @@
 class CollegeList < ActiveRecord::Base
 	validates :name_en, :presence => true, :uniqueness=> true 
 	validates :name_cn, :presence => true, :uniqueness=> true
-	
+
 	has_attached_file :college_pic_1, 
 		:styles => { :medium => "320x240>", :thumb => "160x120>", :large => "640x480>" },
 		:storage => :s3,

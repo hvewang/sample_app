@@ -6,7 +6,7 @@ class CollegesController < ApplicationController
 	@title = "US Bechelor School"
 	@titlelabel = 'label.college.allcollegelistbs'
 	
-	@college_lists = CollegeList.find_by_sql("select * from college_lists where highest_degree = 'bs'").paginate(:page => params[:page], :per_page => 10) 
+	@college_lists = CollegeList.find_by_sql("select * from college_lists where highest_degree = 'bs' and status = 'Active'").paginate(:page => params[:page], :per_page => 10) 
 	render :action => "collegelist"
   end
 
@@ -15,7 +15,7 @@ class CollegesController < ApplicationController
 	@title = "US Master & PhD School"
 	
 	@titlelabel = 'label.college.allcollegelistmsphd'
-	@college_lists = CollegeList.find_by_sql("select * from college_lists where highest_degree in ('ms', 'phd')").paginate(:page => params[:page], :per_page => 10)
+	@college_lists = CollegeList.find_by_sql("select * from college_lists where highest_degree in ('ms', 'phd') and status = 'Active'").paginate(:page => params[:page], :per_page => 10)
 	render :action => "collegelist"
   end
 
@@ -24,7 +24,7 @@ class CollegesController < ApplicationController
 	@title = "US Community College"
 	
 	@titlelabel = 'label.college.allcollegelistcc'
-	@college_lists = CollegeList.find_by_sql("select * from college_lists where highest_degree ='as'").paginate(:page => params[:page], :per_page => 10)
+	@college_lists = CollegeList.find_by_sql("select * from college_lists where highest_degree ='as' and status = 'Active'").paginate(:page => params[:page], :per_page => 10)
 	render :action => "collegelist"
   end
   
@@ -92,7 +92,7 @@ class CollegesController < ApplicationController
 	@title = "US College List"
 	@titlelabel = 'label.college.allcollegelist'
 	
-	@college_lists = CollegeList.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 10)
+	@college_lists = CollegeList.find(:all, :conditions => ["status = 'Active'"], :order => "updated_at desc").paginate(:page => params[:page], :per_page => 10)
   end
   
   def collegedetail
