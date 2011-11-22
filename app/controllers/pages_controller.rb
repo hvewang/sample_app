@@ -6,7 +6,9 @@ class PagesController < ApplicationController
 	@curr_layout = "layouts/home_layout"
 	
 	@news_updates = NewsUpdate.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
-	@college_lists = CollegeList.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
+	@college_lists = CollegeList.find(:all, 
+:conditions =>["status = 'Active'"],
+:order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
 	@high_school_lists = HighSchoolList.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
 	
 	@host_family_infos = HostFamilyInfo.find(:all, :order => "updated_at desc").paginate(:page => params[:page], :per_page => 8)
